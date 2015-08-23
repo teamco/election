@@ -9,13 +9,22 @@
             jQuery('.retrieve-data').on('click', function(){
                 window.app.crud.getCandidate().done(function(data){
                     console.log('>>>>>', data);
-                    alert(data);
+                    alert(JSON.stringify(data));
                 });
             });
 
             jQuery('.save-data').on('click', function(){
-                window.app.crud.saveAll(window.app.crud.exampleCandidate);
-                alert("Data saved");
+                jQuery.ajax({
+                    url: "example.json",
+                    success: function(data){
+                        window.app.crud.saveAll(data);
+                        alert('Data saved');
+                    },
+                    error: function(){
+                        alert('error');
+                    }
+                })
+
             });
 
             /**
@@ -26,7 +35,7 @@
                 fireBase.child("candidate/donate").on('value', function(snapshot) {
                     var donate = snapshot.val();
                     console.log('>>>>>>',donate);
-                    alert(donate);
+                    alert(JSON.stringify(donate));
                 });
             });
 

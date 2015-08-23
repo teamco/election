@@ -1,0 +1,13 @@
+{
+    "name": "test",
+    "fullName": "Candidate full Name",
+    "donate": {
+        "stuff": {
+            "name": "donate name"
+            }
+        },
+    "contact": {
+        "contact1": "contact1",
+        "contact2": "contact2"
+        }
+}

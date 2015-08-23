@@ -1,0 +1,47 @@
+<html>
+<head>
+    <script src='crud.js'></script>
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script>
+
+        jQuery(document).ready(function(){
+            jQuery('.retrieve-data').on('click', function(){
+                window.app.crud.getCandidate().done(function(data){
+                    console.log('>>>>>', data);
+                    alert(data);
+                });
+            });
+
+            jQuery('.save-data').on('click', function(){
+                window.app.crud.saveAll(window.app.crud.exampleCandidate);
+                alert("Data saved");
+            });
+
+            /**
+             * Retrive only on section
+             */
+            jQuery('.retrieve-donate-only').on('click', function(){
+                var fireBase = new Firebase('https://uac96z5sw29.firebaseio-demo.com/');
+                fireBase.child("candidate/donate").on('value', function(snapshot) {
+                    var donate = snapshot.val();
+                    console.log('>>>>>>',donate);
+                    alert(donate);
+                });
+            });
+
+        });
+
+    </script>
+</head>
+<body>
+
+<button class="save-data">saveData</button>
+
+<button class="retrieve-data">Retrieve Data</button>
+
+<button class="retrieve-donate-only">Retrieve donate only</button>
+
+
+</body>
+</html>

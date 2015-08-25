@@ -31,7 +31,7 @@
              * Retrive only on section
              */
             jQuery('.retrieve-donate-only').on('click', function(){
-                var fireBase = new Firebase('https://uac96z5sw29.firebaseio-demo.com/');
+                var fireBase = new Firebase('https://appolitics.firebaseio.com/');
                 fireBase.child("candidate/donate").on('value', function(snapshot) {
                     var donate = snapshot.val();
                     console.log('>>>>>>',donate);
@@ -44,6 +44,8 @@
     </script>
 </head>
 <body>
+
+Hello World!
 
 <button class="save-data">saveData</button>
 

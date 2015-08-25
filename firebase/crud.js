@@ -7,7 +7,7 @@
 
     };
 
-    CRUD.prototype.appInstance = 'https://uac96z5sw29.firebaseio-demo.com/';
+    CRUD.prototype.appInstance = 'https://appolitics.firebaseio.com/';
     CRUD.prototype.exampleCandidate = {
             name: "test",
             fullName: "Candidate full Name",

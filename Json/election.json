@@ -1,0 +1,60 @@
+{
+  "candidates": {
+    "uuidxxx": {
+      "id": "uuidxxx",
+      "accountInfo": {
+          "users":{
+            "userid123": {
+              "id": "userid123",
+               "role": ["manager", "designer"]
+            }
+          },
+        "followers":{
+            "ids":["1","2"]
+        }
+      },
+      "accountTemplate": {
+
+      },
+      "candidateInfo": {
+        "firstName": "John",
+        "lastName": "Smith",
+        "address": {
+          "streetAddress": "21 2nd Street",
+          "city": "New York",
+          "state": "NY",
+          "postalCode": "10021-3100"
+        },
+        "phoneNumbers": [
+          {
+            "type": "home",
+            "number": "212 555-1234"
+          },
+          {
+            "type": "mobile",
+            "number": "212 555-1234"
+            },
+          {
+            "type": "office",
+            "number": "646 555-4567"
+          }
+        ]
+      }
+    },
+    "uuidyy": {
+
+    }
+  },
+  "parties": {
+
+  },
+  "users": {
+
+  },
+  "templates": {
+
+  } ,
+  "configurations": {
+
+  }
+}

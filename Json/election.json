@@ -3,18 +3,30 @@
     "uuidxxx": {
       "id": "uuidxxx",
       "accountInfo": {
-          "users":{
-            "userid123": {
-              "id": "userid123",
-               "role": ["manager", "designer"]
-            }
-          },
-        "followers":{
-            "ids":["1","2"]
+        "users": {
+          "userid123": {
+            "id": "userid123",
+            "role": [
+              "manager",
+              "designer"
+            ]
+          }
         }
       },
-      "accountTemplate": {
-
+      "followers": {
+        "ids": [
+          "1",
+          "2"
+        ]
+      },
+      "accountTemplates": {
+        "defTemplate": {}
+      },
+      "socialAccounts": {
+        "FBAccount": {},
+        "twitterAccount": {},
+        "instagramAccount": {},
+        "youtubeAccount": {}
       },
       "candidateInfo": {
         "firstName": "John",
@@ -33,7 +45,7 @@
           {
             "type": "mobile",
             "number": "212 555-1234"
-            },
+          },
           {
             "type": "office",
             "number": "646 555-4567"
@@ -41,20 +53,28 @@
         ]
       }
     },
-    "uuidyy": {
-
-    }
+    "uuidyy": {}
   },
-  "parties": {
-
-  },
+  "parties": {},
   "users": {
-
+    "id-UUID-123445": {
+      "config": {},
+      "loginInfo": {},
+      "following": {
+        "candidates": {
+          "candidateID-1": {
+            "id": "candidateID-1",
+            "otherInfo": ""
+          },
+          "candidateID-2": {
+            "id": "candidateID-2",
+            "otherInfo": ""
+          }
+        }
+      }
+    },
+    "id-UUID-1234456789": {}
   },
-  "templates": {
-
-  } ,
-  "configurations": {
-
-  }
+  "templates": {},
+  "configurations": {}
 }

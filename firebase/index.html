@@ -15,7 +15,7 @@
 
             jQuery('.save-data').on('click', function(){
                 jQuery.ajax({
-                    url: "example.json",
+                    url: "election.json",
                     success: function(data){
                         window.app.crud.saveAll(data);
                         alert('Data saved');

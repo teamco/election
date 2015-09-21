@@ -1,6 +1,3 @@
-/**
- * Created by I022096 on 23/08/2015.
- */
 (function(){
 
     var CRUD = function CRUD() {
@@ -24,7 +21,7 @@
 
     CRUD.prototype.saveAll = function saveAll(json) {
         var fireBase = new Firebase(this.appInstance);
-        fireBase.set({candidate : json});
+        fireBase.set({"root" : json});
     };
 
     CRUD.prototype.getCandidate = function getCandidate() {

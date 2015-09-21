@@ -15,7 +15,7 @@
 
             jQuery('.save-data').on('click', function(){
                 jQuery.ajax({
-                    url: "election.json",
+                    url: "election.json" + "?" + Math.random(),
                     success: function(data){
                         window.app.crud.saveAll(data);
                         alert('Data saved');

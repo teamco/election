@@ -44,13 +44,12 @@
 
     SITE.prototype.init = function init() {
         var key, info;
-        window.app.crud.getCandidate().done(function(data){
-            console.log('>>>>>', data);
-            for (key in data.candidates){
-                info = data.candidates[key].candidateInfo;
+        window.app.crud.getCandidates().done(function(candidates){
+            console.log('>>>>>', candidates);
+            for (key in candidates){
+                info = candidates[key].candidateInfo;
                 this.addCandidate();
             }
-
         }.bind(this));
     };
 

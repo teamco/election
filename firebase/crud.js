@@ -28,7 +28,7 @@
         var fireBase = new Firebase(this.appInstance),
             oDfd = new jQuery.Deferred();
 
-        fireBase.child("candidate").on('value', function(snapshot) {
+        fireBase.child("root").on('value', function(snapshot) {
             var allCandidateData = snapshot.val();
             oDfd.resolve(allCandidateData);
         });
@@ -36,11 +36,25 @@
         return oDfd.promise();
     };
 
+
+    CRUD.prototype.getCandidates = function getDonateObject() {
+        var fireBase = new Firebase(this.appInstance),
+            oDfd = new jQuery.Deferred();
+
+        fireBase.child("root/candidates").on('value', function(snapshot) {
+            var donate = snapshot.val();
+            oDfd.resolve(donate);
+        });
+
+        return oDfd.promise();
+    };
+
+
     CRUD.prototype.getDonateObject= function getDonateObject() {
         var fireBase = new Firebase(this.appInstance),
             oDfd = new jQuery.Deferred();
 
-        fireBase.child("candidate/donate").on('value', function(snapshot) {
+        fireBase.child("root/candidates").on('value', function(snapshot) {
             var donate = snapshot.val();
             oDfd.resolve(donate);
         });

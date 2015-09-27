@@ -1,10 +1,10 @@
 "use strict";
-var bcrypt = require('bcrypt-nodejs');
-var user = require('../config/user');
 
 module.exports = function (sequelize, DataTypes) {
 
-    var config = user(DataTypes);
+    var bcrypt = require('bcrypt-nodejs'),
+        user = require('../config/models/user'),
+        config = user(DataTypes);
 
     return sequelize.define(config.name, config.model, {
         getterMethods: {},

@@ -1,6 +1,6 @@
 "use strict";
 
-var user = require('../config/user');
+var user = require('../config/models/user');
 
 module.exports = {
     up: function (migration, DataTypes, done) {

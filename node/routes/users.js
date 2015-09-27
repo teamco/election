@@ -1,4 +1,4 @@
-var User = require('../models/setup').User;
+var User = require('../config/models/setup').User;
 var router = require('express').Router();
 
 router.get('/:uuid', function (req, res) {

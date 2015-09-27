@@ -12,11 +12,11 @@ module.exports = function (DataTypes) {
                 allowNull: false
             },
             email: {
-                type: DataTypes.STRING(255),
+                type: DataTypes.STRING,
                 allowNull: false
             },
-            encrypted_password: DataTypes.STRING(255),
-            reset_password_token: DataTypes.STRING(255),
+            encrypted_password: DataTypes.STRING,
+            reset_password_token: DataTypes.STRING,
             reset_password_sent_at: DataTypes.DATE,
             remember_created_at: DataTypes.DATE,
             sign_in_count: {
@@ -25,25 +25,25 @@ module.exports = function (DataTypes) {
             },
             current_sign_in_at: DataTypes.DATE,
             last_sign_in_at: DataTypes.DATE,
-            current_sign_in_ip: DataTypes.STRING(255),
-            last_sign_in_ip: DataTypes.STRING(255),
+            current_sign_in_ip: DataTypes.STRING,
+            last_sign_in_ip: DataTypes.STRING,
             createdAt: DataTypes.DATE,
             updatedAt: DataTypes.DATE,
-            provider: DataTypes.STRING(255),
+            provider: DataTypes.STRING,
             role_id: DataTypes.INTEGER,
-            confirmation_token: DataTypes.STRING(255),
+            confirmation_token: DataTypes.STRING,
             confirmed_at: DataTypes.DATE,
             confirmation_sent_at: DataTypes.DATE,
-            unconfirmed_email: DataTypes.STRING(255),
+            unconfirmed_email: DataTypes.STRING,
             failed_attempts: {
                 type: DataTypes.INTEGER,
                 defaultValue: 0
             },
-            unlock_token: DataTypes.STRING(255),
+            unlock_token: DataTypes.STRING,
             locked_at: DataTypes.DATE,
-            oauth_token: DataTypes.STRING(255),
+            oauth_token: DataTypes.STRING,
             oauth_expires_at: DataTypes.DATE,
-            name: DataTypes.STRING(255),
+            name: DataTypes.STRING,
             image: DataTypes.TEXT
         }
     }

@@ -1,0 +1,27 @@
+extends layout
+
+block content
+    div.page-header.text-center
+        h1
+            span.fa.fa-anchor
+            | Profile Page
+        a(href="/logout", class="btn btn-default btn-sm") Logout
+    div.row
+        div.col-sm-6
+            div.well
+                h3
+                    span.fa.fa-user
+                    | #{user.oauth_token === null ? 'Local' : 'Social'}
+                p
+                    span
+                        strong id:
+                        | #{user.uuid}
+                    span
+                        strong email:
+                        | #{user.email}
+                    span
+                        strong name:
+                        | #{user.name}
+                    span
+                        strong provider:
+                        | #{user.provider}

@@ -1,21 +1,56 @@
 "use strict";
 
 var user = require('../config/models/user'),
-    candidate = require('../config/models/candidates');
+    candidate = require('../config/models/candidates'),
+    parties = require('../config/models/parties'),
+    roles = require('../config/models/roles'),
+    services = require('../config/models/services'),
+    sites = require('../config/models/sites'),
+    templates = require('../config/models/templates');
 
 module.exports = {
     up: function (migration, DataTypes, done) {
-        var config = user(DataTypes);
+        var configUser = user(DataTypes);
         migration.createTable(
-            config.table,
-            config.model
+            configUser.table,
+            configUser.model
         ).done(done);
 
         var configCandidate = candidate(DataTypes);
-                migration.createTable(
-                    configCandidate.table,
-                    configCandidate.model
-                ).done(done);
+        migration.createTable(
+            configCandidate.table,
+            configCandidate.model
+        ).done(done);
+
+        var configParties = parties(DataTypes);
+        migration.createTable(
+            configParties.table,
+            configParties.model
+        ).done(done);
+
+        var configRoles = roles(DataTypes);
+           migration.createTable(
+               configRoles.table,
+               configRoles.model
+           ).done(done);
+
+        var configServices = services(DataTypes);
+        migration.createTable(
+            configServices.table,
+            configServices.model
+        ).done(done);
+
+        var configSites = sites(DataTypes);
+           migration.createTable(
+               configSites.table,
+               configSites.model
+           ).done(done);
+
+        var configTemplates = templates(DataTypes);
+           migration.createTable(
+               configTemplates.table,
+               configTemplates.model
+           ).done(done);
     },
     down: function (migration, DataTypes, done) {
         migration.dropTable(
@@ -25,108 +60,26 @@ module.exports = {
         migration.dropTable(
             candidate(DataTypes).table
         ).done(done);
-    }
-};
 
-/*var candidates = require('../config/models/candidates');
-
-module.exports = {
-    up: function (migration, DataTypes, done) {
-        var config = candidate(DataTypes);
-        migration.createTable(
-            config.table,
-            config.model
-        ).done(done);
-    },
-    down: function (migration, DataTypes, done) {
-        migration.dropTable(
-            candidate(DataTypes).table
-        ).done(done);
-    }
-};*/
-
-/*var parties = require('../config/models/parties');
-
-module.exports = {
-    up: function (migration, DataTypes, done) {
-        var config = parties(DataTypes);
-        migration.createTable(
-            config.table,
-            config.model
-        ).done(done);
-    },
-    down: function (migration, DataTypes, done) {
         migration.dropTable(
             parties(DataTypes).table
         ).done(done);
-    }
-};*/
 
-/*var roles = require('../config/models/roles');
-
-module.exports = {
-    up: function (migration, DataTypes, done) {
-        var config = roles(DataTypes);
-        migration.createTable(
-            config.table,
-            config.model
-        ).done(done);
-    },
-    down: function (migration, DataTypes, done) {
         migration.dropTable(
-            roles(DataTypes).table
-        ).done(done);
-    }
-};*/
+           roles(DataTypes).table
+       ).done(done);
 
-/*var services = require('../config/models/services');
-
-module.exports = {
-    up: function (migration, DataTypes, done) {
-        var config = services(DataTypes);
-        migration.createTable(
-            config.table,
-            config.model
-        ).done(done);
-    },
-    down: function (migration, DataTypes, done) {
         migration.dropTable(
             services(DataTypes).table
         ).done(done);
+
+        migration.dropTable(
+            sites(DataTypes).table
+        ).done(done);
+
+        migration.dropTable(
+            templates(DataTypes).table
+        ).done(done);
     }
-};*/
+};
 
-/*    var sites = require('../config/models/sites');
-
-    module.exports = {
-        up: function (migration, DataTypes, done) {
-            var config = sites(DataTypes);
-            migration.createTable(
-                config.table,
-                config.model
-            ).done(done);
-        },
-        down: function (migration, DataTypes, done) {
-            migration.dropTable(
-                sites(DataTypes).table
-            ).done(done);
-        }
-    };*/
-
-/*
-    var templates = require('../config/models/templates');
-
-    module.exports = {
-        up: function (migration, DataTypes, done) {
-            var config = templates(DataTypes);
-            migration.createTable(
-                config.table,
-                config.model
-            ).done(done);
-        },
-        down: function (migration, DataTypes, done) {
-            migration.dropTable(
-                templates(DataTypes).table
-            ).done(done);
-        }
-    };*/

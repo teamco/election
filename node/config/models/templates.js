@@ -10,7 +10,9 @@ module.exports = function (DataTypes) {
                 defaultValue: DataTypes.UUIDV1,
                 primaryKey: true,
                 allowNull: false
-            }
+            },
+            createdAt: DataTypes.DATE,
+            updatedAt: DataTypes.DATE
         }
     }
 };

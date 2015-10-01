@@ -1,0 +1,346 @@
+
+.tinynav{
+	display: none;
+}
+/* ---------------------------------------------------------------------- */
+/*	1024 Version
+/* ---------------------------------------------------------------------- */
+@media handheld, only screen and (max-width: 1024px) {
+	
+	.main_slide {
+		height: auto;
+	}
+	.main_title .text_rotate{
+		font-size: 35px;
+		line-height: 45px;
+	}
+	.done_info i {
+		font-size: 60px;
+	}
+	.candidate #slider2 li {
+		height: 470px;
+	}
+	ul.tabs li:last-child{
+		margin: 0;
+	}
+	.searchform .button {
+		margin-top: -5px;
+	}
+	.blog_slider li{
+		height: 400px;
+	}
+	.news_slider li{
+		height: 200px;
+	}
+	.events .date_info {
+		padding: 18px;
+	}
+	.events.list_events .date_info {
+		padding: 18px;
+	}
+	.events.list_events .content_event {
+		padding-top: 7px;
+	}
+
+}
+
+@media handheld, only screen and (max-width: 980px) {
+	#menu{
+		text-align: center;
+		padding: 0 0 20px 0;
+	}
+	.main_title .text_rotate{
+		font-size: 30px;
+		line-height: 40px;
+		padding-top: 50px;
+	}
+	.main_name h1,
+	.events .content_event,
+	.main_title.simple_sections h1{
+		text-align: center;
+	}
+	.done_info i{
+		display: none;
+	}
+	.box.donate{
+		padding: 20px 10px;
+	}
+	#slider2{
+		display: none;
+	}
+	.news_slider.rslides img {
+		height: 228px;
+	}
+	.news_slider li{
+		margin-bottom: 40px;
+	}
+	.date{
+		text-align: left;
+	}	
+	.events .date_info{
+		float: none;
+		margin-right: 0;
+	}
+	.events .content_event {
+		padding: 20px;
+	}
+	aside{
+		margin: 0 auto;
+		width: 400px;
+		margin-top: 50px;
+	}
+	.main_title p{
+		padding-top: 0;
+	}
+
+}
+
+/* ---------------------------------------------------------------------- */
+/*	Mobile Version
+/* ---------------------------------------------------------------------- */
+@media handheld, only screen and (max-width: 768px){
+	#menu{
+		display: none;	
+	}
+	.tinynav{
+		display: inline;
+		width: 100%;
+		height: 35px;
+		font-size: 14px;
+		margin: 0 auto;
+		margin-top: 28px;
+	}
+	.main_name h1 {
+		padding: 10px 0;
+	}
+	.main_title .text_rotate{
+		width: 100%;
+	}
+	.icon-error i{
+		font-size: 250px;
+	}
+}
+
+/* ---------------------------------------------------------------------- */
+/*	685px Version
+/* ---------------------------------------------------------------------- */
+@media handheld, only screen and (max-width: 685px) {
+	.main_title p {
+		padding-top: 6px;
+	}
+	.option_blog .news_slider li{
+		height: 300px;
+	}
+	.option_blog .button_url{
+		margin-bottom: 20px;
+	}
+	.news_slider.rslides img,
+	.blog_slider li{
+		height: auto;
+	}
+	.done_info{
+		display: none;
+	}
+	.tinynav{
+		margin-top: 0;
+		margin-bottom: 20px;
+	}
+	.events{
+		width: 400px;
+		margin: 0 auto;
+		margin-bottom: 20px;
+	}
+	.error{
+		padding: 0px 0;
+		text-align: center;
+	}
+	.icon-error i{
+		font-size: 150px;
+	}
+}
+/* ---------------------------------------------------------------------- */
+/*	600px Version
+/* ---------------------------------------------------------------------- */
+@media handheld, only screen and (max-width: 600px) {
+	.nav {
+	    background-color: rgba(0,0,0,0.6);	}
+	.nav li li a {
+	    background-color: rgba(0,0,0,0.8);
+	}
+	.nav li li li a {
+    	background-color: rgba(0,0,0,1);
+    }
+	.post_message input[type="text"], .post_message input[type="email"] {
+		width: 75%;
+	}
+	.post_message textarea {
+		width: 90%;
+	}
+    footer .social_icon{
+    	margin-left: 0;
+    }
+    .main_title .text_rotate{
+    	padding-top: 20px;
+    }
+    .main_title p{
+    	display: none;
+    }
+    .accordion-content{
+    	margin-bottom: 30px;
+    }
+}
+/* ---------------------------------------------------------------------- */
+/*	568px Version
+/* ---------------------------------------------------------------------- */
+@media handheld, only screen and (max-width: 568px) {
+	.main_title h3 {
+		font-size: 30px;
+		line-height: 40px;
+	}
+	.main_title h2 {
+		font-size: 36px;
+		line-height: 46px;
+	}
+	.candidate #slider2 li {
+		margin-left: 15%;
+	}
+	.blog_slider li{
+		height: 300px;
+	}
+	footer .copry{
+		margin-top: 20px;
+	}
+
+}
+
+/* ---------------------------------------------------------------------- */
+/*	480px Version
+/* ---------------------------------------------------------------------- */
+
+
+@media handheld, only screen and (max-width: 480px) {
+	.main_title h3{
+		padding-top: 20px;
+		font-size: 27px;
+		line-height: 37px;
+	}
+	.main_title h2{
+		font-size: 33px;
+		line-height: 43px;
+	}
+	
+	.candidate #slider2 li {
+		margin-left: 7%;
+	}
+	iframe.video_about{
+		height: 200px;
+	}
+	.news_slider li {
+		height: 205px;
+	}
+	.blog_slider li{
+		height: 250px;
+	}
+	.option_blog .news_slider li {
+		height: 220px;
+	}
+	footer {
+		padding: 20px 30px;
+	}
+	.main_title .text_rotate{
+		font-size: 20px;
+		line-height: 30px;
+		padding-top: 30px;
+	}
+	.main_title .social_icon{
+		display: none;
+	}
+	.main_title #newsletterForm input[type="email"]{
+		width: 310px;
+	}
+	#newsletterForm{
+		min-width: 0;
+		width: 432px;
+	}
+}
+
+/* ---------------------------------------------------------------------- */
+/*	384px Version
+/* ---------------------------------------------------------------------- */
+
+@media handheld, only screen and (max-width: 384px) {
+	.nav {
+	    margin-left: 0;
+	}
+	.candidate #slider2 li {
+		margin-left: 0;
+	}
+	.searchform .button {
+		margin-top: -5px;
+	}
+	.item_news.option_blog, .blog{
+		margin-right: 10px;
+	}
+	.simple_sections .social_icon{
+		display: inline-block;
+		margin-left: -10px;
+	}
+	.toggleMenu{
+		margin-left: 0;
+		padding: 10px 15px;
+	}
+	.comment img{
+		max-width: 40%;
+	}
+	aside{
+		width: 310px;
+	}
+	#newsletterForm{
+		width: 100%;
+		margin: 0;
+		margin-top: 60px;
+		background: rgba(0,0,0,0.8);
+	}
+	.main_title #newsletterForm input[type="email"] {
+		width: 250px;
+	}
+	.central_content{
+		margin: 110px auto 50px auto;
+	}
+}
+
+/* ---------------------------------------------------------------------- */
+/*	320px Version
+/* ---------------------------------------------------------------------- */
+
+@media handheld, only screen and (max-width: 320px) {
+	.main_name h1 {
+		font-size: 21px;
+		line-height: 31px;
+	}
+	.main_title p {
+		padding-top: 10px;
+	}
+	.menu{
+		padding: 26px 0 27px 0;
+	}
+	.simple_sections .social_icon a {
+		font-size: 16px;
+	}
+	.blog_slider li {
+		height: 200px;
+	}
+	aside{
+		width: 280px;
+	}
+	.searchform .button{
+		width: 24%;
+	}
+	.searchform input[type="text"]{
+		width: 73%;
+	}
+	.main_slide,
+	.main_slide .rslides img {
+		height: 300px;
+	}
+}

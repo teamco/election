@@ -1,0 +1,121 @@
+/*Main Colors*/
+
+	/*Color*/
+	a,
+	.info_resalt,
+	.central_content h1,
+	.central_content h3,
+	.central_content h2,
+	.accordion-trigger span:hover,
+	.accordion-trigger.active span,
+	.fn,
+	.content_done:hover a,
+	footer .contact a:hover,
+	.date li:hover,
+	.date li:hover span,
+	.nav li a:hover,
+	.testimonials_content h4 span,
+	.pagination > li > a, .pagination > li > span,
+	.pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus,
+	.icons a:hover i,
+	.register i
+	{
+		color: #8a0010;
+	}
+
+	/*Backgrounds*/
+	.cbp_tmtimeline > li .cbp_tmicon:hover{
+		background-color: #9B2633;
+	}
+	.progress-striped .bar{
+		background-color: #8a0010;
+	}
+	.events .date_info{		
+		background: #8a0010 url(../../../img/world-map.png) no-repeat;
+	}
+	ul.tabs li,
+	.event_information,
+	form.replies input[type="submit"],
+	form.replies input[type="submit"]:hover,
+	form.replies input[type="submit"],
+	.tooltip-inner,
+	.button,
+	.button_url,
+	.toggleMenu.active,
+	.cbp_tmtimeline > li .cbp_tmicon,
+	#wp_calendar caption,
+	#wp_calendar tbody td > a,
+	.nav li li a:hover,
+	.sf-menu .active,
+	.sf-menu li li a:hover,
+	#theme-options .title,
+	#theme-options .title span,
+	#theme-options .layout-style li.active,
+	.info-team h3
+	 {
+		background: #8a0010;
+	}
+
+	html ul.tabs li.active a:hover,
+	html ul.tabs li.active,
+	.button_url:hover{
+		background: #6f010e;
+	}
+
+	.cbp_tmtimeline > li .cbp_tmicon:hover{
+		box-shadow: 0 0 0 8px #8a0010;
+	}
+
+	/*Bordes*/
+	.sf-menu ul{
+		border-bottom: 3px solid #8a0010;	
+	}
+	.cbp_tmtimeline > li .cbp_tmicon{
+		box-shadow: 0 0 0 8px #9B2633;
+	}
+	.cbp_tmtimeline > li .cbp_tmlabel{
+		border-top: 3px solid #6f010e;
+	}
+	.main_name{
+		border-top: 4px solid #6f010e;
+	}
+	.cbp_tmtimeline > li .cbp_tmlabel:after,.cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel:after{
+		border-right-color: #6F010E;		
+	}
+	footer .divisor_line{
+		border-bottom: 1px solid #8a0010;
+		border-top: 1px solid #8a0010;
+	}
+	.social_icon li:hover{
+		border: 2px solid #8a0010;	
+	}
+	ul.tabs li:first-child {
+		border-left: 1px solid #6f010e;
+	}
+	.tab_container {
+		border-top: 2px solid #6f010e;
+	}
+	.item_topics{
+		border-bottom: 2px solid #8a0010;
+		border-top: 2px solid #8a0010;
+	}
+	
+	/*Images*/	
+	.accordion-trigger{
+		background: transparent url(../../../img/toggle.png) no-repeat 5px 7px;
+	}
+	.accordion-trigger.active{	
+		background: transparent url(../../../img/toggle.png) no-repeat 5px -78px;
+	}
+
+	.tooltip.top .tooltip-arrow {
+  		border-top-color: #8a0010;
+  	}
+	
+
+  	@media screen and (max-width: 768px) {
+		.cbp_tmtimeline > li .cbp_tmlabel:after,.cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel:after{		
+			border-bottom-color: #8a0010;
+			border-right-color: transparent;
+		}
+	}

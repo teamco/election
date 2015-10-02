@@ -1,9 +1,0 @@
-{
-  "firebase": "appolitics",
-  "public": ".",
-  "ignore": [
-    "firebase.json",
-    "**/.*",
-    "**/node_modules/**"
-  ]
-}

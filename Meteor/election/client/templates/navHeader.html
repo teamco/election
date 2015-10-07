@@ -1,0 +1,20 @@
+<template name="navHeader">
+    <li class="nav-header">
+        <div class="dropdown profile-element">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                <span class="clear"></span> <span class="block m-t-xs"> <strong class="font-bold">
+                {{#if currentUser}}
+                    <!--TODO-->
+                {{else}}
+                    <button id="facebook-login" class="btn btn-default"> Login with Facebook</button>
+                {{/if}}
+            </strong></span>
+                <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                    <li><a href="#">Logout</a></li>
+                </ul></a>
+        </div>
+        <div class="logo-element">
+            AP
+        </div>
+    </li>
+</template>

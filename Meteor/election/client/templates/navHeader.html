@@ -2,19 +2,8 @@
     <li class="nav-header">
         <div class="dropdown profile-element">
             {{#if currentUser}}
-                <span><img alt="image" class="img-circle" src="{{currentUser.profile.picture}}"/></span>
-            {{else}}
-                <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                    <span class="clear"></span>
-                    <span class="block m-t-xs">
-                        <strong class="font-bold"></strong>
-                    </span>
-                </a>
-                <button id="facebook-login" class="btn btn-default"> Login with Facebook</button>
+                <span><img alt="image" style="width: 50px" class="img-circle" src="{{currentUser.profile.picture}}"/></span>
             {{/if}}
-            <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                <li><a href="#">Logout</a></li>
-            </ul>
         </div>
         <div class="logo-element">
             AP

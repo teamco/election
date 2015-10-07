@@ -23,4 +23,5 @@ accounts-google
 accounts-facebook
 momentjs:moment
 iron:router
-accounts-ui
+ian:accounts-ui-bootstrap-3
+twbs:bootstrap

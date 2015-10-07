@@ -7,8 +7,8 @@ if (typeof Meteor.settings === 'undefined')
 
 _.defaults(Meteor.settings, {
     facebook: {
-        //appId: '417579755099789',
-        //secret: 'e5c75d88a98cbad17f671129f5f448cd'
+        appId: '1472927183016726',
+        secret: '57fc9f9efe160b8d2ceebc2de06db5ff'
     }
 });
 

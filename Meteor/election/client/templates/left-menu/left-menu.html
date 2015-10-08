@@ -1,35 +1,40 @@
 <template name="LeftMenu">
-    <nav class="navbar-default navbar-static-side" role="navigation">
-        <div class="sidebar-collapse">
-            <ul class="nav" id="side-menu">
-                {{> LeftMenuHeader }}
-                <li class="active">
-                    <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">Candidates</span></a>
-                </li>
-                <li>
-                    <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">Parties</span></a>
-                </li>
-                <li>
-                    <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">Mailbox </span><span
-                            class="label label-warning pull-right">16/24</span></a>
-                    <ul class="nav nav-second-level">
-                        <li><a href="/eyal">Inbox</a></li>
-                        <li><a href="mail_detail.html">Email view</a></li>
-                        <li><a href="mail_compose.html">Compose email</a></li>
-                        <li><a href="email_template.html">Email templates</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a name="donate"><i class="fa fa-dollar"></i><span class="nav-label">Donate</span></a>
-                </li>
-                <li>
-                    <a href="minor.html"><i class="fa fa-th-large"></i> <span class="nav-label">Events</span> </a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">Forms</span></a>
-                </li>
-            </ul>
 
-        </div>
-    </nav>
+    <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="side-menu">
+                    {{> LeftMenuHeader }}
+                    <li class="active">
+                        <a href="dashboard"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard</span></a>
+                    </li>
+                    <li >
+                        <a href="campaignManage"><i class="fa fa-th-large"></i> <span class="nav-label">Campaign Management</span></a>
+                    </li>
+                    <li>
+                        <a href="contentMange.html"><i class="fa fa-envelope"></i> <span class="nav-label">Content Management</span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="contentReports">Reports</a></li>
+                            <li><a href="fileRepository">Files</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="mailbox"><i class="fa fa-envelope"></i> <span class="nav-label">Mailbox </span><span class="label label-warning pull-right">16/24</span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="mailbox">Inbox</a></li>
+                            <li><a href="mail_compose">Compose email</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="calendar"><i class="fa fa-edit"></i> <span class="nav-label">Calendar</span> </a>
+                    </li>
+                    <li>
+                        <a href="events"><i class="fa fa-th-large"></i> <span class="nav-label">Events</span> </a>
+                    </li>
+                    <li>
+                        <a href="donations"><i class="fa fa-dollar"></i> <span class="nav-label">Donations</span></a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
 </template>

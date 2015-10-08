@@ -1,8 +1,18 @@
 Template.LeftMenu.events({
 
-    'click a[name="donate"]': function (event) {
-        Router.go('/donate');
+    'click a[name="donations"]': function (event) {
+        Router.go('/donations');
     },
+
+
+    'click a[name="dashboard"]': function (event) {
+        Router.go('/dashboard');
+    },
+
+    'click a[name="calendar"]': function (event) {
+           Router.go('/calendar');
+       },
+
 
     'click img.img-circle': function (event) {
         Router.go('/');
@@ -10,9 +20,20 @@ Template.LeftMenu.events({
 
 });
 
-Router.route('/donate', function () {
+Router.route('/donations', function () {
 
-    this.render('Donate');
-    this.render('Eyal', {to: 'eyal'});
+    this.render('donations');
 
-}, {name: 'donate'});
+}, {name: 'donations'});
+
+Router.route('/dashboard', function () {
+
+    this.render('dashboard');
+
+}, {name: 'dashboard'});
+
+Router.route('/calendar', function () {
+
+    this.render('calendar');
+
+}, {name: 'calendar'});

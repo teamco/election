@@ -25,4 +25,9 @@ momentjs:moment
 iron:router
 ian:accounts-ui-bootstrap-3
 twbs:bootstrap
-multiply:iron-router-progress
+
+rzymek:fullcalendar
+mrt:fullcalendar
+mrt:bootstrap-3
+accounts-base
+accounts-ui

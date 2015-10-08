@@ -13,5 +13,6 @@ Template.LeftMenu.events({
 Router.route('/donate', function () {
 
     this.render('Donate');
+    this.render('Eyal', {to: 'eyal'});
 
 }, {name: 'donate'});

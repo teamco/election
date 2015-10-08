@@ -3,18 +3,20 @@ Router.configure({
     layoutTemplate: 'appBody',
 
     // the appNotFound template is used for unknown routes and missing lists
-    notFoundTemplate: 'appNotFound',
+    //notFoundTemplate: 'appNotFound',
 
     // show the appLoading template whilst the subscriptions below load their data
-    loadingTemplate: 'appLoading',
+    //loadingTemplate: 'appLoading',
+
+    progress : true,
 
     // wait on the following subscriptions before rendering the page to ensure
     // the data it's expecting is present
     waitOn: function () {
         return [
-            Meteor.subscribe('adminApp'),
-            Meteor.subscribe('publicApp'),
-            Meteor.subscribe('privateApp')
+            //Meteor.subscribe('adminApp'),
+            //Meteor.subscribe('publicApp'),
+            //Meteor.subscribe('privateApp')
         ];
     }
 });
@@ -31,5 +33,6 @@ if (Meteor.isClient) {
     Router.onBeforeAction('dataNotFound', {except: ['join', 'signin']});
 }
 
-Router.route('join');
-Router.route('signin');
+Router.route('/', function () {
+    this.render('Index');
+});

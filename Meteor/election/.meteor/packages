@@ -25,3 +25,4 @@ momentjs:moment
 iron:router
 ian:accounts-ui-bootstrap-3
 twbs:bootstrap
+multiply:iron-router-progress

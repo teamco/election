@@ -1,4 +1,4 @@
-Template.facebook.events({
+Template.Facebook.events({
     'click #facebook-login': function (event) {
         Meteor.loginWithFacebook({}, function (err) {
             if (err) {

@@ -1,12 +1,10 @@
 <template name="appBody">
 
     <div id="wrapper">
-        {{> leftMenu}}
+        {{> LeftMenu}}
 
         <div id="page-wrapper" class="gray-bg">
-            {{> topHeader}}
-            {{> dashboard}}
-            {{> content}}
+            {{> yield}}
         </div>
     </div>
 </template>

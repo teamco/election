@@ -1,4 +1,4 @@
-Template._loginButtonsLoggedInDropdown.events({
+Template.CustomLogin.events({
     'click #login-buttons-edit-profile': function(event) {
         Router.go('profileEdit');
     }

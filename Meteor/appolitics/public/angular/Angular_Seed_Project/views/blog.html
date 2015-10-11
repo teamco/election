@@ -9,18 +9,12 @@
                     {{main.descriptionText}}
                 </small>
 
-
-
                 <ul class="list-group">
                     <div endless-scroll="item in site.blog" class="list-group-item">
-
                         <a href="#index/blog:{{item.uuid}}"><div class="nav-label">{{item.name}}</div></a>
-
                         <!--<div ng-include="'views/common/blog.html'"></div>-->
                     </div>
                 </ul>
-
-
 
                 <div ng-click="loadMore()">
                     load more

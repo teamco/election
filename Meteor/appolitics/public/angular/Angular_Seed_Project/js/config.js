@@ -32,6 +32,10 @@
                 templateUrl: "views/minor.html",
                 data: { pageTitle: 'Example view' }
             })
+            .state('index.blog', {
+                url: "/blog",
+                templateUrl: "views/blog.html"
+            })
             .state('index.blog:uuid', {
                 url: "/blog:uuid",
                 templateUrl: "views/blog.html",

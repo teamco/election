@@ -8,8 +8,7 @@
  * MainCtrl - controller
  */
 function MainCtrl($scope, $http) {
-    $http.get('/election/Meteor/appolitics/public/election.json').success(function(data) {
-        console.log('>>>>>',data);
+    $http.get('/election/Meteor/appolitics/public/angular/Angular_Seed_Project/json/election.json').success(function(data) {
         $scope.site = data;
     }.bind(this));
 

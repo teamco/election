@@ -38,7 +38,7 @@
             })
             .state('index.blog:uuid', {
                 url: "/blog:uuid",
-                templateUrl: "views/blog.html",
+                templateUrl: "views/article.html",
                 controller: 'ArticleCtrl'
                 /*controller: function($scope,$stateParams){
                     //do ajax to article here and load article

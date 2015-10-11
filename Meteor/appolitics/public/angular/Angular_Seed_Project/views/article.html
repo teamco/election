@@ -1,64 +1,12 @@
-<!--
-
-<div class="wrapper wrapper-content  animated fadeInRight article">
-    <div class="row">
-        <div class="col-lg-10 col-lg-offset-1">
-            <div class="ibox">
-                <div class="ibox-content">
-                    <div class="pull-right">
-                        <button class="btn btn-white btn-xs" type="button">Model</button>
-                        <button class="btn btn-white btn-xs" type="button">Publishing</button>
-                        <button class="btn btn-white btn-xs" type="button">Modern</button>
-                    </div>
-                    <div class="text-center article-title">
-                        <span class="text-muted"><i class="fa fa-clock-o"></i> 28th Oct 2015</span>
-                        <h1>
-                            {{title}}
-                        </h1>
-                    </div>
-                    {{content}}
-                    <hr>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h5>Tags:</h5>
-                            <button class="btn btn-primary btn-xs" type="button">Model</button>
-                            <button class="btn btn-white btn-xs" type="button">Publishing</button>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="small text-right">
-                                <h5>Stats:</h5>
-                                <div> <i class="fa fa-comments-o"> </i> 56 comments </div>
-                                <i class="fa fa-eye"> </i> 144 views
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="feed-activity-list">
-        <div ng-include="'views/common/feed-element.html'"></div>
-        <div ng-include="'views/common/feed-element.html'"></div>
-        <div ng-include="'views/common/feed-element.html'"></div>
-        <div ng-include="'views/common/feed-element.html'"></div>
-        <div ng-include="'views/common/feed-element.html'"></div>
-        <div ng-include="'views/common/feed-element.html'"></div>
-    </div>
-
-
-</div>-->
-
 <div class="row wrapper border-bottom white-bg page-heading">
     <div class="col-lg-10">
         <h2>Basic Form</h2>
         <ol class="breadcrumb">
             <li>
-                <a href="index.html">Home</a>
+                <a href="index.html#index/main">Home</a>
             </li>
             <li class="active">
-                <strong>Basic Form</strong>
+                <strong>{{article.title}}</strong>
             </li>
         </ol>
     </div>
@@ -119,70 +67,6 @@
             <div ng-include="'views/common/feed-element.html'"></div>
         </div>
         <button ng-click="onloadMoreFeedback()" class="btn btn-primary btn-block m-t"><i class="fa fa-arrow-down"></i> Show More</button>
-<!--
-        <div class="feed-element">
-            <a href="" class="pull-left">
-                <img alt="image" class="img-circle" src="img/a3.jpg">
-            </a>
-
-            <div class="media-body ">
-                <small class="pull-right">2h ago</small>
-                <strong>Janet Rosowski</strong> add 1 photo on <strong>Monica Smith</strong>. <br>
-                <small class="text-muted">2 days ago at 8:30am</small>
-            </div>
-        </div>
-        <div class="feed-element">
-            <a href="" class="pull-left">
-                <img alt="image" class="img-circle" src="img/a4.jpg">
-            </a>
-
-            <div class="media-body ">
-                <small class="pull-right text-navy">5h ago</small>
-                <strong>Chris Johnatan Overtunk</strong> started following <strong>Monica Smith</strong>. <br>
-                <small class="text-muted">Yesterday 1:21 pm - 11.06.2014</small>
-                <div class="actions">
-                    <a class="btn btn-xs btn-white"><i class="fa fa-thumbs-up"></i> Like </a>
-                    <a class="btn btn-xs btn-white"><i class="fa fa-heart"></i> Love</a>
-                </div>
-            </div>
-        </div>
-        <div class="feed-element">
-            <a href="" class="pull-left">
-                <img alt="image" class="img-circle" src="img/a5.jpg">
-            </a>
-
-            <div class="media-body ">
-                <small class="pull-right">2h ago</small>
-                <strong>Kim Smith</strong> posted message on <strong>Monica Smith</strong> site. <br>
-                <small class="text-muted">Yesterday 5:20 pm - 12.06.2014</small>
-                <div class="well">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                    Over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                </div>
-            </div>
-        </div>
-        <div class="feed-element">
-            <a href="" class="pull-left">
-                <img alt="image" class="img-circle" src="img/profile.jpg">
-            </a>
-
-            <div class="media-body ">
-                <small class="pull-right">23h ago</small>
-                <strong>Monica Smith</strong> love <strong>Kim Smith</strong>. <br>
-                <small class="text-muted">2 days ago at 2:30 am - 11.06.2014</small>
-            </div>
-        </div>
-        <div class="feed-element">
-            <a href="" class="pull-left">
-                <img alt="image" class="img-circle" src="img/a7.jpg">
-            </a>
-
-            <div class="media-body ">
-                <small class="pull-right">46h ago</small>
-                <strong>Mike Loreipsum</strong> started following <strong>Monica Smith</strong>. <br>
-                <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small>
-            </div>
-        </div>-->
     </div>
 
 </div>

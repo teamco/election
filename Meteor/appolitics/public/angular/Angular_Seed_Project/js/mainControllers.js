@@ -12,6 +12,13 @@ function MainCtrl($scope, $http) {
         $scope.site = data;
     }.bind(this));
 
+    $scope.loadBlogs = function loadBlogs() {
+        $scope.blogs = $scope.blogs || [];
+        $http.get('/election/Meteor/appolitics/public/angular/Angular_Seed_Project/json/blogs.json').success(function (data) {
+            $scope.blogs = $scope.blogs.concat(data.blogs);
+        }.bind(this));
+    }
+
     // Register event handler
     $scope.$on('endlessScroll:next', function() {
         // Determine which page to load
@@ -20,9 +27,11 @@ function MainCtrl($scope, $http) {
         //load(page);
     });
 
-    $scope.loadMore = function() {
-        debugger;
+    $scope.onloadMoreBlogs = function() {
+        $scope.loadBlogs();
     }
+
+    $scope.loadBlogs();
 
     this.userName = 'Example user 111';
     this.helloText = 'Welcome in SeedProject';

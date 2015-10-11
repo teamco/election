@@ -18,7 +18,7 @@
 
         $stateProvider
             .state('index', {
-                abstract: true,
+                abstract: false ,
                 url: "/index",
                 templateUrl: "views/common/content.html"
             })
@@ -32,18 +32,10 @@
                 templateUrl: "views/minor.html",
                 data: { pageTitle: 'Example view' }
             })
-            .state('index.blog', {
-                url: "/blog",
-                templateUrl: "views/blog.html"
-            })
             .state('index.blog:uuid', {
-                url: "/blog:uuid",
+                url: "/blog/:uuid",
                 templateUrl: "views/article.html",
                 controller: 'ArticleCtrl'
-                /*controller: function($scope,$stateParams){
-                    //do ajax to article here and load article
-                    $scope.uuid= $stateParams.uuid;
-                }*/
             })
     }
     var app = angular

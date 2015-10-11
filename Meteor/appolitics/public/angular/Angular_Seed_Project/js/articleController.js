@@ -4,7 +4,7 @@
      * MainCtrl - controller
      */
     function ArticleCtrl($scope, $http, $stateParams, $location) {
-        $http.get('/election/Meteor/appolitics/public/angular/Angular_Seed_Project/json/json/article.json?uuid=' + $stateParams.uuid).success(function(data) {
+        $http.get('/election/Meteor/appolitics/public/angular/Angular_Seed_Project/json/article.json?uuid=' + $stateParams.uuid).success(function(data) {
             $scope.article = data;
         }.bind(this));
 

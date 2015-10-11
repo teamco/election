@@ -1,0 +1,30 @@
+<template name="users">
+    <h2>Users list</h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>_id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Provider</th>
+            <th colspan="3">?</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each users}}
+            <tr>
+                <td>{{_id}}</td>
+                <td class="user-info">
+                    <img src="{{profile.picture}}" alt="{{profile.name}}" />
+                    <a href="#">{{profile.name}}</a>
+                </td>
+                <td>{{profile.email}}</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+</template>

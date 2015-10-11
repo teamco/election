@@ -1,4 +1,3 @@
-CalEvent = new Mongo.Collection('calevent');
 if (Meteor.isClient) {
 
     Template.dialog.events({
@@ -50,7 +49,7 @@ if (Meteor.isClient) {
                 $('#title').val(calEvent.title);
             },
             eventDrop: function (reqEvent) {
-                Meteor.call('moveEvent', reqEvent);
+                //Meteor.call('moveEvent', reqEvent);
             },
             events: function (start, end, callback) {
                 var calEvents = CalEvent.find({}, {reactive: false}).fetch();
@@ -67,25 +66,4 @@ if (Meteor.isClient) {
             }
         })
     }
-}
-
-if (Meteor.isServer) {
-    Meteor.startup(function () {
-        Meteor.methods({
-            'saveCalEvent': function (ce) {
-                CalEvent.insert(ce);
-            },
-            'updateTitle': function (id, title) {
-                return CalEvent.update({_id: id}, {$set: {title: title}});
-            },
-            'moveEvent': function (reqEvent) {
-                return CalEvent.update({_id: reqEvent._id}, {
-                    $set: {
-                        start: reqEvent.start,
-                        end: reqEvent.end
-                    }
-                })
-            }
-        })
-    });
 }

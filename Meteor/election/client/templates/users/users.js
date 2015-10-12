@@ -22,6 +22,11 @@ if (Meteor.isClient) {
                 });
             }
         },
+        hideModal: function () {
+            Meteor.defer(function () {
+                $('#editUserModal').modal("hide");
+            });
+        },
         allUsers: function () {
             return Accounts.users.find().fetch();
         },

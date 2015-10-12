@@ -41,6 +41,7 @@ Router.route('/', function () {
 
 Router.route('/users', function () {
     this.render('userData');
+    Template.userData.__helpers.get('hideModal')();
 });
 
 Router.route('/users/:id', function () {

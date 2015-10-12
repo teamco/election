@@ -1,13 +1,12 @@
 if (Meteor.isClient) {
 
     Template.editUser.events({
-        'click #editUserModal button[type="submit"]': function (event) {
+        'click #editUserModal button[type="submit"]': function (event, template) {
             event.preventDefault();
         }
     });
 
     Template.editUser.onRendered(function() {
-        //Meteor.defer(function () {
         this.$('.datetimepicker').datetimepicker({
             format: 'MMMM DD, YYYY'
         });
@@ -27,13 +26,13 @@ if (Meteor.isClient) {
             return getCurrentUser().profile.updatedAt;
         },
         firstName: function () {
-            return getUserProfile().firstName || getCurrentUser().profile.name.split(' ')[0];
+            return getUserProfile().firstName || getUserName().split(' ')[0];
         },
         middleName: function () {
             return getUserProfile().firstName;
         },
         lastName: function () {
-            return getUserProfile().firstName || getCurrentUser().profile.name.split(' ')[1];
+            return getUserProfile().firstName || getUserName().split(' ')[1];
         },
         birthday: function () {
             return getUserProfile().firstName;
@@ -42,6 +41,10 @@ if (Meteor.isClient) {
             return getUserProfile().firstName;
         }
     });
+
+    function getUserName() {
+        return getCurrentUser().profile.name || ' ';
+    }
 
     function getCurrentUser() {
         return Accounts.users.findOne(Router.current().params.id) || {profile: {}};

@@ -8,13 +8,13 @@
  * MainCtrl - controller
  */
 function MainCtrl($scope, $http) {
-    $http.get('/election/Meteor/appolitics/public/angular/Angular_Seed_Project/json/election.json').success(function(data) {
+    $http.get('json/election.json').success(function(data) {
         $scope.site = data;
     }.bind(this));
 
     $scope.loadBlogs = function loadBlogs() {
         $scope.blogs = $scope.blogs || [];
-        $http.get('/election/Meteor/appolitics/public/angular/Angular_Seed_Project/json/blogs.json').success(function (data) {
+        $http.get('json/blogs.json').success(function (data) {
             $scope.blogs = $scope.blogs.concat(data.blogs);
         }.bind(this));
     }

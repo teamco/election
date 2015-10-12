@@ -32,6 +32,18 @@
                 templateUrl: "views/minor.html",
                 data: { pageTitle: 'Example view' }
             })
+            .state('index.donate', {
+                url: "/donate",
+                templateUrl: "views/donate.html"
+            })
+            .state('index.parties', {
+                url: "/parties",
+                templateUrl: "views/parties.html"
+            })
+            .state('index.candidates', {
+                url: "/candidates",
+                templateUrl: "views/candidates.html"
+            })
             .state('index.blog:uuid', {
                 url: "/blog/:uuid",
                 templateUrl: "views/article.html",

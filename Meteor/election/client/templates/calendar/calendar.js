@@ -1,3 +1,5 @@
+CalEvent = new Mongo.Collection('calevent');
+
 if (Meteor.isClient) {
 
     Template.dialog.events({

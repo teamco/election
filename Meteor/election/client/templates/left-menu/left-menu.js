@@ -15,6 +15,7 @@ Template.LeftMenu.events({
 
     'click a[name="inbox"]': function (event) {
             Router.go('/inbox');
+
         },
 
     'click a[name="mail_compose"]': function (event) {

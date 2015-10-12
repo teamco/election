@@ -1,4 +1,5 @@
 CalEvent = new Mongo.Collection('calevent');
+
 CalEvent.allow({
     insert: function (user_uuid, doc) {debugger;
         return doc.user_uuid === user_uuid;

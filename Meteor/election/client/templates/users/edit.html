@@ -19,29 +19,8 @@
                     <form role="form">
 
                         <div class="tab-content">
-                            <div id="info" class="tab-pane fade in active">
-                                <div class="form-group">
-                                    <label for="user-email">Email address:</label>
-                                    <input type="email" disabled="disabled" class="form-control" id="user-email" value="{{email}}" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="user-provider">Provider:</label>
-                                    <input id="user-provider" type="text" class="form-control" disabled="disabled" value="{{provider}}" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="user-profile">Profile:</label>
-                                    <input id="user-profile" type="text" class="form-control" disabled="disabled" value="{{profile}}" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="user-last-login">Last login:</label>
-                                    <input id="user-last-login" type="text" class="form-control" disabled="disabled" value="{{longDate lastLogin}}" />
-                                </div>
-                            </div>
-                            <div id="profile" class="tab-pane fade">
-                                <h3>Menu 1</h3>
-
-                                <p>Some content in menu 1.</p>
-                            </div>
+                            {{> editUserInfo email=email profile=profile lastLogin=lastLogin provider=provider}}
+                            {{> editUserProfile firstName=firstName middleName=middleName lastName=lastName}}
                             <div id="access" class="tab-pane fade">
                                 <h3>Menu 2</h3>
 

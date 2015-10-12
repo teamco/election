@@ -1,5 +1,24 @@
 td.user-info img {
     border: 1px solid #333;
+    border-radius: 50%;
     width: 30px;
+    height: 30px;
     margin-right: 10px;
+}
+
+.table.userData > tbody > tr > td {
+    vertical-align: middle;
+}
+
+ul.notifications {
+    position: fixed;
+}
+
+#login-dropdown-list {
+    right: 0;
+    left: auto;
+}
+
+#editUserModal .nav-tabs {
+    margin-bottom: 2em;
 }

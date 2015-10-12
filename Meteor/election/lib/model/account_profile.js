@@ -5,7 +5,7 @@ Meteor.methods({
         return {
             create: function (account, opts) {
                 AccountProfile.insert({
-                    accountId: account._id,
+                    user_id: account._id,
                     firstName: opts.firstName,
                     middleName: opts.middleName,
                     lastName: opts.lastName,

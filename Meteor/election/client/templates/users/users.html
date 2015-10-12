@@ -1,30 +1,32 @@
-<template name="users">
+<template name="userData">
     <h2>Users list</h2>
-    <table class="table">
+
+    <table class="table userData">
         <thead>
         <tr>
-            <th>_id</th>
             <th>Name</th>
             <th>Email</th>
             <th>Provider</th>
+            <th>Last login</th>
             <th colspan="3">?</th>
         </tr>
         </thead>
         <tbody>
-        {{#each users}}
-            <tr>
-                <td>{{_id}}</td>
+        {{#each allUsers}}
+            <tr class="{{#if isCurrentUser _id}}current{{/if}}">
                 <td class="user-info">
-                    <img src="{{profile.picture}}" alt="{{profile.name}}" />
-                    <a href="#">{{profile.name}}</a>
+                    <img src="{{profile.picture}}" alt="{{profile.name}}"/>
+                    <a href="{{profile.link}}">{{profile.name}}</a>
                 </td>
                 <td>{{profile.email}}</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>{{profile.provider}}</td>
+                <td>{{longDate profile.updatedAt}}</td>
+                <td>{{> quickRemoveLink collection="Meteor.users" _id=_id onError=onError onSuccess=onSuccess beforeRemove=beforeRemove class="btn btn-danger"}}</td>
+                <td><button rel="editUser" type="button" class="btn btn-info">Show</button></td>
                 <td></td>
             </tr>
         {{/each}}
         </tbody>
     </table>
+    {{> editUser}}
 </template>

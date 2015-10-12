@@ -5,12 +5,13 @@ Router.configure({
     // the appNotFound template is used for unknown routes and missing lists
     notFoundTemplate: 'appNotFound',
 
-    progress : true,
+    progress: true,
 
     // wait on the following subscriptions before rendering the page to ensure
     // the data it's expecting is present
     waitOn: function () {
         return [
+            Meteor.subscribe('userData')
             //Meteor.subscribe('adminApp'),
             //Meteor.subscribe('publicApp'),
             //Meteor.subscribe('privateApp')
@@ -26,6 +27,23 @@ if (Meteor.isClient) {
     dataReadyHold = LaunchScreen.hold();
 }
 
+Router.onBeforeAction(function () {
+    if (!Meteor.userId()) {
+        this.render('login');
+    } else {
+        this.next();
+    }
+});
+
 Router.route('/', function () {
     this.render('Index');
+});
+
+Router.route('/users', function () {
+    this.render('userData');
+});
+
+Router.route('/users/:id', function () {
+    this.render('userData');
+    Template.userData.__helpers.get('showModal')(this.params.id);
 });

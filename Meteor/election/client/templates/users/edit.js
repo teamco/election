@@ -1,8 +1,16 @@
 if (Meteor.isClient) {
 
     Template.editUser.events({
-        'click #editUserModal button[type="submit"]': function (event, template) {
+        'click #editUserModal button[rel="submit"]': function (event, template) {
             event.preventDefault();
+        }
+    });
+
+    Template.editUser.events({
+        'click #editUserModal button[rel="cancel"]': function (event, template) {
+            event.preventDefault();
+            Template.userData.__helpers.get('hideModal')();
+            Router.go('/users');
         }
     });
 

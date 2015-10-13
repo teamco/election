@@ -34,15 +34,20 @@ if (Meteor.isClient) {
         beforeRemove: function () {
             return function (collection, _id) {
                 var user = collection.findOne(_id),
-                    name = user.profile.name,
-                    message = 'Really remove user: ' + name + '?';
+                    name = user.profile.name || user.profile.email,
+                    scope = this;
 
-                if (confirm(message)) {
-                    this.remove();
-                    if (isCurrentUser(_id)) {
-                        Meteor.logout();
+                BootstrapModalPrompt.prompt({
+                    title: "Delete user",
+                    content: 'Do you really want to remove user: ' + name + '?'
+                }, function (confirmed) {
+                    if (confirmed) {
+                        scope.remove();
+                        if (isCurrentUser(_id)) {
+                            Meteor.logout();
+                        }
                     }
-                }
+                });
             };
         }
     });
@@ -51,3 +56,5 @@ if (Meteor.isClient) {
 function isCurrentUser(_id) {
     return _id === Meteor.userId();
 }
+
+Meteor.subscribe("allUsers");

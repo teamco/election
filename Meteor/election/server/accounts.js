@@ -74,3 +74,7 @@ function getProviderInfo(provider, user) {
 
     return opts;
 }
+
+Meteor.publish("allUsers", function () {
+    return Meteor.users.find();
+});

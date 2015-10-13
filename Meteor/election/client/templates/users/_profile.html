@@ -17,8 +17,12 @@
 
             <div class="input-group datetimepicker">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-                <input class="set-due-date form-control" type="text" id="user-birthday"/>
+                <input class="set-due-date form-control" type="text" id="user-birthday" value="{{birthday}}"/>
             </div>
+        </div>
+        <div class="form-group">
+            <label for="user-address">Address:</label>
+            <textarea type="text" class="form-control" id="user-address">{{address}}</textarea>
         </div>
     </div>
 </template>

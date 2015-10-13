@@ -31,20 +31,6 @@ if (Meteor.isClient) {
             return Accounts.users.find().fetch();
         },
         isCurrentUser: isCurrentUser,
-        onError: function () {
-            return function (error) {
-                Meteor.call('notify', 'serverMessage:error', 'Error', error, {
-                    timeout: 1000
-                });
-            };
-        },
-        onSuccess: function () {
-            return function (result) {
-                Meteor.call('notify', 'serverMessage:success', 'Success', result, {
-                    timeout: 1000
-                });
-            };
-        },
         beforeRemove: function () {
             return function (collection, _id) {
                 var user = collection.findOne(_id),
@@ -54,7 +40,7 @@ if (Meteor.isClient) {
                 if (confirm(message)) {
                     this.remove();
                     if (isCurrentUser(_id)) {
-                        //Meteor.logout();
+                        Meteor.logout();
                     }
                 }
             };

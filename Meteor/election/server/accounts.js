@@ -1,17 +1,19 @@
 Accounts.onCreateUser(function (options, user) {
 
     var provider = Object.keys(user.services).shift() || '';
-    var auth = getProviderInfo(provider, user.services);
+    var auth = getProviderInfo(provider, user);
 
-    if ((options || {}).profile) {
-        options.profile.picture = auth.picture;
-        options.profile.provider = provider;
-        options.profile.email = auth.email;
-        options.profile.link = auth.link;
-        options.profile.createdAt = user.createdAt;
-        options.profile.updatedAt = user.createdAt;
-        user.profile = options.profile;
-    }
+    options = options || {};
+    options.profile = options.profile || {};
+
+    options.profile.picture = auth.picture;
+    options.profile.provider = provider;
+    options.profile.email = auth.email;
+    options.profile.link = auth.link;
+    options.profile.createdAt = user.createdAt;
+    options.profile.updatedAt = user.createdAt;
+    user.profile = options.profile;
+
     return user;
 });
 
@@ -27,10 +29,10 @@ Meteor.users.allow({
     }
 });
 
-function getProviderInfo(provider, oauth) {
+function getProviderInfo(provider, user) {
 
     var opts = {},
-        info = oauth[provider];
+        info = user.services[provider];
 
     switch (provider) {
         case 'facebook':
@@ -43,24 +45,31 @@ function getProviderInfo(provider, oauth) {
         case 'github':
             opts = {
                 email: info.email,
-                picture: '',
                 link: ''
             };
             break;
         case 'google':
             opts = {
                 email: info.email,
-                picture: '',
                 link: ''
             };
             break;
         case 'twitter':
             opts = {
                 email: info.screenName,
-                picture: '',
                 link: ''
             };
             break;
+        default:
+            opts = {
+                email: user.emails[0].address,
+                link: '/users/' + user._id
+            };
+            break;
+    }
+
+    if (!opts.picture) {
+        opts.picture = Gravatar.imageUrl(opts.email, {});
     }
 
     return opts;

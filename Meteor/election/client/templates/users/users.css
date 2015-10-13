@@ -22,3 +22,7 @@ ul.notifications {
 #editUserModal .nav-tabs {
     margin-bottom: 2em;
 }
+
+#editUserModal textarea {
+    resize: vertical;
+}

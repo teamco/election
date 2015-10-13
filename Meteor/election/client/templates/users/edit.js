@@ -29,16 +29,16 @@ if (Meteor.isClient) {
             return getUserProfile().firstName || getUserName().split(' ')[0];
         },
         middleName: function () {
-            return getUserProfile().firstName;
+            return getUserProfile().middleName;
         },
         lastName: function () {
-            return getUserProfile().firstName || getUserName().split(' ')[1];
+            return getUserProfile().lastName || getUserName().split(' ')[1];
         },
         birthday: function () {
-            return getUserProfile().firstName;
+            return getUserProfile().birthday;
         },
         address: function () {
-            return getUserProfile().firstName;
+            return getUserProfile().address;
         }
     });
 

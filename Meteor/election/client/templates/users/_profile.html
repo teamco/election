@@ -21,6 +21,14 @@
             </div>
         </div>
         <div class="form-group">
+            <label for="user-country">Country:</label>
+            <select class="form-control">
+                {{#each countries}}
+                    <option value="{{name}}">{{name}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <div class="form-group">
             <label for="user-address">Address:</label>
             <textarea type="text" class="form-control" id="user-address">{{address}}</textarea>
         </div>

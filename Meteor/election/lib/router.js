@@ -29,7 +29,7 @@ if (Meteor.isClient) {
 
 Router.onBeforeAction(function () {
     if (!Meteor.userId()) {
-        this.render('login');
+        this.render('publicSite');
     } else {
         this.next();
     }
@@ -37,6 +37,11 @@ Router.onBeforeAction(function () {
 
 Router.route('/', function () {
     this.render('Index');
+});
+
+Router.route('/home', function () {
+    this.render('Home');
+    this.layout(null);
 });
 
 Router.route('/users', function () {

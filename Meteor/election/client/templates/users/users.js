@@ -1,5 +1,8 @@
 Template.userData.events({
     "click button[rel='editUser']": function (event, template) {
+
+        event.preventDefault();
+
         var nextUrl = '/users/' + this._id,
             currentUrl = Router.current().originalUrl;
 

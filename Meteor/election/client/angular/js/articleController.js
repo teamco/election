@@ -18,13 +18,15 @@
                 }
             }.bind(this));
             console.log(response);
-        }
+        };
 
         $scope.onloadMoreFeedback = function(){
             $scope.loadFeedback();
-        }
+        };
+
         $scope.loadFeedback();
 
-    };
+    }
+
     angular.module('inspinia').controller('ArticleCtrl', ArticleCtrl);
 }());

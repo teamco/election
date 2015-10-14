@@ -8,6 +8,9 @@
  * MainCtrl - controller
  */
 function MainCtrl($scope, $http) {
+
+    $scope.viewPath = '/angular/views/';
+
     $http.get('/angular/json/election.json').success(function(data) {
         $scope.site = data;
     }.bind(this));
@@ -17,7 +20,7 @@ function MainCtrl($scope, $http) {
         $http.get('/angular/json/blogs.json').success(function (data) {
             $scope.blogs = $scope.blogs.concat(data.blogs);
         }.bind(this));
-    }
+    };
 
     // Register event handler
     $scope.$on('endlessScroll:next', function() {
@@ -29,13 +32,13 @@ function MainCtrl($scope, $http) {
 
     $scope.onloadMoreBlogs = function() {
         $scope.loadBlogs();
-    }
+    };
 
     $scope.loadBlogs();
 
     this.userName = 'Example user 111';
     this.helloText = 'Welcome in SeedProject';
     this.descriptionText = 'It is an application skeleton for a typical AngularJS web app. You can use it to quickly bootstrap your angular webapp projects and dev environment for these projects.';
-};
+}
 
 angular.module('inspinia').controller('MainCtrl', MainCtrl);

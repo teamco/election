@@ -1,0 +1,39 @@
+<div class="social-feed-box">
+
+    <div class="pull-right social-action dropdown">
+        <button data-toggle="dropdown" class="dropdown-toggle btn-white" aria-expanded="false">
+            <i class="fa fa-angle-down"></i>
+        </button>
+        <ul class="dropdown-menu m-t-xs">
+            <li><a href="#">Config</a></li>
+        </ul>
+    </div>
+    <div class="social-avatar">
+        <a href="" class="pull-left">
+            <img alt="image" src="../../candidatesContent/marcorubio/Marco-Rubio.gif">
+        </a>
+        <a href="#index/blog/{{item.uuid}}" class="btn-link">
+               <h2>
+                   {{item.title}}
+               </h2>
+           </a>
+        <div class="media-body">
+            <a href="#">
+                {{item.by}}
+            </a>
+            <small class="text-muted">Today 4:21 pm - 12.06.2014</small>
+        </div>
+    </div>
+    <div class="social-body" class="article">
+        <p>
+            {{item.description}}
+        </p>
+        <img src={{item.media}} class="img-responsive">
+
+        <div class="btn-group">
+            <button class="btn btn-white btn-xs"><i class="fa fa-thumbs-up"></i> Like this!</button>
+            <button class="btn btn-white btn-xs"><i class="fa fa-comments"></i> Comment</button>
+            <button class="btn btn-white btn-xs"><i class="fa fa-share"></i> Share</button>
+        </div>
+    </div>
+</div>

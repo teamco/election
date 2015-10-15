@@ -1,9 +1,36 @@
 {
-    "blogs": [
-        {"name": "name 1", "title": "title 1", "description": "description 1", "uuid": "1111"},
-        {"name": "name 2", "title": "title 2", "description": "description 2", "uuid": "2222"},
-        {"name": "name 3", "title": "title 3", "description": "description 3", "uuid": "3333"},
-        {"name": "name 4", "title": "title 4", "description": "description 4", "uuid": "4444"}
-    ]
-
+  "blogs": [
+    {
+      "name": "name 1",
+      "by": "Marco Rubio",
+      "title": "The Obama Administration Needs to Stop Blaming Israel for Palestinian Terror",
+      "description": "As Palestinian terrorists continue to murder and maim Israelis, the Obama administration is spreading malicious falsehoods about the attacks. On Wednesday, administration spokesmen continued to blame “both sides” for the violence, as if the Israeli victims were themselves somehow culpable.  Indeed, speaking at Harvard on Tuesday, Secretary of State Kerry imputed responsibility to the Israelis. “There’s been a massive increase in settlements over the course of the last years,” he said. “Now you have this violence because there’s a frustration that is growing.” This is false. There has been no massive increase in settlements, and his statement ignores the campaign of incitement based on the lie that the Israelis are seeking to displace the Muslims from the Temple Mount in Jerusalem.  By lying about the true causes of the violence and falsely blaming the Israelis, Kerry brings dishonor on the United States. By providing a Palestinian leadership with cover for its support for terrorism, he rewards incitement.  For her part, Hillary Clinton is no better. She refuses to even say the words “Palestinian terrorism.” Her statement on Monday fails to identify those guilty of stabbing women and children. It avoids criticizing those who for weeks have exhorted Palestinians to murder and wound Israeli civilians?—?namely, Palestinian President Mahmoud Abbas, his Fatah Party, and Hamas. It does not even endorse Israel’s right to defend itself.  The United States, however, must defend Israel’s right to fight terrorism as if its own rights depended on it. Indeed, they do. History shows that the excuses for terror that are hurled at Israel today will be hurled at us tomorrow. Speaking the truth about Israel under siege is our first line of defense.",
+      "media": "../../candidatesContent/marcorubio/150408_Marco_Stand_Blog-892x400.png",
+      "uuid": "1111"
+    },
+    {
+      "name": "name 2",
+      "by": "Marco Rubio",
+      "title": "Supporting and Safeguarding the Jewish State",
+      "description": "We have a national security interest in making sure Israel is strong, and we have a moral obligation to keep the promise made in the wake of the Holocaust for a safe and secure nation for the Jewish people.  Sadly, even as Israelis are facing daily Palestinian terrorist attacks, that commitment to Israel has been lacking from the current administration.  Israel deserves our support and respect. If we are perceived as not standing with Israel, what realistically could any of our other allies expect from us? It’s time to reaffirm our commitment to Israel’s continued strength and prosperity.",
+      "media": "../../candidatesContent/marcorubio/150408_Marco_Stand_Blog-892x400.png",
+      "uuid": "2222"
+    },
+    {
+      "name": "name 3",
+      "by": "Marco Rubio",
+      "title": "Want to Watch Marco in Person at the Next Debate?",
+      "description": "Have you been, like millions, watching the Republican presidential debates? Want to see Marco reprise his dominating performance from the first two debates at the end of this month, in Colorado?  Then enter our contest to win tickets to the October 28th debate in Denver, with airfare and accommodation on us!  The CNN debate in September was their most watched broadcast in history, with more than 20 million viewers.  And the Fox News debate back in August — 24 million Americans tuned in — remains the most-watched cable program in history (other than sports, of course).  Tickets for these debates are seriously hard to come by, because everyone wants to be there when candidates get such a big stage.",
+      "media": "../../candidatesContent/marcorubio/151013_MarcoRubio_LiveDebate_Post-1-892x400.jpg",
+      "uuid": "3333"
+    },
+    {
+      "name": "name 4",
+      "by": "Marco Rubio",
+      "title": "Marco: Hillary and Bernie May Not Care about Her Email Scandal, But Americans Do",
+      "description": "Marco Rubio was on Fox and Friends the morning of October 14, 2015, to react to the first Democratic debate. Asked about Bernie Sanders’s and Hillary Clinton’s dismissal of investigations into her use of private email while in government:  Well, they may not care about it, but the people in this country do, because it goes right to the issue of credibility. First of all, it’s pretty clear that what she told us and what happened are two very different things. Second, it goes to the issue of competency: These emails, by the secretary of state, were the prime targets of foreign intelligence agencies. As soon as the news came out that she was using a private server, one of the first things I said was, those emails were vulnerable to the Chinese, to the North Koreans, Iran, you name it . . . And of course now we’re seeing reports that that was the case.  It shows that she was both incompetent but quite frankly was not being [honest] with the American people andplaying games with words.  It goes to the issue of whether you can trust someone or not, the credibility issue.",
+      "media": "../../candidatesContent/marcorubio/rubio_101415_foxsite-892x400.jpg",
+      "uuid": "4444"
+    }
+  ]
 }

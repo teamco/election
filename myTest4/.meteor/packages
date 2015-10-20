@@ -31,3 +31,6 @@ accounts-ui
 accounts-twitter
 accounts-facebook
 accounts-google
+service-configuration
+facebook
+google

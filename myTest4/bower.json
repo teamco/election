@@ -14,7 +14,7 @@
   },
   "overrides": {
     "angular": {
-      "main": [] 
+      "brand": []
     }
   }
 }

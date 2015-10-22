@@ -11,7 +11,7 @@ angular.module('myTest4App')
       case 'AUTH_REQUIRED':
       case 'FORBIDDEN':
       case 'UNAUTHORIZED':
-        $state.go('main');
+        $state.go('brand');
         break;
     }
   });

@@ -13,7 +13,7 @@ angular.module('appoliticsApp').config(function ($urlRouterProvider, $locationPr
             case 'AUTH_REQUIRED':
             case 'FORBIDDEN':
             case 'UNAUTHORIZED':
-                $state.go('users');
+                $state.go('main');
                 break;
         }
     });

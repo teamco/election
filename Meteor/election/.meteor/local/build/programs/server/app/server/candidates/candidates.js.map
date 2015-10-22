@@ -1,0 +1,1 @@
+{"version":3,"sources":["meteor://💻app/server/candidates/candidates.js"],"names":[],"mappings":";;;;;;;;AAAA,SAAS,GAAG,IAAI,MAAM,CAAC,UAAU,CAAC,YAAY,CAAC,CAAC,2B","file":"/server/candidates/candidates.js","sourcesContent":["Candidate = new Meteor.Collection('candidates');\n"]}

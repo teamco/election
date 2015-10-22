@@ -1,0 +1,42 @@
+/* Imports for global scope */
+
+Mongo = Package.mongo.Mongo;
+Session = Package.session.Session;
+$ = Package.jquery.$;
+jQuery = Package.jquery.jQuery;
+Tracker = Package.tracker.Tracker;
+Deps = Package.tracker.Deps;
+Date = Package['es5-shim'].Date;
+parseInt = Package['es5-shim'].parseInt;
+ECMAScript = Package.ecmascript.ECMAScript;
+ServiceConfiguration = Package['service-configuration'].ServiceConfiguration;
+Roles = Package['alanning:roles'].Roles;
+moment = Package['momentjs:moment'].moment;
+Router = Package['iron:router'].Router;
+RouteController = Package['iron:router'].RouteController;
+Accounts = Package['accounts-base'].Accounts;
+AccountsClient = Package['accounts-base'].AccountsClient;
+Notifications = Package['gfk:notifications'].Notifications;
+ServerMessages = Package['gfk:server-messages'].ServerMessages;
+Gravatar = Package['jparker:gravatar'].Gravatar;
+BootstrapModalPrompt = Package['theduke:bootstrap-modal-prompt'].BootstrapModalPrompt;
+Countries = Package['chipcastle:countries'].Countries;
+Meteor = Package.meteor.Meteor;
+WebApp = Package.webapp.WebApp;
+_ = Package.underscore._;
+DDP = Package['ddp-client'].DDP;
+LaunchScreen = Package['launch-screen'].LaunchScreen;
+Blaze = Package.ui.Blaze;
+UI = Package.ui.UI;
+Handlebars = Package.ui.Handlebars;
+Spacebars = Package.spacebars.Spacebars;
+Template = Package.templating.Template;
+babelHelpers = Package['babel-runtime'].babelHelpers;
+Promise = Package.promise.Promise;
+Map = Package['ecmascript-collections'].Map;
+Set = Package['ecmascript-collections'].Set;
+Iron = Package['iron:core'].Iron;
+Autoupdate = Package.autoupdate.Autoupdate;
+Reload = Package.reload.Reload;
+HTML = Package.htmljs.HTML;
+

@@ -1,0 +1,1 @@
+{"version":3,"sources":["meteor://💻app/server/sites/sites.js"],"names":[],"mappings":";;;;;;;;AAAA,KAAK,GAAG,IAAI,MAAM,CAAC,UAAU,CAAC,OAAO,CAAC,CAAC,oC","file":"/server/sites/sites.js","sourcesContent":["Sites = new Meteor.Collection('sites');"]}

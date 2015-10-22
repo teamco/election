@@ -1,0 +1,14 @@
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="text-center m-t-lg">
+                <ul class="list-group">
+                    <div endless-scroll="item in blogs" class="list-group-item">
+                        <div ng-include="'/angular/views/common/blog.html'"></div>
+                    </div>
+                </ul>
+            </div>
+            <button ng-click="onloadMoreBlogs()" class="btn btn-primary btn-block m-t"><i class="fa fa-arrow-down"></i> Show More</button>
+        </div>
+    </div>
+</div>

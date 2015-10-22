@@ -1,0 +1,1 @@
+{"version":3,"sources":["meteor://💻app/lib/shared_config.js"],"names":[],"mappings":";;;;;;;;AAAA,cAAc,GAAG,IAAI,cAAc,EAAE,CAAC,qC","file":"/lib/shared_config.js","sourcesContent":["serverMessages = new ServerMessages();"]}

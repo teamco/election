@@ -1,0 +1,1 @@
+{"head":"","body":"","js":"\nTemplate.__checkName(\"Index\");\nTemplate[\"Index\"] = new Template(\"Template.Index\", (function() {\n  var view = this;\n  return [ Spacebars.include(view.lookupTemplate(\"Dashboard\")), \"\\n    \", Spacebars.include(view.lookupTemplate(\"Content\")) ];\n}));\n","bodyAttrs":{}}

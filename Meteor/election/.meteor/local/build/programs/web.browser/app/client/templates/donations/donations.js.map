@@ -1,0 +1,1 @@
+{"version":3,"sources":["meteor://💻app/client/templates/donations/donations.js"],"names":[],"mappings":";;;;;;;;AAAA,QAAQ,CAAC,SAAS,CAAC,MAAM,CAAC,EAGzB,CAAC,CAAC,6C","file":"/client/templates/donations/donations.js","sourcesContent":["Template.donations.events({\n\n\n});\n"]}

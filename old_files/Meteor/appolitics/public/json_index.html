@@ -1,0 +1,58 @@
+<html>
+<head>
+    <script src='crud.js'></script>
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script>
+
+        jQuery(document).ready(function(){
+            jQuery('.retrieve-data').on('click', function(){
+                window.app.crud.getCandidate().done(function(data){
+                    console.log('>>>>>', data);
+                    alert(JSON.stringify(data));
+                });
+            });
+
+            jQuery('.save-data').on('click', function(){
+                jQuery.ajax({
+                    url: "election.json" + "?" + Math.random(),
+                    success: function(data){
+                        window.app.crud.saveAll(data);
+                        alert('Data saved');
+                    },
+                    error: function(){
+                        alert('error');
+                    }
+                })
+
+            });
+
+            /**
+             * Retrive only on section
+             */
+            jQuery('.retrieve-donate-only').on('click', function(){
+                var fireBase = new Firebase('https://appolitics.firebaseio.com/');
+                fireBase.child("candidate/donate").on('value', function(snapshot) {
+                    var donate = snapshot.val();
+                    console.log('>>>>>>',donate);
+                    alert(JSON.stringify(donate));
+                });
+            });
+
+        });
+
+    </script>
+</head>
+<body>
+
+Hello World!
+
+<button class="save-data">saveData</button>
+
+<button class="retrieve-data">Retrieve Data</button>
+
+<button class="retrieve-donate-only">Retrieve donate only</button>
+
+
+</body>
+</html>

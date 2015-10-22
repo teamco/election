@@ -9,7 +9,7 @@ Router.configure({
 
     // wait on the following subscriptions before rendering the page to ensure
     // the data it's expecting is present
-    waitOn: function () {
+    wait: function () {
         return [
             Meteor.subscribe('userData')
             //Meteor.subscribe('adminApp'),
@@ -28,28 +28,24 @@ if (Meteor.isClient) {
 }
 
 Router.onBeforeAction(function () {
-    if (!Meteor.userId()) {
-        this.render('publicSite');
-    } else {
+    if (Meteor.userId() && Router.current().url.match(/admin/)) {
         this.next();
+    } else {
+        Router.go('/');
     }
 });
 
 Router.route('/', function () {
-    this.render('Index');
-});
-
-Router.route('/home', function () {
     this.render('Home');
     this.layout(null);
 });
 
-Router.route('/users', function () {
+Router.route('/admin/users', function () {debugger
     this.render('userData');
     Template.userData.__helpers.get('hideModal')();
 });
 
-Router.route('/users/:id', function () {
+Router.route('/admin/users/:id', function () {
     this.render('userData');
     Template.userData.__helpers.get('showModal')(this.params.id);
 });

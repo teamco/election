@@ -24,10 +24,13 @@ twbs:bootstrap
 angularui:angular-ui-bootstrap
 mquandalle:bower
 tmeasday:publish-counts
-angularutils:pagination@=0.9.0
+angularutils:pagination
 accounts-password
 accounts-ui
 accounts-twitter
 accounts-facebook
 accounts-google
 service-configuration
+planettraining:oclazyload
+aaronroberson:ng-idle
+planettraining:angular-translate

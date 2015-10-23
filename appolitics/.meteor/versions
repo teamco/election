@@ -1,3 +1,4 @@
+aaronroberson:ng-idle@1.1.0
 accounts-base@1.2.1
 accounts-facebook@1.0.6
 accounts-google@1.0.6
@@ -10,7 +11,7 @@ angular@1.0.3
 angular:angular@1.4.7
 angularui:angular-ui-bootstrap@0.13.0
 angularui:angular-ui-router@0.2.15
-angularutils:pagination@0.9.0
+angularutils:pagination@0.9.1_2
 autoupdate@1.2.3
 babel-compiler@5.8.24_1
 babel-runtime@0.1.4
@@ -69,6 +70,8 @@ oauth1@1.1.5
 oauth2@1.1.5
 observe-sequence@1.0.7
 ordered-dict@1.0.4
+planettraining:angular-translate@2.8.1
+planettraining:oclazyload@1.0.6
 promise@0.5.0
 random@1.0.4
 rate-limit@1.0.0

@@ -34,3 +34,4 @@ service-configuration
 planettraining:oclazyload
 aaronroberson:ng-idle
 planettraining:angular-translate
+theduke:bootstrap-modal-prompt

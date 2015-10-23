@@ -89,6 +89,7 @@ srp@1.0.4
 standard-minifiers@1.0.1
 templating@1.1.4
 templating-tools@1.0.0
+theduke:bootstrap-modal-prompt@0.0.2
 tmeasday:publish-counts@0.7.2
 tracker@1.0.9
 twbs:bootstrap@3.3.5

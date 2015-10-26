@@ -1,0 +1,22 @@
+<div id="user-info" class="tab-pane fade in active">
+    <div class="form-group">
+        <label for="user-email">Email address:</label>
+        <input type="email" disabled="disabled" class="form-control" id="user-email"
+               value="{{user.profile.email}}"/>
+    </div>
+    <div class="form-group">
+        <label for="user-provider">Provider:</label>
+        <input id="user-provider" type="text" class="form-control" disabled="disabled"
+               value="{{user.profile.provider}}"/>
+    </div>
+    <div class="form-group">
+        <label for="user-profile">Profile:</label>
+        <input id="user-profile" type="text" class="form-control" disabled="disabled"
+               value="{{user.profile.link}}"/>
+    </div>
+    <div class="form-group">
+        <label for="user-last-login">Last login:</label>
+        <input id="user-last-login" type="text" class="form-control" disabled="disabled"
+               value="{{user.profile.updatedAt | date:'medium'}}"/>
+    </div>
+</div>

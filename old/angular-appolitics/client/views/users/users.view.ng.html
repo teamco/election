@@ -1,0 +1,28 @@
+<h2>Users list</h2>
+
+<table class="table userData">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Provider</th>
+        <th>Last login</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="user in allUsers">
+        <td class="user-info">
+            <img src="{{user.profile.picture}}" alt="{{user.profile.name}}"/>
+            <a ng-href="{{user.profile.link}}" title="{{user.profile.name}}">{{user.profile.name}}</a>
+        </td>
+        <td>{{user.profile.email}}</td>
+        <td>{{user.profile.provider}}</td>
+        <td>{{user.profile.updatedAt | date:'medium'}}</td>
+        <td>
+            <button ng-click="beforeDeleteUser(user)" type="button" class="btn btn-danger">Delete</button>
+            <a ng-href="/users/{{user._id}}" class="btn btn-info">Show</a>
+        </td>
+    </tr>
+    </tbody>
+</table>

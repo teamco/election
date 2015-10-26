@@ -13,6 +13,10 @@ Router.route('/candidates', function () {
     this.render('candidates');
 });
 
+Router.route('/natiPage', function () {
+    this.render('natiPage');
+});
+
 Router.route('/pageOne', function () {
     this.render('pageOne');
 });

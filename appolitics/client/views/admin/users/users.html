@@ -1,0 +1,32 @@
+<template name="userData">
+    <h2>Users list</h2>
+
+    <table class="table userData">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Provider</th>
+            <th>Last login</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each allUsers}}
+            <tr class="{{#if isCurrentUser _id}}current{{/if}}">
+                <td class="user-info">
+                    <img src="{{profile.picture}}" alt="{{profile.name}}"/>
+                    <a href="{{profile.link}}">{{profile.name}}</a>
+                </td>
+                <td>{{profile.email}}</td>
+                <td>{{profile.provider}}</td>
+                <td>{{longDate profile.updatedAt}}</td>
+                <td>
+                    <button rel="editUser" type="button" class="btn btn-info">Show</button>
+                </td>
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+    {{> editUser}}
+</template>

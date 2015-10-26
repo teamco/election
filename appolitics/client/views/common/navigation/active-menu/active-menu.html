@@ -1,0 +1,10 @@
+<template name="activeMenu">
+    {{#each currentMenu}}
+        <li class="{{isActiveRoute path}}">
+            <a href="{{pathFor route=path}}">
+                <i class="fa fa-dashboard"></i>
+                <span class="nav-label">{{text}}</span>
+            </a>
+        </li>
+    {{/each}}
+</template>

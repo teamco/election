@@ -4,7 +4,6 @@
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
 
-autopublish
 less
 iron:router
 twbs:bootstrap@3.3.5
@@ -29,3 +28,21 @@ check
 zimme:active-route
 underscorestring:underscore.string
 okgrow:router-autoscroll
+
+es5-shim
+ecmascript
+service-configuration
+accounts-password
+alanning:roles
+accounts-google
+accounts-facebook
+accounts-twitter
+momentjs:moment
+accounts-base
+accounts-ui-unstyled
+accounts-ui
+gfk:notifications
+gfk:server-messages
+jparker:gravatar
+theduke:bootstrap-modal-prompt
+chipcastle:countries

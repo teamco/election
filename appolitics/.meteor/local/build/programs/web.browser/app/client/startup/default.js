@@ -1,5 +1,13 @@
-(function(){// Run this when the meteor app is started
-Meteor.startup(function () {
+(function(){
 
-});
+/////////////////////////////////////////////////////////////////////////
+//                                                                     //
+// client/startup/default.js                                           //
+//                                                                     //
+/////////////////////////////////////////////////////////////////////////
+                                                                       //
+// Run this when the meteor app is started                             //
+Meteor.startup(function () {});                                        // 2
+/////////////////////////////////////////////////////////////////////////
+
 }).call(this);

@@ -1,7 +1,12 @@
 {
   "format": "javascript-image-pre1",
-  "arch": "os",
+  "arch": "os.osx.x86_64",
   "load": [
+    {
+      "node_modules": "npm/es5-shim/node_modules",
+      "sourceMap": "packages/es5-shim.js.map",
+      "path": "packages/es5-shim.js"
+    },
     {
       "sourceMap": "packages/underscore.js.map",
       "path": "packages/underscore.js"
@@ -10,10 +15,6 @@
       "node_modules": "npm/meteor/node_modules",
       "sourceMap": "packages/meteor.js.map",
       "path": "packages/meteor.js"
-    },
-    {
-      "sourceMap": "packages/autopublish.js.map",
-      "path": "packages/autopublish.js"
     },
     {
       "sourceMap": "packages/less.js.map",
@@ -189,6 +190,14 @@
       "path": "packages/ecmascript.js"
     },
     {
+      "sourceMap": "packages/rate-limit.js.map",
+      "path": "packages/rate-limit.js"
+    },
+    {
+      "sourceMap": "packages/ddp-rate-limiter.js.map",
+      "path": "packages/ddp-rate-limiter.js"
+    },
+    {
       "sourceMap": "packages/callback-hook.js.map",
       "path": "packages/callback-hook.js"
     },
@@ -290,6 +299,141 @@
       "path": "packages/okgrow_router-autoscroll.js"
     },
     {
+      "sourceMap": "packages/accounts-base.js.map",
+      "path": "packages/accounts-base.js"
+    },
+    {
+      "sourceMap": "packages/service-configuration.js.map",
+      "path": "packages/service-configuration.js"
+    },
+    {
+      "node_modules": "npm/npm-bcrypt/node_modules",
+      "sourceMap": "packages/npm-bcrypt.js.map",
+      "path": "packages/npm-bcrypt.js"
+    },
+    {
+      "sourceMap": "packages/sha.js.map",
+      "path": "packages/sha.js"
+    },
+    {
+      "sourceMap": "packages/srp.js.map",
+      "path": "packages/srp.js"
+    },
+    {
+      "node_modules": "npm/email/node_modules",
+      "sourceMap": "packages/email.js.map",
+      "path": "packages/email.js"
+    },
+    {
+      "sourceMap": "packages/accounts-password.js.map",
+      "path": "packages/accounts-password.js"
+    },
+    {
+      "sourceMap": "packages/alanning_roles.js.map",
+      "path": "packages/alanning_roles.js"
+    },
+    {
+      "sourceMap": "packages/localstorage.js.map",
+      "path": "packages/localstorage.js"
+    },
+    {
+      "sourceMap": "packages/url.js.map",
+      "path": "packages/url.js"
+    },
+    {
+      "sourceMap": "packages/oauth.js.map",
+      "path": "packages/oauth.js",
+      "assets": {
+        "end_of_popup_response.html": "assets/packages/oauth/end_of_popup_response.html",
+        "end_of_redirect_response.html": "assets/packages/oauth/end_of_redirect_response.html"
+      }
+    },
+    {
+      "sourceMap": "packages/accounts-oauth.js.map",
+      "path": "packages/accounts-oauth.js"
+    },
+    {
+      "sourceMap": "packages/oauth2.js.map",
+      "path": "packages/oauth2.js"
+    },
+    {
+      "node_modules": "npm/http/node_modules",
+      "sourceMap": "packages/http.js.map",
+      "path": "packages/http.js"
+    },
+    {
+      "sourceMap": "packages/google.js.map",
+      "path": "packages/google.js"
+    },
+    {
+      "sourceMap": "packages/accounts-google.js.map",
+      "path": "packages/accounts-google.js"
+    },
+    {
+      "sourceMap": "packages/facebook.js.map",
+      "path": "packages/facebook.js"
+    },
+    {
+      "sourceMap": "packages/accounts-facebook.js.map",
+      "path": "packages/accounts-facebook.js"
+    },
+    {
+      "sourceMap": "packages/oauth1.js.map",
+      "path": "packages/oauth1.js"
+    },
+    {
+      "sourceMap": "packages/twitter.js.map",
+      "path": "packages/twitter.js"
+    },
+    {
+      "sourceMap": "packages/accounts-twitter.js.map",
+      "path": "packages/accounts-twitter.js"
+    },
+    {
+      "sourceMap": "packages/momentjs_moment.js.map",
+      "path": "packages/momentjs_moment.js"
+    },
+    {
+      "sourceMap": "packages/accounts-ui-unstyled.js.map",
+      "path": "packages/accounts-ui-unstyled.js"
+    },
+    {
+      "sourceMap": "packages/accounts-ui.js.map",
+      "path": "packages/accounts-ui.js"
+    },
+    {
+      "sourceMap": "packages/gfk_notifications.js.map",
+      "path": "packages/gfk_notifications.js"
+    },
+    {
+      "sourceMap": "packages/gfk_server-messages.js.map",
+      "path": "packages/gfk_server-messages.js"
+    },
+    {
+      "sourceMap": "packages/jparker_crypto-core.js.map",
+      "path": "packages/jparker_crypto-core.js"
+    },
+    {
+      "sourceMap": "packages/jparker_crypto-md5.js.map",
+      "path": "packages/jparker_crypto-md5.js"
+    },
+    {
+      "sourceMap": "packages/idorecall_email-normalize.js.map",
+      "path": "packages/idorecall_email-normalize.js"
+    },
+    {
+      "sourceMap": "packages/jparker_gravatar.js.map",
+      "path": "packages/jparker_gravatar.js"
+    },
+    {
+      "sourceMap": "packages/theduke_bootstrap-modal-prompt.js.map",
+      "path": "packages/theduke_bootstrap-modal-prompt.js"
+    },
+    {
+      "sourceMap": "packages/chipcastle_countries.js.map",
+      "path": "packages/chipcastle_countries.js"
+    },
+    {
       "sourceMap": "packages/livedata.js.map",
       "path": "packages/livedata.js"
     },
@@ -307,6 +451,14 @@
     },
     {
       "path": "packages/global-imports.js"
+    },
+    {
+      "sourceMap": "app/model/accounts.model.js.map",
+      "path": "app/model/accounts.model.js"
+    },
+    {
+      "sourceMap": "app/server/accounts.js.map",
+      "path": "app/server/accounts.js"
     }
   ]
 }

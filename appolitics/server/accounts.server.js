@@ -63,6 +63,6 @@ function getProviderInfo(provider, user) {
     return opts;
 }
 
-Meteor.publish("allUsers", function () {
+Meteor.publish("users", function () {
     return Meteor.users.find();
 });

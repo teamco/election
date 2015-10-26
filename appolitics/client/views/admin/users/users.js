@@ -57,4 +57,4 @@ function isCurrentUser(_id) {
     return _id === Meteor.userId();
 }
 
-Meteor.subscribe("allUsers");
+Meteor.subscribe("users");

@@ -1203,11 +1203,11 @@
       "where": "client",
       "type": "js",
       "cacheable": true,
-      "url": "/app/client/views/common/top-navbar/template.top-navbar.js?8c09ec66f7c573410b4397e71bb42a14c2fea98b",
+      "url": "/app/client/views/common/top-navbar/template.top-navbar.js?f8309405f89879ab75861bc0ba8468098b9e9b60",
       "sourceMap": "app/client/views/common/top-navbar/template.top-navbar.js.map",
-      "sourceMapUrl": "/app/client/views/common/top-navbar/8c09ec66f7c573410b4397e71bb42a14c2fea98b.map",
-      "size": 982,
-      "hash": "8c09ec66f7c573410b4397e71bb42a14c2fea98b"
+      "sourceMapUrl": "/app/client/views/common/top-navbar/f8309405f89879ab75861bc0ba8468098b9e9b60.map",
+      "size": 902,
+      "hash": "f8309405f89879ab75861bc0ba8468098b9e9b60"
     },
     {
       "path": "app/client/views/common/top-navbar/template.top-navigation.js",

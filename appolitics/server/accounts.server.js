@@ -17,6 +17,16 @@ Accounts.onCreateUser(function (options, user) {
     return user;
 });
 
+Meteor.methods({
+    updateUser: function () {
+    },
+    destroyUser: function (user) {
+
+        Meteor.users.remove(user._id);
+        return user;
+    }
+});
+
 function getProviderInfo(provider, user) {
 
     var opts = {},

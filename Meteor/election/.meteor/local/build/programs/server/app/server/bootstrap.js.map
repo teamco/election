@@ -1,1 +1,0 @@
-{"version":3,"sources":["meteor://💻app/server/bootstrap.js"],"names":[],"mappings":";;;;;;;;;AACA,MAAM,CAAC,OAAO,CAAC,YAAY,EAE1B,CAAC,CAAC,4C","file":"/server/bootstrap.js","sourcesContent":["// if the database is empty on server start, create some sample data.\nMeteor.startup(function () {\n\n});\n"]}

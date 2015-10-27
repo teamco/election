@@ -11,14 +11,6 @@ Router.configure({
     //}
 //});
 
-Router.route('/admin/users', function () {
-    this.render('userData');
-});
-
-Router.route('/admin/users/:id', function () {
-    this.render('userData');
-});
-
 Router.route('/pageOne', function () {
     this.render('pageOne');
 });

@@ -1,9 +1,0 @@
-{
-    "blogs": [
-        {"name": "name 1", "title": "title 1", "description": "description 1", "uuid": "1111"},
-        {"name": "name 2", "title": "title 2", "description": "description 2", "uuid": "2222"},
-        {"name": "name 3", "title": "title 3", "description": "description 3", "uuid": "3333"},
-        {"name": "name 4", "title": "title 4", "description": "description 4", "uuid": "4444"}
-    ]
-
-}

@@ -1,1 +1,0 @@
-{"head":"","body":"","js":"\nTemplate.__checkName(\"CustomLogin\");\nTemplate[\"CustomLogin\"] = new Template(\"Template.CustomLogin\", (function() {\n  var view = this;\n  return HTML.Raw('<button class=\"btn btn-default btn-block\" id=\"login-buttons-edit-profile\">Edit profile</button>');\n}));\n","bodyAttrs":{}}

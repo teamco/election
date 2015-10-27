@@ -1,1 +1,0 @@
-{"version":3,"sources":["meteor://💻app/client/lib/app.ng.js"],"names":[],"mappings":"yBAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA,C","file":"/client/lib/app.ng.js","sourcesContent":["if (Meteor.isClient) {\n\n    angular.module(\n        'appolitics', [\n            'angular-meteor',\n            'ui.router'\n        ]\n    );\n}"]}

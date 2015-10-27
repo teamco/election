@@ -1,1 +1,0 @@
-{"head":"","body":"","js":"\nTemplate.__checkName(\"Donate\");\nTemplate[\"Donate\"] = new Template(\"Template.Donate\", (function() {\n  var view = this;\n  return \"plz donate\";\n}));\n","bodyAttrs":{}}

@@ -11,16 +11,3 @@ ActiveMenu.allow({
         return _id === user._id;
     }
 });
-
-Meteor.methods({
-    activeMenu: function () {
-        return {
-            create: function () {
-            },
-            update: function () {
-            },
-            destroy: function () {
-            }
-        }
-    }
-});

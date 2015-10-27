@@ -1,15 +1,3 @@
-Template.editUser.events({
-    'click #editUserModal button[rel="submit"]': function (event, template) {
-        closeEditProfile(event);
-    }
-});
-
-Template.editUser.events({
-    'click #editUserModal button[rel="cancel"]': function (event, template) {
-        closeEditProfile(event);
-    }
-});
-
 Template.editUser.onRendered(function () {
     this.$('.datetimepicker').datetimepicker({
         format: 'MMMM DD, YYYY'
@@ -56,10 +44,4 @@ function getCurrentUser() {
 
 function getUserProfile() {
     return AccountProfile.findOne({user_id: getCurrentUser()._id}) || {};
-}
-
-function closeEditProfile(event) {
-    event.preventDefault();
-    Template.userData.__helpers.get('hideModal')();
-    Router.go('/users');
 }

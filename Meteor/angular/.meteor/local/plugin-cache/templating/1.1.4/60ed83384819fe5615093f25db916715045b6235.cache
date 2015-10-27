@@ -1,1 +1,0 @@
-{"head":"<base href=\"/\">","body":"","js":"\nTemplate.body.addContent((function() {\n  var view = this;\n  return HTML.Raw('<div ng-app=\"socially\">\\n    <h1>\\n        <a href=\"/parties\">Home</a>\\n    </h1>\\n\\n    <div ui-view=\"\"></div>\\n</div>');\n}));\nMeteor.startup(Template.body.renderToDocument);\n","bodyAttrs":{}}

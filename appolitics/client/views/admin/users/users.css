@@ -6,7 +6,7 @@ td.user-info img {
     margin-right: 10px;
 }
 
-.table.userData > tbody > tr > td {
+.table.user-data > tbody > tr > td {
     vertical-align: middle;
 }
 
@@ -19,10 +19,12 @@ ul.notifications {
     left: auto;
 }
 
-#editUserModal .nav-tabs {
-    margin-bottom: 2em;
+.show-user textarea {
+    resize: vertical;
 }
 
-#editUserModal textarea {
-    resize: vertical;
+.show-user form {
+    border: 1px solid #ddd;
+    border-top: none;
+    padding: 2em 2em 1em;
 }

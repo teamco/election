@@ -1,1 +1,0 @@
-{"version":3,"sources":["meteor://💻app/server/content/content.js"],"names":[],"mappings":";;;;;;;;AAAA,OAAO,GAAG,IAAI,MAAM,CAAC,UAAU,CAAC,SAAS,CAAC,CAAC,gC","file":"/server/content/content.js","sourcesContent":["Content = new Meteor.Collection('content');\n"]}

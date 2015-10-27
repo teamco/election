@@ -1,7 +1,7 @@
 <template name="userData">
     <h2>Users list</h2>
 
-    <table class="table userData">
+    <table class="table user-data">
         <thead>
         <tr>
             <th>Name</th>
@@ -22,11 +22,11 @@
                 <td>{{profile.provider}}</td>
                 <td>{{longDate profile.updatedAt}}</td>
                 <td>
-                    <button rel="editUser" type="button" class="btn btn-info">Show</button>
+                    <a href="/admin/users/{{_id}}" class="btn btn-info show-user">Show</a>
+                    <a href="/admin/users/{{_id}}" class="btn btn-danger delete-user">Delete</a>
                 </td>
             </tr>
         {{/each}}
         </tbody>
     </table>
-    {{> editUser}}
 </template>

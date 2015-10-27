@@ -1,1 +1,0 @@
-{"head":"","body":"","js":"\nTemplate.__checkName(\"home\");\nTemplate[\"home\"] = new Template(\"Template.home\", (function() {\n  var view = this;\n  return HTML.Raw('<body class=\"\" ng-controller=\"MainCtrl as main\">\\n\\n    </body>');\n}));\n","bodyAttrs":{}}

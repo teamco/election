@@ -1,1 +1,0 @@
-{"version":3,"sources":["meteor://💻app/server/server.js"],"names":[],"mappings":";;;;;;;;AAAA,MAAM,CAAC,OAAO,CAAC;AACX,WAAO,EAAE,YAAW;AAChB,eAAO,MAAM,CAAC,MAAM,EAAE,CAAC;KAC1B;CACJ,CAAC,CAAC,sE","file":"/server/server.js","sourcesContent":["Meteor.methods({\n    isAdmin: function() {\n        return Meteor.userId();\n    }\n});"]}

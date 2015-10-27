@@ -12,20 +12,15 @@
         <form role="form">
 
             <div class="tab-content">
-                {{> editUserInfo email=email profile=profile lastLogin=lastLogin provider=provider}}
-                {{> editUserProfile firstName=firstName middleName=middleName lastName=lastName birthday=birthday address=address}}
-                <div id="access" class="tab-pane fade">
-                    <h3>Menu 2</h3>
-
-                    <p>Some content in menu 2.</p>
-                </div>
+                {{> editUserInfo info=info}}
+                {{> editUserProfile profile=profile}}
+                {{> editUserAccess}}
             </div>
 
         </form>
 
-
         <div class="footer">
-            <button rel="cancel" type="button" class="btn btn-default">Close</button>
+            <a href="/admin/users" class="btn btn-default">Back</a>
             <button rel="submit" type="submit" class="btn btn-info">Submit</button>
         </div>
     </div>

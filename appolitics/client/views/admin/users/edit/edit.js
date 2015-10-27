@@ -5,32 +5,40 @@ Template.editUser.onRendered(function () {
 });
 
 Template.editUser.helpers({
-    email: function () {
-        return getCurrentUser().profile.email;
-    },
-    provider: function () {
-        return getCurrentUser().profile.provider;
+    info: function () {
+        return {
+            email: function () {
+                return getCurrentUser().profile.email;
+            },
+            provider: function () {
+                return getCurrentUser().profile.provider;
+            },
+            profile: function () {
+                return getCurrentUser().profile.link;
+            },
+            lastLogin: function () {
+                return getCurrentUser().profile.updatedAt;
+            }
+        };
     },
     profile: function () {
-        return getCurrentUser().profile.link;
-    },
-    lastLogin: function () {
-        return getCurrentUser().profile.updatedAt;
-    },
-    firstName: function () {
-        return getUserProfile().firstName || getUserName().split(' ')[0];
-    },
-    middleName: function () {
-        return getUserProfile().middleName;
-    },
-    lastName: function () {
-        return getUserProfile().lastName || getUserName().split(' ')[1];
-    },
-    birthday: function () {
-        return getUserProfile().birthday;
-    },
-    address: function () {
-        return getUserProfile().address;
+        return {
+            firstName: function () {
+                return getUserProfile().firstName || getUserName().split(' ')[0];
+            },
+            middleName: function () {
+                return getUserProfile().middleName;
+            },
+            lastName: function () {
+                return getUserProfile().lastName || getUserName().split(' ')[1];
+            },
+            birthday: function () {
+                return getUserProfile().birthday;
+            },
+            address: function () {
+                return getUserProfile().address;
+            }
+        };
     }
 });
 

@@ -28,3 +28,7 @@ ul.notifications {
     border-top: none;
     padding: 2em 2em 1em;
 }
+
+.show-user .footer {
+    bottom: 40px;
+}

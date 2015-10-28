@@ -39,6 +39,16 @@ Template.editUser.helpers({
                 return getUserProfile().address;
             }
         };
+    },
+    access: function () {
+        return {
+            availableRoles: function () {
+
+            },
+            currentRoles: function () {
+                return Roles.getRolesForUser(Meteor.userId());
+            }
+        }
     }
 });
 

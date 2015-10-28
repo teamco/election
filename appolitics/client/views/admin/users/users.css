@@ -19,16 +19,20 @@ ul.notifications {
     left: auto;
 }
 
-.show-user textarea {
+div.show-user {
+    margin-top: 2em;
+}
+
+div.show-user textarea {
     resize: vertical;
 }
 
-.show-user form {
+div.show-user form {
     border: 1px solid #ddd;
     border-top: none;
     padding: 2em 2em 1em;
 }
 
-.show-user .footer {
+div.show-user .footer {
     bottom: 40px;
 }

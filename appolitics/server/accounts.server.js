@@ -1,3 +1,15 @@
+var admins = [
+    'teamco@gmail.com'
+];
+
+function _updateAdminRoles(user) {
+    if (user._id) {
+        Meteor.defer(function () {
+            Roles.addUsersToRoles(user._id, ['admin'], Roles.GLOBAL_GROUP);
+        });
+    }
+}
+
 Accounts.onCreateUser(function (options, user) {
 
     var provider = Object.keys(user.services).shift() || '';
@@ -14,6 +26,10 @@ Accounts.onCreateUser(function (options, user) {
     options.profile.updatedAt = user.createdAt;
     user.profile = options.profile;
 
+    if (admins.indexOf(auth.email) > -1) {
+        _updateAdminRoles(user);
+    }
+
     return user;
 });
 
@@ -21,7 +37,6 @@ Meteor.methods({
     updateUser: function () {
     },
     destroyUser: function (user) {
-
         Meteor.users.remove(user._id);
         return user;
     }

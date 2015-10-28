@@ -8,6 +8,9 @@ Template.userData.events({
 
 // This code only runs on the client
 Template.userData.helpers({
+    isAdminUser: function () {
+        return Roles.userIsInRole(Meteor.user(), ['admin']);
+    },
     allUsers: function () {
         return Accounts.users.find().fetch();
     },
@@ -29,7 +32,7 @@ Template.userData.helpers({
                 Meteor.call(
                     'destroyUser',
                     user,
-                    function(error, result){
+                    function (error, result) {
                         console.log(arguments)
                     }
                 )

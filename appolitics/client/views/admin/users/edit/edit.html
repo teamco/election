@@ -5,6 +5,7 @@
 
         <ul class="nav nav-tabs">
             <li class="active"><a data-toggle="tab" href="#info">Info</a></li>
+            <li><a data-toggle="tab" href="#status">Status</a></li>
             <li><a data-toggle="tab" href="#profile">Profile</a></li>
             <li><a data-toggle="tab" href="#access">Access</a></li>
         </ul>
@@ -13,6 +14,7 @@
 
             <div class="tab-content">
                 {{> editUserInfo info=info}}
+                {{> editUserStatus status=status}}
                 {{> editUserProfile profile=profile}}
                 {{> editUserAccess access=access}}
             </div>

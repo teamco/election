@@ -25,6 +25,11 @@ div.show-user {
 
 div.show-user textarea {
     resize: vertical;
+    white-space: normal;
+}
+
+div.show-user textarea[disabled="disabled"] {
+    resize: none;
 }
 
 div.show-user form {

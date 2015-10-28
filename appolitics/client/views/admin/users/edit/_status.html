@@ -1,0 +1,25 @@
+<template name="editUserStatus">
+    <div id="status" class="tab-pane fade">
+        <div class="form-group">
+            <label for="user-online">Status:</label>
+            <input type="text" disabled="disabled" class="form-control" id="user-online"
+                   value="{{status.online}}"/>
+        </div>
+        <div class="form-group">
+            <label for="user-ip">IP Address:</label>
+            <input id="user-ip" type="text" class="form-control" disabled="disabled"
+                   value="{{status.ipAddress}}"/>
+        </div>
+        <div class="form-group">
+            <label for="user-user-agent">User agent:</label>
+            <textarea id="user-user-agent" class="form-control" disabled="disabled">
+                {{status.userAgent}}
+            </textarea>
+        </div>
+        <div class="form-group">
+            <label for="user-last-login">Last login:</label>
+            <input id="user-last-login" type="text" class="form-control" disabled="disabled"
+                   value="{{status.lastLogin}}"/>
+        </div>
+    </div>
+</template>

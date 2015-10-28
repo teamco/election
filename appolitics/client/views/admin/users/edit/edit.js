@@ -16,8 +16,24 @@ Template.editUser.helpers({
             profile: function () {
                 return getCurrentUser().profile.link;
             },
-            lastLogin: function () {
+            createdAt: function () {
                 return getCurrentUser().createdAt;
+            }
+        };
+    },
+    status: function () {
+        return {
+            online: function () {
+                return getCurrentUser().status.online ? 'Online' : 'Offline';
+            },
+            ipAddress: function () {
+                return getCurrentUser().status.lastLogin.ipAddr;
+            },
+            userAgent: function () {
+                return getCurrentUser().status.lastLogin.userAgent;
+            },
+            lastLogin: function () {
+                return getCurrentUser().status.lastLogin.date;
             }
         };
     },

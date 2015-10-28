@@ -11,17 +11,22 @@
                 <li class="nav-header">
                     <div class="dropdown profile-element">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">Meteor.user</strong>
-                             </span> <span class="text-muted text-xs block">user <b class="caret"></b></span> </span>
+                            <img alt="image" class="img-circle" src="{{picture}}"/>
+                            <span class="clear">
+                                <span class="block m-t-xs">
+                                     <strong class="font-bold">
+                                      <p>{{name}}</p>
+                                     </strong>
+                                </span>
+                            </span>
                         </a>
-                    </div>
+                        </div>
                     <div class="logo-element">
-                        IN+
+                        AP
                     </div>
                 </li>
                 {{> activeMenu }}
             </ul>
-
         </div>
     </nav>
 </template>

@@ -9,6 +9,14 @@ Template.navigation.helpers({
 
     isSelected: function() {
         debugger
+    },
+
+    name: function() {
+       return Meteor.user().profile.name;
+     },
+
+    picture: function() {
+          return Meteor.user().profile.picture;
     }
 
 });

@@ -42,6 +42,12 @@ Template.userData.helpers({
     allUsers: function () {
         return Accounts.users.find().fetch();
     },
+    labelClass: function (_id) {
+        var status = Accounts.users.findOne(_id).status;
+        if (status.idle) return "label-warning";
+        else if (status.online) return "label-success";
+        else return "label-default";
+    },
     isCurrentUser: isCurrentUser
 });
 

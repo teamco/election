@@ -19,7 +19,9 @@
                     <img src="{{profile.picture}}" alt="{{profile.name}}"/>
                     <a href="{{profile.link}}">{{profile.name}}</a>
                 </td>
-                <td>{{profile.email}}</td>
+                <td>
+                    <span class="label {{labelClass _id}}">{{profile.email}}</span>
+                </td>
                 <td>{{profile.provider}}</td>
                 <td>
                     {{#if status.online}}

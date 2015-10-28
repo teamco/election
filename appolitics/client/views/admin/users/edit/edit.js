@@ -23,6 +23,9 @@ Template.editUser.helpers({
     },
     status: function () {
         return {
+            idle: function () {
+                return getCurrentUser().status.idle ? 'Idle' : 'Active';
+            },
             online: function () {
                 return getCurrentUser().status.online ? 'Online' : 'Offline';
             },
@@ -73,7 +76,7 @@ function getUserName() {
 }
 
 function getCurrentUser() {
-    return Accounts.users.findOne(Router.current().params.id) || {profile: {}};
+    return Accounts.users.findOne(Router.current().params.id) || {profile: {}, status: {}};
 }
 
 function getUserProfile() {

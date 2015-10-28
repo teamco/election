@@ -1,6 +1,11 @@
 <template name="editUserStatus">
     <div id="status" class="tab-pane fade">
         <div class="form-group">
+            <label for="user-idle">Idle:</label>
+            <input type="text" disabled="disabled" class="form-control" id="user-idle"
+                   value="{{status.idle}}"/>
+        </div>
+        <div class="form-group">
             <label for="user-online">Status:</label>
             <input type="text" disabled="disabled" class="form-control" id="user-online"
                    value="{{status.online}}"/>

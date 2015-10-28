@@ -1,22 +1,14 @@
+function isCurrentUser(_id) {
+    return _id === Meteor.userId();
+}
+
 Template.userData.events({
     'click a.delete-user': function (event, template) {
 
         event.preventDefault();
-        Template.userData.__helpers.get('confirmBeforeRemove')(this);
-    }
-});
 
-// This code only runs on the client
-Template.userData.helpers({
-    isAdminUser: function () {
-        return Roles.userIsInRole(Meteor.user(), ['admin']);
-    },
-    allUsers: function () {
-        return Accounts.users.find().fetch();
-    },
-    isCurrentUser: isCurrentUser,
-    confirmBeforeRemove: function (user) {
-        var name = user.profile.name || user.profile.email;
+        var user = this,
+            name = user.profile.name || user.profile.email;
 
         BootstrapModalPrompt.prompt({
             title: "Delete user",
@@ -38,11 +30,19 @@ Template.userData.helpers({
                 )
             }
         });
+
     }
 });
 
-function isCurrentUser(_id) {
-    return _id === Meteor.userId();
-}
+// This code only runs on the client
+Template.userData.helpers({
+    isAdminUser: function () {
+        return Roles.userIsInRole(Meteor.user(), ['admin']);
+    },
+    allUsers: function () {
+        return Accounts.users.find().fetch();
+    },
+    isCurrentUser: isCurrentUser
+});
 
 Meteor.subscribe("users");

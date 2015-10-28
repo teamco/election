@@ -1,8 +1,15 @@
 <template name="editUserAccess">
     <div id="access" class="tab-pane fade">
         <div class="form-group">
-            <label for="user-roles">Roles:</label>
-            <input type="email" class="form-control" id="user-roles" value="{{access.currentRoles}}"/>
+            <label for="user-roles">Current Roles:</label>
+            <input type="email" class="form-control" disabled="disabled" id="user-roles"
+                   value="{{access.currentRoles}}"/>
+        </div>
+        <div class="form-group">
+            <label for="user-roles">Available Roles:</label>
+            {{#each access.availableRoles}}
+                <label class="checkbox-inline"><input type="checkbox" value="">{{name}}</label>
+            {{/each}}
         </div>
     </div>
 </template>

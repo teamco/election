@@ -43,7 +43,7 @@ Template.editUser.helpers({
     access: function () {
         return {
             availableRoles: function () {
-
+                return [];
             },
             currentRoles: function () {
                 return (Roles.getRolesForUser(Router.current().params.id) || []).join(', ');

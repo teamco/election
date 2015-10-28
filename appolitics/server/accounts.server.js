@@ -102,3 +102,7 @@ Meteor.publish("users", function () {
 Meteor.publish("userStatus", function () {
     return _runAsAdmin(this, Meteor.users.find({'status.online': true}));
 });
+
+Meteor.publish(null, function () {
+    return _runAsAdmin(this, Meteor.roles.find());
+})

@@ -8,7 +8,9 @@
         <div class="form-group">
             <label for="user-roles">Available Roles:</label>
             {{#each access.availableRoles}}
-                <label class="checkbox-inline"><input class="form-control" type="checkbox" value="">{{name}}</label>
+                <label class="checkbox-inline">
+                    <input class="form-control" type="checkbox" value="">{{name}}
+                </label>
             {{/each}}
         </div>
     </div>

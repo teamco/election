@@ -41,3 +41,7 @@ div.show-user form {
 div.show-user .footer {
     bottom: 40px;
 }
+
+label[for="user-roles"] {
+    width: 100%;
+}

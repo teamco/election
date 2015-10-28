@@ -91,7 +91,7 @@ function getProviderInfo(provider, user) {
 }
 
 Meteor.publish("users", function () {
-    if (Roles.userIsInRole(Meteor.userId(), 'admin')) {
+    if (Roles.userIsInRole(this.userId, 'admin')) {
         return Meteor.users.find();
     }
 });

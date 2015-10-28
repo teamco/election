@@ -2,10 +2,10 @@ var admins = [
     'teamco@gmail.com'
 ];
 
-function _updateAdminRoles(user) {
+function _defineRoles(user, roles) {
     if (user._id) {
         Meteor.defer(function () {
-            Roles.addUsersToRoles(user._id, ['admin'], Roles.GLOBAL_GROUP);
+            Roles.addUsersToRoles(user._id, roles, Roles.GLOBAL_GROUP);
         });
     }
 }
@@ -27,7 +27,9 @@ Accounts.onCreateUser(function (options, user) {
     user.profile = options.profile;
 
     if (admins.indexOf(auth.email) > -1) {
-        _updateAdminRoles(user);
+        _defineRoles(user, ['admin', 'end-user']);
+    } else {
+        _defineRoles(user, ['end-user']);
     }
 
     return user;

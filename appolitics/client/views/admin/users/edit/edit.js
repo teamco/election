@@ -46,7 +46,7 @@ Template.editUser.helpers({
 
             },
             currentRoles: function () {
-                return Roles.getRolesForUser(Meteor.userId());
+                return (Roles.getRolesForUser(Router.current().params.id) || []).join(', ');
             }
         }
     }

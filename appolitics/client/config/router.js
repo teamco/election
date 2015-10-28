@@ -11,15 +11,12 @@ Router.configure({
     //}
 //});
 
-Router.route('/pageOne', function () {
-    this.render('pageOne');
+Router.route('/admin/users', function () {
+    this.render('userData');
 });
 
-Router.route('/pageTwo', function () {
-    this.render('pageTwo');
+Router.route('/admin/users/:id', function () {
+    this.render('userData');
 });
 
-Router.route('/', function () {
-    Router.go('pageOne');
-});
 

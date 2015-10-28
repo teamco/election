@@ -21,13 +21,3 @@ var requireLogin = function () {
 };
 
 Router.onBeforeAction(requireLogin);
-
-Router.route('/admin/users', function () {
-    this.render('userData');
-});
-
-Router.route('/admin/users/:id', function () {
-    this.render('userData');
-});
-
-

@@ -17,7 +17,7 @@ Template.editUser.helpers({
                 return getCurrentUser().profile.link;
             },
             lastLogin: function () {
-                return getCurrentUser().profile.updatedAt;
+                return getCurrentUser().createdAt;
             }
         };
     },

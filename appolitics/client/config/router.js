@@ -14,8 +14,17 @@ var requireLogin = function () {
     }
 
     if (_isRestrictedArea(this) && !_isAdmin()) {
+
         this.render('accessDenied');
+
+    } else if (Meteor.user()) {
+
+        // Redirect to end user page
+        this.next();
+
     } else {
+
+        // Redirect to public page
         this.next();
     }
 };

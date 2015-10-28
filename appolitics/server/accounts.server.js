@@ -10,10 +10,17 @@ function _defineRoles(user, roles) {
     }
 }
 
+function _runAsAdmin(ref, filter) {
+
+    if (Roles.userIsInRole(ref.userId, 'admin')) {
+        return filter;
+    }
+}
+
 Accounts.onCreateUser(function (options, user) {
 
-    var provider = Object.keys(user.services).shift() || '';
-    var auth = getProviderInfo(provider, user);
+    var provider = Object.keys(user.services).shift() || '',
+        auth = getProviderInfo(provider, user);
 
     options = options || {};
     options.profile = options.profile || {};
@@ -22,8 +29,6 @@ Accounts.onCreateUser(function (options, user) {
     options.profile.provider = provider;
     options.profile.email = auth.email;
     options.profile.link = auth.link;
-    options.profile.createdAt = user.createdAt;
-    options.profile.updatedAt = user.createdAt;
     user.profile = options.profile;
 
     if (admins.indexOf(auth.email) > -1) {
@@ -91,7 +96,9 @@ function getProviderInfo(provider, user) {
 }
 
 Meteor.publish("users", function () {
-    if (Roles.userIsInRole(this.userId, 'admin')) {
-        return Meteor.users.find();
-    }
+    return _runAsAdmin(this, Meteor.users.find());
+});
+
+Meteor.publish("userStatus", function () {
+    return _runAsAdmin(this, Meteor.users.find({'status.online': true}));
 });

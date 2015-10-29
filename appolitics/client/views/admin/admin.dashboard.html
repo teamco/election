@@ -1,5 +1,7 @@
 <template name="adminDashboard">
     <section class="admin-dashboard content">
+        <h2>Users management</h2>
+
         <div class="row">
             <div class="col-lg-3 col-xs-6">
                 <!-- small box -->
@@ -32,6 +34,29 @@
                     </a>
                 </div>
             </div>
+        </div>
+        <h2>Stocks</h2>
+
+        <div class="row">
+            {{#each stocks}}
+                <div class="col-lg-3 col-xs-6">
+                    <!-- small box -->
+                    <div class="small-box bg-yellow">
+                        <div class="inner">
+                            <h3>{{results.quote.LastTradePriceOnly}}</h3>
+
+                            <p>{{results.quote.Name}}</p>
+                        </div>
+                        <div class="icon">
+                            <i class="glyphicon glyphicon-signal"></i>
+                        </div>
+                        <a class="small-box-footer">
+                            <i class="glyphicon glyphicon-chevron-{{stockChange results.quote.Change}}"></i>
+                            {{results.quote.Change}}
+                        </a>
+                    </div>
+                </div>
+            {{/each}}
         </div>
     </section>
 </template>

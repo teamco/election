@@ -1,12 +1,15 @@
 var availableStocks = ['FB', 'GOOG', 'SAP.DE', 'AAPL'];
 
-Template.adminDashboard.helpers({
+Template.usersDashboard.helpers({
     registeredUsers: function () {
         return Accounts.users.find().count();
     },
     onlineUsers: function () {
         return Accounts.users.find({'status.online': true}).count();
-    },
+    }
+});
+
+Template.stocksDashboard.helpers({
     stocks: function () {
         return _.map(availableStocks, function (symbol) {
             return Template.instance()[symbol].get();
@@ -17,7 +20,7 @@ Template.adminDashboard.helpers({
     }
 });
 
-Template.adminDashboard.created = function () {
+Template.stocksDashboard.created = function () {
 
     var scope = this;
 

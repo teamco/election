@@ -1,62 +1,6 @@
 <template name="adminDashboard">
     <section class="admin-dashboard content">
-        <h2>Users management</h2>
-
-        <div class="row">
-            <div class="col-lg-3 col-xs-6">
-                <!-- small box -->
-                <div class="small-box bg-yellow">
-                    <div class="inner">
-                        <h3>{{registeredUsers}}</h3>
-
-                        <p>User Registrations</p>
-                    </div>
-                    <div class="icon">
-                        <i class="glyphicon glyphicon-user"></i>
-                    </div>
-                    <a href="{{pathFor route='admin.users'}}" class="small-box-footer">
-                        More info <i class="fa fa-arrow-circle-right"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-xs-6">
-                <div class="small-box bg-aqua">
-                    <div class="inner">
-                        <h3>{{onlineUsers}}</h3>
-
-                        <p>Online</p>
-                    </div>
-                    <div class="icon">
-                        <i class="glyphicon glyphicon-user"></i>
-                    </div>
-                    <a href="{{pathFor route='admin.users'}}" class="small-box-footer">
-                        More info <i class="fa fa-arrow-circle-right"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <h2>Stocks</h2>
-
-        <div class="row">
-            {{#each stocks}}
-                <div class="col-lg-3 col-xs-6">
-                    <!-- small box -->
-                    <div class="small-box bg-{{stockChange results.quote.Change}}">
-                        <div class="inner">
-                            <h3>{{results.quote.LastTradePriceOnly}}</h3>
-
-                            <p>{{results.quote.Name}}</p>
-                        </div>
-                        <div class="icon">
-                            <i class="glyphicon glyphicon-signal"></i>
-                        </div>
-                        <a class="small-box-footer">
-                            <i class="glyphicon glyphicon-chevron-{{stockChange results.quote.Change}}"></i>
-                            {{results.quote.Change}}
-                        </a>
-                    </div>
-                </div>
-            {{/each}}
-        </div>
+        {{> usersDashboard}}
+        {{> stocksDashboard}}
     </section>
 </template>

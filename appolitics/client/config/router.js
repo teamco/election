@@ -30,3 +30,15 @@ var requireLogin = function () {
 };
 
 Router.onBeforeAction(requireLogin);
+
+Router.route('/', function () {
+
+    if (Meteor.user()) {
+
+        this.layout('mainLayout');
+
+    } else {
+
+        this.layout('siteLayout');         
+    }
+});

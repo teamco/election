@@ -7,7 +7,6 @@
             <th>Name</th>
             <th>Email</th>
             <th>Provider</th>
-            <th>Status</th>
             <th>Last login</th>
             <th></th>
         </tr>
@@ -23,11 +22,6 @@
                     <span class="label {{labelClass _id}}">{{profile.email}}</span>
                 </td>
                 <td>{{profile.provider}}</td>
-                <td>
-                    {{#if status.online}}
-                        <span title="Online" class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>
-                    {{/if}}
-                </td>
                 <td>{{status.lastLogin.date}}</td>
                 <td>
                     <a href="/admin/users/{{_id}}" class="btn btn-info show-user">Show</a>

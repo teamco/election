@@ -1,7 +1,7 @@
 Template.layout.helpers({
     loggedInUser: function () {
-         return Meteor.user();
-       }
+        return Meteor.user();
+    }
 });
 
 Template.layout.events({

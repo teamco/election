@@ -105,4 +105,4 @@ Meteor.publish("userStatus", function () {
 
 Meteor.publish(null, function () {
     return _runAsAdmin(this, Meteor.roles.find());
-})
+});

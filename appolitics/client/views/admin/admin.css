@@ -10,11 +10,11 @@
     background-color: #00c0ef;
 }
 
-.bg-green {
+.bg-green, .bg-up {
     background-color: #00a65a;
 }
 
-.bg-red {
+.bg-red, .bg-down {
     background-color: #dd4b39;
 }
 

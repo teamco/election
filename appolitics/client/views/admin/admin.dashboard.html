@@ -20,7 +20,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-xs-6">
-                <div class="small-box bg-green">
+                <div class="small-box bg-aqua">
                     <div class="inner">
                         <h3>{{onlineUsers}}</h3>
 
@@ -41,7 +41,7 @@
             {{#each stocks}}
                 <div class="col-lg-3 col-xs-6">
                     <!-- small box -->
-                    <div class="small-box bg-yellow">
+                    <div class="small-box bg-{{stockChange results.quote.Change}}">
                         <div class="inner">
                             <h3>{{results.quote.LastTradePriceOnly}}</h3>
 

@@ -1,4 +1,4 @@
-var availableStocks = ['FB', 'GOOG', 'SAP', 'APPL'];
+var availableStocks = ['FB', 'GOOG', 'SAP.DE', 'AAPL'];
 
 Template.adminDashboard.helpers({
     registeredUsers: function () {

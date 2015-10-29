@@ -1,4 +1,4 @@
-Router.route('/admin/dashboard', function () {
+Router.route('/admin', function () {
     this.render('adminDashboard');
 });
 

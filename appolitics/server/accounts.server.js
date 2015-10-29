@@ -1,5 +1,7 @@
 var admins = [
-    'teamco@gmail.com'
+    'teamco@gmail.com',
+    'nati.ari@gmail.com',
+    'eyal32@gmail.com'
 ];
 
 function _defineRoles(user, roles) {

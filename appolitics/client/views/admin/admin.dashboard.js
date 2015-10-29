@@ -16,7 +16,11 @@ Template.stocksDashboard.helpers({
         });
     },
     stockChange: function (change) {
-        return (change || '').match(/\+/) ? 'up' : 'down';
+
+        change = change || '';
+
+        return change.match(/\+/) ? 'up' :
+            change.match(/\-/) ? 'down' : 'no-change';
     }
 });
 

@@ -1,6 +1,10 @@
-Router.route('/admin/users', function () {
-    this.render('usersDashboard');
+Router.route('/admin/dashboard', function () {
+    this.render('adminDashboard');
 });
+
+Router.route('/admin/users', function () {
+    this.render('userData');
+}, {name: 'admin.users'});
 
 Router.route('/admin/users/:id', function () {
     this.render('editUser');

@@ -1,5 +1,5 @@
 Router.configure({
-    layoutTemplate: 'layout',
+    layoutTemplate: 'siteLayout',
     notFoundTemplate: 'notFound'
 });
 
@@ -39,6 +39,6 @@ Router.route('/', function () {
 
     } else {
 
-        this.layout('siteLayout');         
+        this.layout('siteLayout');
     }
 });

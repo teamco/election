@@ -82,3 +82,5 @@ function getCurrentUser() {
 function getUserProfile() {
     return AccountProfile.findOne({user_id: getCurrentUser()._id}) || {};
 }
+
+Meteor.subscribe("roles");

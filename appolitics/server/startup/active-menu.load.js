@@ -5,10 +5,10 @@ Meteor.startup(function () {
             {
                'name': 'Dashboard',
                'path': 'dashboard',
-               'gif': '',
-               'permissions': [
-                 "a",
-                 "c"
+               'gif': 'fa-dashboard',
+               'roles': [
+                 "admin",
+                 "candidate"
                ]
              }
         );
@@ -16,32 +16,46 @@ Meteor.startup(function () {
             {
               'name': 'Campaign Management',
               'path': 'campaignManagement',
-              'gif': '',
-              'permissions': [
-                "a",
-                "c"
+              'gif': 'fa fa-bar-chart-o',
+              'roles': [
+                "admin",
+                "candidate"
               ]
             }
         );
         ActiveMenu.insert(
            {
-             'name': 'Home',
-             'path': 'home',
-             'gif': '',
-             'permissions': [
-               "b"
+             'name': 'Timeline',
+             'path': 'timeline',
+             'gif': 'fa-greas',
+             'roles': [
+                "admin",
+                "candidate",
+                "end-user"
              ]
            }
        );
         ActiveMenu.insert(
             {
-              'name': 'Candidates',
-              'path': 'candidates',
-              'gif': '',
-              'permissions': [
-                "a",
-                "b",
-                "c"
+              'name': 'Followers',
+              'path': 'followers',
+              'gif': 'sa-users',
+              'roles': [
+                "admin",
+                "candidate",
+                "end-user"
+              ]
+            }
+        );
+        ActiveMenu.insert(
+            {
+              'name': 'My Groups',
+              'path': 'groups',
+              'gif': 'sa-users',
+              'roles': [
+                "admin",
+                "candidate",
+                "end-user"
               ]
             }
         );
@@ -49,10 +63,10 @@ Meteor.startup(function () {
             {
               'name': 'Events Management',
               'path': 'eventManagement',
-              'gif': '',
-              'permissions': [
-                "a",
-                "c"
+              'gif': 'fa-tasks',
+              'roles': [
+                "admin",
+                "candidate"
               ]
             }
         );
@@ -61,27 +75,27 @@ Meteor.startup(function () {
               'name': 'Content Management',
               'path': 'contentManagement',
               'gif': '',
-              'permissions': [
-                "a",
-                "c"
+              'roles': [
+                "admin",
+                "candidate"
               ],
               'subMenu': [
                 {
                   'name': 'Reports',
                   'path': 'reports',
                   'gif': '',
-                  'permissions': [
-                    "a",
-                    "c"
+                  'roles': [
+                    "admin",
+                    "candidate"
                   ]
                 },
                 {
                   'name': 'Files',
                   'path': 'repository',
-                  'gif': '',
-                  'permissions': [
-                    "a",
-                    "c"
+                  'gif': 'fa fa-picture-o',
+                  'roles': [
+                    "admin",
+                    "candidate"
                   ]
                 }
               ]
@@ -92,10 +106,10 @@ Meteor.startup(function () {
               'name': 'Calendar',
               'path': 'calendar',
               'gif': '',
-              'permissions': [
-                "a",
-                "b",
-                "c"
+              'roles': [
+                "admin",
+                "candidate",
+                "end-user"
               ]
             }
         );
@@ -104,10 +118,10 @@ Meteor.startup(function () {
               'name': 'Messages',
               'path': 'messages',
               'gif': 'fa fa-envelope',
-              'permissions': [
-                "a",
-                "b",
-                "c"
+              'roles': [
+                "admin",
+                "candidate",
+                "end-user"
               ]
             }
         );
@@ -116,41 +130,30 @@ Meteor.startup(function () {
               'name': 'Donations',
               'path': 'donations',
               'gif': '',
-              'permissions': [
-                "a",
-                "c"
+              'roles': [
+                "admin",
+                "candidate"
               ]
             }
         );
+        ActiveMenu.insert(
+             {
+               'name': 'Shop',
+               'path': 'shop',
+               'gif': 'fa fa-shopping-cart',
+               'roles': [
+                 "admin",
+                 "candidate"
+               ]
+             }
+         );
         ActiveMenu.insert(
             {
               'name': 'Users',
               'path': 'admin/users',
               'gif': '',
-              'permissions': [
-                "a"
-              ]
-            }
-        );
-        ActiveMenu.insert(
-            {
-              'name': 'Dashboard1',
-              'path': 'dashboard',
-              'gif': '',
-              'permissions': [
-                "a",
-                "c"
-              ]
-            }
-        );
-        ActiveMenu.insert(
-            {
-              'name': 'Dashboard2',
-              'path': 'dashboard',
-              'gif': '',
-              'permissions': [
-                "a",
-                "c"
+              'roles': [
+                "admin"
               ]
             }
         );

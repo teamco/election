@@ -3,7 +3,17 @@ Meteor.publish("activeMenu", function () {
 });
 
 Meteor.publish("activeMenuByRoles", function () {
-    return ActiveMenu.find();
+    var roles =[];
+
+    if(this.userId) {
+        roles = Roles.getRolesForUser(this.userId);
+    }
+
+    return ActiveMenu.find({
+        roles: {
+           $in: roles
+        }
+    });
 });
 
 Meteor.methods({

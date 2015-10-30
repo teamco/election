@@ -1,20 +1,20 @@
-Template.home.helpers({
+Template.shop.helpers({
     //add you helpers here
 });
 
-Template.home.events({
+Template.shop.events({
     //add your events here
 });
 
-Template.home.onCreated(function () {
+Template.shop.onCreated(function () {
     //add your statement here
 });
 
-Template.home.onRendered(function () {
+Template.shop.onRendered(function () {
     //add your statement here
 });
 
-Template.home.onDestroyed(function () {
+Template.shop.onDestroyed(function () {
     //add your statement here
 });
 

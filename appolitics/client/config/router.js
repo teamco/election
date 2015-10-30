@@ -20,6 +20,7 @@ var requireLogin = function () {
     } else if (Meteor.user()) {
 
         // Redirect to end user page
+        this.render('home');
         this.next();
 
     } else {

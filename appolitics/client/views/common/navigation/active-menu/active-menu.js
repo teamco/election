@@ -6,4 +6,4 @@ Template.activeMenu.helpers({
 
 });
 
-Meteor.subscribe("activeMenu");
+Meteor.subscribe("activeMenuByRoles");

@@ -54,3 +54,5 @@ mfactory:admin-lte
 mizzao:user-status
 reactive-var
 http
+
+gquemart:meteor-reactive-fullcalendar

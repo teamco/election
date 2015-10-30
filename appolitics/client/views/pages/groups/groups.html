@@ -1,0 +1,98 @@
+<template name="groups">
+
+
+    <div class="wrapper wrapper-content animated fadeInUp">
+
+        <div class="tabs-container">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#tab-1">My Groups</a></li>
+                <li class=""><a data-toggle="tab" href="#tab-2">Suggested Groups</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="tab-1" class="tab-pane active">
+                    <div class="panel-body">
+
+                        <div>
+                            <div class="ibox-tools">
+                                <a href="" class="btn btn-primary btn-xs">Create new group</a>
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+                            <div class="row m-b-sm m-t-sm">
+                                <div class="col-md-1">
+                                    <button type="button" id="loading-example-btn" class="btn btn-white btn-sm" ><i class="fa fa-refresh"></i> Refresh</button>
+                                </div>
+                                <div class="col-md-11">
+                                    <div class="input-group"><input type="text" placeholder="Search" class="input-sm form-control"> <span class="input-group-btn">
+                                                          <button type="button" class="btn btn-sm btn-primary"> Go!</button> </span></div>
+                                </div>
+                            </div>
+
+                            <div class="project-list">
+                                <table class="table table-hover">
+                                    <tbody>
+                                    <tr>
+                                        <td class="project-status">
+                                            <span class="label label-primary">Active</span>
+                                        </td>
+                                        <td class="project-title">
+                                            <a href="{{pathFor route='groups.views'}}">Contract with Zender Company</a>
+                                            <br/>
+                                            <small>Created 14.08.2014</small>
+                                        </td>
+
+                                        <td class="project-people">
+                                            <a href=""><img alt="image" class="img-circle" src="img/a3.jpg"></a>
+                                            <a href=""><img alt="image" class="img-circle" src="img/a1.jpg"></a>
+                                            <a href=""><img alt="image" class="img-circle" src="img/a2.jpg"></a>
+                                            <a href=""><img alt="image" class="img-circle" src="img/a4.jpg"></a>
+                                            <a href=""><img alt="image" class="img-circle" src="img/a5.jpg"></a>
+                                        </td>
+                                        <td class="project-actions">
+                                            <a href="{{pathFor route='groups.views'}}" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> View </a>
+                                            <a href="#" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> Edit </a>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="project-status">
+                                            <span class="label label-default">Unactive</span>
+                                        </td>
+                                        <td class="project-title">
+                                            <a href="{{pathFor route='groups.views'}}">new york volunteers for jeb bush</a>
+                                            <br/>
+                                            <small>Created 14.08.2015</small>
+                                        </td>
+
+                                        <td class="project-people">
+                                            <a href=""><img alt="image" class="img-circle" src="img/a3.jpg"></a>
+                                            <a href=""><img alt="image" class="img-circle" src="img/a1.jpg"></a>
+
+                                        </td>
+                                        <td class="project-actions">
+                                            <a href="{{pathFor route='groups.views'}}" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> View </a>
+                                            <a href="#" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> Edit </a>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab-2" class="tab-pane">
+                    <div class="panel-body">
+                        <strong>Donec quam felis</strong>
+
+                        <p>Thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects
+                            and flies, then I feel the presence of the Almighty, who formed us in his own image, and the breath </p>
+
+                        <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite
+                            sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

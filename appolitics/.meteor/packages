@@ -40,8 +40,6 @@ momentjs:moment
 accounts-base
 accounts-ui-unstyled
 accounts-ui
-gfk:notifications
-gfk:server-messages
 jparker:gravatar
 theduke:bootstrap-modal-prompt
 chipcastle:countries
@@ -54,5 +52,7 @@ mfactory:admin-lte
 mizzao:user-status
 reactive-var
 http
+themeteorchef:bert
+fourseven:scss
 
 gquemart:meteor-reactive-fullcalendar

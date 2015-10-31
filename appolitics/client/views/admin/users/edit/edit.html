@@ -19,11 +19,10 @@
                 {{> editUserAccess access=access}}
             </div>
 
+            <div class="footer">
+                <a href="/admin/users" class="btn btn-default">Back</a>
+                <a href="/admin/users/{{info._id}}/update" class="btn btn-info">Submit</a>
+            </div>
         </form>
-
-        <div class="footer">
-            <a href="/admin/users" class="btn btn-default">Back</a>
-            <button rel="submit" type="submit" class="btn btn-info">Submit</button>
-        </div>
     </div>
 </template>

@@ -9,3 +9,8 @@ Router.route('/admin/users', function () {
 Router.route('/admin/users/:id', function () {
     this.render('editUser');
 });
+
+Router.route('/admin/users/:id/update', {
+    controller: 'UsersController',
+    action: 'update'
+});

@@ -4,11 +4,12 @@ Meteor.methods({
     create: function (account, opts) {
         AccountProfile.insert({
             user_id: account._id,
-            firstName: opts.firstName,
-            middleName: opts.middleName,
-            lastName: opts.lastName,
-            birthday: opts.birthday,
-            address: opts.address
+            userFirstName: opts.firstName,
+            userMiddleName: opts.middleName,
+            userLastName: opts.lastName,
+            userBirthday: opts.birthday,
+            userCountry: opts.country,
+            userAddress: opts.address
         });
     },
     update: function () {

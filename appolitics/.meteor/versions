@@ -41,9 +41,8 @@ es5-shim@4.1.14
 facebook@1.2.2
 fastclick@1.0.7
 fortawesome:fontawesome@4.4.0
+fourseven:scss@3.4.1
 geojson-utils@1.0.4
-gfk:notifications@1.1.4
-gfk:server-messages@1.1.0
 google@1.1.7
 gquemart:meteor-reactive-fullcalendar@1.0.1
 hot-code-push@1.0.0
@@ -110,6 +109,7 @@ standard-minifiers@1.0.2
 templating@1.1.5
 templating-tools@1.0.0
 theduke:bootstrap-modal-prompt@0.0.2
+themeteorchef:bert@2.1.0
 tracker@1.0.9
 tsega:bootstrap3-datetimepicker@4.17.37_1
 twbs:bootstrap@3.3.5

@@ -7,6 +7,9 @@ Template.editUser.onRendered(function () {
 Template.editUser.helpers({
     info: function () {
         return {
+            _id: function () {
+                return getCurrentUser()._id;
+            },
             email: function () {
                 return getCurrentUser().profile.email;
             },
@@ -43,29 +46,40 @@ Template.editUser.helpers({
     profile: function () {
         return {
             firstName: function () {
-                return getUserProfile().firstName || getUserName().split(' ')[0];
+                return getUserProfile().userFirstName || getUserName().split(' ')[0];
             },
             middleName: function () {
-                return getUserProfile().middleName;
+                return getUserProfile().userMiddleName;
             },
             lastName: function () {
-                return getUserProfile().lastName || getUserName().split(' ')[1];
+                return getUserProfile().userLastName || getUserName().split(' ')[1];
             },
             birthday: function () {
-                return getUserProfile().birthday;
+                return getUserProfile().userBirthday;
+            },
+            country: function () {
+                return getUserProfile().userCountry;
             },
             address: function () {
-                return getUserProfile().address;
+                return getUserProfile().userAddress;
             }
         };
     },
     access: function () {
+
+        var roles = getUserRoles();
+
         return {
             availableRoles: function () {
-                return Roles.getAllRoles().fetch();
+                return _.map(Roles.getAllRoles().fetch(), function (role) {
+                    return {
+                        name: role.name,
+                        checked: _.contains(roles, role.name)
+                    }
+                });
             },
             currentRoles: function () {
-                return (Roles.getRolesForUser(Router.current().params.id) || []).join(', ');
+                return roles.join(', ');
             }
         }
     }
@@ -75,8 +89,13 @@ function getUserName() {
     return getCurrentUser().profile.name || ' ';
 }
 
+function getUserRoles() {
+    return Roles.getRolesForUser(getCurrentUser()) || [];
+}
+
 function getCurrentUser() {
-    return Accounts.users.findOne(Router.current().params.id) || {profile: {}, status: {}};
+    return Accounts.users.findOne(Router.current().params.id) ||
+        {profile: {}, status: {lastLogin: {}}};
 }
 
 function getUserProfile() {

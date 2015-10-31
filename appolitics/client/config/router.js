@@ -16,12 +16,14 @@ var requireLogin = function () {
     if (_isRestrictedArea(this) && !_isAdmin()) {
 
         this.render('accessDenied');
+        Bert.alert('Restricted area', 'danger');
 
     } else if (Meteor.user()) {
 
         // Redirect to end user page
         this.render('home');
         this.next();
+        //Bert.alert( 'Welcome', 'success', 'growl-top-right' );
 
     } else {
 

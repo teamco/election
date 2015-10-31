@@ -12,6 +12,7 @@ Meteor.startup(function () {
                ]
              }
         );
+
         ActiveMenu.insert(
             {
               'name': 'Campaign Management',
@@ -24,57 +25,10 @@ Meteor.startup(function () {
             }
         );
         ActiveMenu.insert(
-           {
-             'name': 'Timeline',
-             'path': 'timeline',
-             'gif': 'fa-greas',
-             'roles': [
-                "admin",
-                "candidate",
-                "end-user"
-             ]
-           }
-       );
-        ActiveMenu.insert(
-            {
-              'name': 'Followers',
-              'path': 'followers',
-              'gif': 'sa-users',
-              'roles': [
-                "admin",
-                "candidate",
-                "end-user"
-              ]
-            }
-        );
-        ActiveMenu.insert(
-            {
-              'name': 'My Groups',
-              'path': 'groups',
-              'gif': 'sa-users',
-              'roles': [
-                "admin",
-                "candidate",
-                "end-user"
-              ]
-            }
-        );
-        ActiveMenu.insert(
-            {
-              'name': 'Events Management',
-              'path': 'eventManagement',
-              'gif': 'fa-tasks',
-              'roles': [
-                "admin",
-                "candidate"
-              ]
-            }
-        );
-        ActiveMenu.insert(
             {
               'name': 'Content Management',
               'path': 'contentManagement',
-              'gif': '',
+              'gif': 'fa-cogs',
               'roles': [
                 "admin",
                 "candidate"
@@ -98,6 +52,75 @@ Meteor.startup(function () {
                     "candidate"
                   ]
                 }
+              ]
+            }
+        );
+        ActiveMenu.insert(
+            {
+              'name': 'Events Management',
+              'path': 'eventManagement',
+              'gif': 'fa-tasks',
+              'roles': [
+                "admin",
+                "candidate"
+              ]
+            }
+        );
+        ActiveMenu.insert(
+             {
+               'name': 'Shop Management',
+               'path': 'shopManagement',
+               'gif': 'fa fa-shopping-cart',
+               'roles': [
+                 "admin",
+                 "candidate"
+               ]
+             }
+         );
+        ActiveMenu.insert(
+           {
+             'name': 'Timeline',
+             'path': 'timeline',
+             'gif': 'fa-greas',
+             'roles': [
+                "admin",
+                "candidate",
+                "end-user"
+             ]
+           }
+       );
+        ActiveMenu.insert(
+            {
+              'name': 'Volunteer',
+              'path': 'volunteer',
+              'gif': 'sa-users',
+              'roles': [
+                "admin",
+                "candidate"
+              ]
+            }
+        );
+        ActiveMenu.insert(
+            {
+              'name': 'Followers',
+              'path': 'followers',
+              'gif': 'sa-users',
+              'roles': [
+                "admin",
+                "candidate",
+                "end-user"
+              ]
+            }
+        );
+        ActiveMenu.insert(
+            {
+              'name': 'My Groups',
+              'path': 'groups',
+              'gif': 'sa-users',
+              'roles': [
+                "admin",
+                "candidate",
+                "end-user"
               ]
             }
         );
@@ -129,10 +152,21 @@ Meteor.startup(function () {
             {
               'name': 'Donations',
               'path': 'donations',
-              'gif': '',
+              'gif': 'fa-usd',
               'roles': [
                 "admin",
                 "candidate"
+              ]
+            }
+        );
+        ActiveMenu.insert(
+            {
+              'name': 'Donate',
+              'path': 'donate',
+              'gif': 'fa-usd',
+              'roles': [
+                "admin",
+                "end-user"
               ]
             }
         );
@@ -143,7 +177,7 @@ Meteor.startup(function () {
                'gif': 'fa fa-shopping-cart',
                'roles': [
                  "admin",
-                 "candidate"
+                 "end-user"
                ]
              }
          );
@@ -151,11 +185,43 @@ Meteor.startup(function () {
             {
               'name': 'Users',
               'path': 'admin/users',
-              'gif': '',
+              'gif': 'fa-user',
               'roles': [
                 "admin"
               ]
             }
+        );
+        ActiveMenu.insert(
+           {
+             'name': 'Settings',
+             'path': 'admin/settings',
+             'gif': 'fa-cog',
+             'roles': [
+               "admin"
+             ]
+           }
+        );
+        ActiveMenu.insert(
+           {
+             'name': 'Settings',
+             'path': 'accountSettings',
+             'gif': 'fa-cog',
+             'roles': [
+                 "admin",
+                 "candidate"
+             ]
+           }
+        );
+        ActiveMenu.insert(
+           {
+             'name': 'Settings',
+             'path': 'userSettings',
+             'gif': 'fa-cog',
+             'roles': [
+               "admin",
+               "end-user"
+             ]
+           }
         );
     }
 });

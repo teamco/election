@@ -4,6 +4,10 @@ var admins = [
     'eyal32@gmail.com'
 ];
 
+var candidates = [
+    'a@a'
+];
+
 function _defineRoles(user, roles) {
     if (user._id) {
         Meteor.defer(function () {
@@ -35,8 +39,10 @@ Accounts.onCreateUser(function (options, user) {
 
     if (admins.indexOf(auth.email) > -1) {
         _defineRoles(user, ['admin', 'end-user']);
-    } else {
-        _defineRoles(user, ['end-user']);
+    } else if (candidates.indexOf(auth.email) > -1) {
+        _defineRoles(user, ['candidate','end-user']);
+    }else{
+        defineRoles(user, ['end-user']);
     }
 
     return user;

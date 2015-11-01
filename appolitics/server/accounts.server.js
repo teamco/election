@@ -17,7 +17,6 @@ function _defineRoles(user, roles) {
 }
 
 function _runAsAdmin(ref, filter) {
-
     if (Roles.userIsInRole(ref.userId, 'admin')) {
         return filter;
     }
@@ -40,7 +39,7 @@ Accounts.onCreateUser(function (options, user) {
     if (admins.indexOf(auth.email) > -1) {
         _defineRoles(user, ['admin', 'end-user']);
     } else if (candidates.indexOf(auth.email) > -1) {
-        _defineRoles(user, ['candidate']);
+        _defineRoles(user, ['candidate', 'end-user']);
     } else {
         _defineRoles(user, ['end-user']);
     }
@@ -50,6 +49,8 @@ Accounts.onCreateUser(function (options, user) {
 
 Meteor.methods({
     updateUser: function () {
+        console.log(arguments);
+        debugger;
     },
     destroyUser: function (user) {
         Meteor.users.remove(user._id);

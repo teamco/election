@@ -17,6 +17,7 @@ function filterValueByType(input, type) {
 
 UsersController = RouteController.extend({
     update: function () {
+
         var $profile = $('#profile').find('input:enabled, textarea:enabled, select:enabled'),
             $access = $('#access').find('input:enabled'),
             profile = {},
@@ -30,7 +31,20 @@ UsersController = RouteController.extend({
             access[input.name] = filterValueByType(input, input.dataset.type);
         });
 
-        debugger
-        this.redirect('/admin/users');
+        Meteor.call(
+            'updateUser', {
+                user_id: this.userId,
+                profile: profile,
+                access: access
+            },
+            function (error, result) {
+
+                if (error) {
+                    return Bert.alert(error.reason, 'danger');
+                }
+
+                this.redirect('/admin/users');
+            }
+        );
     }
 });

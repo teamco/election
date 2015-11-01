@@ -1,28 +1,30 @@
 <template name="activeMenu">
     {{#each currentMenu}}
-<!--        {{#if subMenu}}
-                 <li class="{{isActiveRoute path}}">
-     &lt;!&ndash;            <i class="fa fa-table"></i>
-                 <span class="nav-label"></span>
-                 <span class="fa arrow"></span>&ndash;&gt;
-        {{else}}
-                 <li class="{{isActiveRoute path}}">
-        {{/if}}-->
 
         <li class="{{isActiveRoute path}}">
-
-            <a href="{{pathFor route=path}}">
-                <i class="{{gif}}"></i>
-                <span class="nav-label">{{name}}</span>
-            </a>
             {{#if subMenu}}
-                {{#each subMenu}}
-                    <ul class="nav nav-second-level collapse">
-                        <a href="{{pathFor route=path}}"><li class="{{gif}}"></li> <span class="nav-label">{{name}}</span>
-                        </a>
-                    </ul>
-                {{/each}}
+                <a href="#">
+                    <i class="{{gif}}"></i>
+                    <span class="nav-label">{{name}}</span>
+                    <span class="fa arrow"></span>
+                </a>
+                <ul class="nav nav-second-level collapse">
+                    {{#each subMenu}}
+                        <li class="{{isActiveRoute path}}">
+                            <a href="{{pathFor route=path}}">
+                                <i class="{{gif}}"></i>
+                                <span class="nav-label">{{name}}</span>
+                            </a>
+                        </li>
+                    {{/each}}
+                </ul>
+            {{else}}
+                <a href="{{pathFor route=path}}">
+                    <i class="{{gif}}"></i>
+                    <span class="nav-label">{{name}}</span>
+                </a>
             {{/if}}
         </li>
+
     {{/each}}
 </template>

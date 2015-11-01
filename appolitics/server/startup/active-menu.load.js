@@ -5,7 +5,7 @@ Meteor.startup(function () {
             {
                'name': 'Dashboard',
                'path': 'dashboard',
-               'gif': 'fa-dashboard',
+               'gif': 'fa fa-dashboard',
                'roles': [
                  "admin",
                  "candidate"
@@ -17,7 +17,7 @@ Meteor.startup(function () {
             {
               'name': 'Campaign Management',
               'path': 'campaignManagement',
-              'gif': 'fa fa-bar-chart-o',
+              'gif': 'fa fa fa-bar-chart-o',
               'roles': [
                 "admin",
                 "candidate"
@@ -28,7 +28,7 @@ Meteor.startup(function () {
             {
               'name': 'Content Management',
               'path': 'contentManagement',
-              'gif': 'fa-cogs',
+              'gif': 'fa fa-cogs',
               'roles': [
                 "admin",
                 "candidate"
@@ -46,7 +46,7 @@ Meteor.startup(function () {
                 {
                   'name': 'Files',
                   'path': 'repository',
-                  'gif': 'fa fa-picture-o',
+                  'gif': 'fa fa fa-picture-o',
                   'roles': [
                     "admin",
                     "candidate"
@@ -59,7 +59,7 @@ Meteor.startup(function () {
             {
               'name': 'Events Management',
               'path': 'eventManagement',
-              'gif': 'fa-tasks',
+              'gif': 'fa fa-tasks',
               'roles': [
                 "admin",
                 "candidate"
@@ -70,7 +70,7 @@ Meteor.startup(function () {
              {
                'name': 'Shop Management',
                'path': 'shopManagement',
-               'gif': 'fa fa-shopping-cart',
+               'gif': 'fa fa fa-shopping-cart',
                'roles': [
                  "admin",
                  "candidate"
@@ -81,7 +81,7 @@ Meteor.startup(function () {
            {
              'name': 'Timeline',
              'path': 'timeline',
-             'gif': 'fa-greas',
+             'gif': 'fa fa-greas',
              'roles': [
                 "admin",
                 "candidate",
@@ -140,7 +140,7 @@ Meteor.startup(function () {
             {
               'name': 'Messages',
               'path': 'messages',
-              'gif': 'fa fa-envelope',
+              'gif': 'fa fa fa-envelope',
               'roles': [
                 "admin",
                 "candidate",
@@ -152,7 +152,7 @@ Meteor.startup(function () {
             {
               'name': 'Donations',
               'path': 'donations',
-              'gif': 'fa-usd',
+              'gif': 'fa fa-usd',
               'roles': [
                 "admin",
                 "candidate"
@@ -163,7 +163,7 @@ Meteor.startup(function () {
             {
               'name': 'Donate',
               'path': 'donate',
-              'gif': 'fa-usd',
+              'gif': 'fa fa-usd',
               'roles': [
                 "admin",
                 "end-user"
@@ -185,7 +185,7 @@ Meteor.startup(function () {
             {
               'name': 'Users',
               'path': 'admin/users',
-              'gif': 'fa-user',
+              'gif': 'fa fa-user',
               'roles': [
                 "admin"
               ]
@@ -193,9 +193,9 @@ Meteor.startup(function () {
         );
         ActiveMenu.insert(
            {
-             'name': 'Settings',
+             'name': 'Admin Settings',
              'path': 'admin/settings',
-             'gif': 'fa-cog',
+             'gif': 'fa fa-cog',
              'roles': [
                "admin"
              ]
@@ -203,9 +203,9 @@ Meteor.startup(function () {
         );
         ActiveMenu.insert(
            {
-             'name': 'Settings',
+             'name': 'Account Settings',
              'path': 'accountSettings',
-             'gif': 'fa-cog',
+             'gif': 'fa fa-cog',
              'roles': [
                  "admin",
                  "candidate"
@@ -214,9 +214,9 @@ Meteor.startup(function () {
         );
         ActiveMenu.insert(
            {
-             'name': 'Settings',
+             'name': 'User Settings',
              'path': 'userSettings',
-             'gif': 'fa-cog',
+             'gif': 'fa fa-cog',
              'roles': [
                "admin",
                "end-user"

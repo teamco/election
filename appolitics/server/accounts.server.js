@@ -41,8 +41,8 @@ Accounts.onCreateUser(function (options, user) {
         _defineRoles(user, ['admin', 'end-user']);
     } else if (candidates.indexOf(auth.email) > -1) {
         _defineRoles(user, ['candidate','end-user']);
-    }else{
-        defineRoles(user, ['end-user']);
+    } else {
+        _defineRoles(user, ['end-user']);
     }
 
     return user;

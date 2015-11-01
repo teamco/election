@@ -21,15 +21,15 @@ var requireLogin = function () {
     } else if (Meteor.user()) {
 
         // Redirect to end user page
-        this.render('home');
-        this.next();
+//        this.redirect('/home');
         //Bert.alert( 'Welcome', 'success', 'growl-top-right' );
 
     } else {
 
         // Redirect to public page
-        this.next();
     }
+
+    this.next();
 };
 
 Router.onBeforeAction(requireLogin);

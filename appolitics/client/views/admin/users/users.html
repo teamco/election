@@ -4,7 +4,7 @@
     <table class="table user-data">
         <thead>
         <tr>
-            <th>Name</th>
+            <th colspan="2">Name</th>
             <th>Email</th>
             <th>Provider</th>
             <th>Last login</th>
@@ -14,8 +14,8 @@
         <tbody>
         {{#each allUsers}}
             <tr class="{{#if isCurrentUser _id}}current{{/if}}">
+                <td class="user-info"><img src="{{profile.picture}}" alt="{{profile.name}}"/></td>
                 <td class="user-info">
-                    <img src="{{profile.picture}}" alt="{{profile.name}}"/>
                     <a href="{{profile.link}}">{{profile.name}}</a>
                 </td>
                 <td>
@@ -24,8 +24,8 @@
                 <td>{{profile.provider}}</td>
                 <td>{{status.lastLogin.date}}</td>
                 <td>
-                    <a href="/admin/users/{{_id}}" class="btn btn-info show-user">Show</a>
-                    <a href="/admin/users/{{_id}}" class="btn btn-danger delete-user">Delete</a>
+                    <a href="/admin/users/{{_id}}" class="label label-info show-user">Show</a>
+                    <a href="/admin/users/{{_id}}" class="label label-danger delete-user">Delete</a>
                 </td>
             </tr>
         {{/each}}

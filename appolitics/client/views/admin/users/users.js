@@ -27,7 +27,7 @@ Template.userData.events({
                     function (error, result) {
                         console.log(arguments)
                     }
-                )
+                );
             }
         });
 

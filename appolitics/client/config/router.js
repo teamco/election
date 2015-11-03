@@ -23,13 +23,13 @@ var requireLogin = function () {
         // Redirect to end user page
 //        this.redirect('/home');
         //Bert.alert( 'Welcome', 'success', 'growl-top-right' );
+        this.next();
 
     } else {
 
         // Redirect to public page
+        this.next();
     }
-
-    this.next();
 };
 
 Router.onBeforeAction(requireLogin);

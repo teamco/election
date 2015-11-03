@@ -31,19 +31,24 @@ UsersController = RouteController.extend({
             access[input.name] = filterValueByType(input, input.dataset.type);
         });
 
+        var router = this,
+            userId = router.params.id;
+
         Meteor.call(
             'updateUser', {
-                user_id: this.userId,
+                userId: userId,
                 profile: profile,
                 access: access
             },
             function (error, result) {
 
                 if (error) {
-                    return Bert.alert(error.reason, 'danger');
+                    router.redirect('/admin/users/' + userId, function () {
+                        Bert.alert(error.reason, 'danger');
+                    });
                 }
 
-                this.redirect('/admin/users');
+                router.redirect('/admin/users');
             }
         );
     }

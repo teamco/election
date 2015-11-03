@@ -34,6 +34,8 @@ Accounts.onCreateUser(function (options, user) {
     options.profile.provider = provider;
     options.profile.email = auth.email;
     options.profile.link = auth.link;
+    options.profile.updatedAt = user.createdAt;
+
     user.profile = options.profile;
 
     if (admins.indexOf(auth.email) > -1) {
@@ -49,8 +51,14 @@ Accounts.onCreateUser(function (options, user) {
 
 Meteor.methods({
     updateUser: function () {
-        console.log(arguments);
-        debugger;
+
+        Meteor.users.update(
+            {_id: this.userId},
+            {$set: {"profile.updatedAt": new Date()}},
+            {multi: true}
+        );
+
+
     },
     destroyUser: function (user) {
         Meteor.users.remove(user._id);

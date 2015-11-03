@@ -10,6 +10,10 @@ td.user-info img {
     vertical-align: middle;
 }
 
+.table.user-data > tbody > tr > td:last-child {
+    white-space: nowrap;
+}
+
 ul.notifications {
     position: fixed;
 }

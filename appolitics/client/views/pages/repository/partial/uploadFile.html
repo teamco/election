@@ -1,0 +1,18 @@
+<template name="uploadFile">
+    <div class="wrapper wrapper-content animated fadeIn">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>Dropzone Area</h5>
+                        {{>iboxTools}}
+                    </div>
+                    <div class="ibox-content">
+                        {{> dropzone url='http://localhost:3030/upload' id='dropzoneDiv'}}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</template>

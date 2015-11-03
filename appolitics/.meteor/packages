@@ -56,3 +56,7 @@ themeteorchef:bert
 fourseven:scss
 
 gquemart:meteor-reactive-fullcalendar
+dbarrett:dropzonejs
+tomi:upload-server
+#tomi:upload-jquery
+tkornblit:icheck

@@ -3,7 +3,9 @@ Template.repository.helpers({
 });
 
 Template.repository.events({
-    //add your events here
+    'click #uploadFile': function () {
+        Router.go('/repository/new');
+    }
 });
 
 Template.repository.onCreated(function () {
@@ -17,4 +19,3 @@ Template.repository.onRendered(function () {
 Template.repository.onDestroyed(function () {
     //add your statement here
 });
-

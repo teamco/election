@@ -1,4 +1,4 @@
-Template.mainLayout.rendered = function(){
+Template.endUserLayout.rendered = function(){
 
     // Minimalize menu when screen is less than 768px
     $(window).bind("resize load", function () {

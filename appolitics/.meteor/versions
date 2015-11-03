@@ -25,6 +25,7 @@ callback-hook@1.0.4
 check@1.1.0
 chipcastle:countries@1.0.2
 coffeescript@1.0.11
+dbarrett:dropzonejs@4.0.2
 dburles:collection-helpers@1.0.4
 ddp@1.2.2
 ddp-client@1.2.1
@@ -110,6 +111,8 @@ templating@1.1.5
 templating-tools@1.0.0
 theduke:bootstrap-modal-prompt@0.0.2
 themeteorchef:bert@2.1.0
+tkornblit:icheck@0.0.2
+tomi:upload-server@1.3.2
 tracker@1.0.9
 tsega:bootstrap3-datetimepicker@4.17.37_1
 twbs:bootstrap@3.3.5

@@ -1,3 +1,5 @@
+Calendars  = new Mongo.Collection("events");
+
 Template.calendar.helpers({
         calendarOptions: {
             // Standard fullcalendar options

@@ -36,7 +36,7 @@
                        data-type="date"
                        name="userBirthday"
                        id="user-birthday"
-                       value="{{profile.birthday}}"/>
+                       value="{{formatDate profile.birthday 'MMMM DD, YYYY'}}"/>
             </div>
         </div>
         <div class="form-group">
@@ -44,7 +44,11 @@
             <select class="form-control" name="userCountry" id="user-country">
                 <option selected>Select country</option>
                 {{#each countries}}
-                    <option value="{{name}}">{{name}}</option>
+                    {{#if selectedCountry name}}
+                        <option selected value="{{name}}">{{name}}</option>
+                    {{else}}
+                        <option value="{{name}}">{{name}}</option>
+                    {{/if}}
                 {{/each}}
             </select>
         </div>

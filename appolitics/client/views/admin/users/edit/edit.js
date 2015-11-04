@@ -99,7 +99,8 @@ function getCurrentUser() {
 }
 
 function getUserProfile() {
-    return AccountProfile.findOne({user_id: getCurrentUser()._id}) || {};
+    return (AccountProfile.findOne({userId: getCurrentUser()._id}) || {}).profile || {};
 }
 
+Meteor.subscribe("profile");
 Meteor.subscribe("roles");

@@ -1,24 +1,35 @@
 Meteor.methods({
     updateAccountRoles: function (opts) {
-
+        
         var roles = Roles.getRolesForUser(opts.userId),
-            update = _.map(opts.access, function (access, role) {
-                if (access) {
-                    return role;
-                }
-            });
+            update = _.compact(
+                _.map(opts.access, function (access, role) {
+                    if (access) {
+                        return role;
+                    }
+                })
+            );
 
-        if (Roles.getUsersInRole(opts.userId, 'admin')) {
+        var isAdmin = Roles.getUsersInRole(opts.userId, 'admin'),
+            isCurrent = opts.userId === this.userId;
+
+        if (isAdmin) {
 
             if (update.indexOf('admin') > -1) {
 
-                console.warn(TAPi18n.__('admin_removed'));
+                console.warn(TAPi18n.__('admin_added'));
 
-            } else {
+            } else if (isCurrent) {
+
+                console.warn(TAPi18n.__('admin_skipped'));
 
                 roles = _.reject(roles, function (role) {
                     return role === 'admin';
                 });
+
+            } else {
+
+                console.warn(TAPi18n.__('admin_removed'));
             }
         }
 

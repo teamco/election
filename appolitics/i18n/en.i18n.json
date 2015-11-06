@@ -1,4 +1,6 @@
 {
+  "admin_added": "Admin role was added.",
+  "admin_skipped": "Admin role can't be removed from itself.",
   "admin_removed": "Admin role was removed.",
   "user_updated": "User \"%s\" was updated successfully.",
   "user_updated_at": "Update user timestamp.",

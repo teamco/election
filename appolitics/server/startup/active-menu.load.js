@@ -138,6 +138,17 @@ Meteor.startup(function () {
         );
         ActiveMenu.insert(
             {
+                'name': 'Events',
+                'path': 'eventView',
+                'gif': '',
+                'roles': [
+                    "admin",
+                    "end-user"
+                ]
+            }
+        );
+        ActiveMenu.insert(
+            {
                 'name': 'Messages',
                 'path': 'messages',
                 'gif': 'fa fa fa-envelope',

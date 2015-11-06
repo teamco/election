@@ -5,12 +5,16 @@
                 <a id="navbar-minimalize" class="minimalize-styl-2 btn btn-primary " href="#">
                     <i class="fa fa-bars"></i>
                 </a>
-                {{> searchForm }}
+                <div class="nav navbar-top-links navbar-left">
+                    {{> search}}
+                </div>
+
             </div>
             <ul class="nav navbar-top-links navbar-right">
-                <li>{{> loginButtons}}</li>
+                {{>language}}
+                {{> mailsNotification}}
+                {{> loginButtons}}
             </ul>
-
         </nav>
     </div>
 </template>

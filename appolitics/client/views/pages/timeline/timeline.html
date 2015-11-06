@@ -1,18 +1,20 @@
 <template name="timeline">
     <div class="wrapper wrapper-content animated fadeInRight">
 
-        <div class="tabs-container">
-            <ul class="nav nav-tabs">
-                <li class="active"><a data-toggle="tab" href="#timelineBlogs">Timeline</a></li>
-                <li class=""><a data-toggle="tab" href="#recommendation">Most Recommendation</a></li>
-                <li class=""><a data-toggle="tab" href="#channels">Channels</a></li>
-            </ul>
-            <div class="tab-content">
+        <div class="col-lg-9 animated ">
+            <div class="tabs-container">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#timelineBlogs">Timeline</a></li>
+                    <li class=""><a data-toggle="tab" href="#recommendation">Most Recommendation</a></li>
+                    <li class=""><a data-toggle="tab" href="#channels">Channels</a></li>
+                </ul>
+                <div class="tab-content">
 
-                {{> timelineBlogs}}
-                {{> recommendation}}
-                {{> channels}}
+                    {{> timelineBlogs}}
+                    {{> recommendation}}
+                    {{> channels}}
 
+                </div>
             </div>
         </div>
     </div>

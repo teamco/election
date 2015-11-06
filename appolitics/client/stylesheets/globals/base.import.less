@@ -7,6 +7,12 @@ body {
 
 }
 
+.mega-dropdown>.dropdown-menu.mega-dropdown-menu {
+    left: 18px;
+    right: 18px;
+    max-width: 1250px;
+}
+
 html,body {
   height: 100%;
 
@@ -250,6 +256,17 @@ ul.unstyled, ol.unstyled {
   background: white;
   border-top: 1px solid @border-color;
   margin-left: @sidebar-width;
+}
+
+.footer.fixedEU {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding:10px 20px;
+  background: white;
+  border-top: 1px solid @border-color;
 }
 
 body.mini-navbar .footer.fixed,

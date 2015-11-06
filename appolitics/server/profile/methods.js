@@ -1,13 +1,11 @@
 Meteor.methods({
     createAccountProfile: function (opts) {
-        if (opts.userId) {
-            AccountProfile.insert(opts);
-        }
+        AccountProfile.insert(opts);
     },
     updateAccountProfile: function (opts) {
         AccountProfile.update(
             {userId: opts.userId},
-            {$set: opts.profile},
+            {$set: {profile: opts.profile}},
             {multi: true}
         );
     },

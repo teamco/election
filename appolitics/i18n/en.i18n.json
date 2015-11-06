@@ -1,4 +1,7 @@
 {
   "admin_removed": "Admin role was removed.",
-  "user_updated": "User \"%s\" was updated successfully."
+  "user_updated": "User \"%s\" was updated successfully.",
+  "user_updated_at": "Update user timestamp.",
+  "account_profile": "Define account profile as: %s.",
+  "user_roles": "Update user roles: %s."
 }

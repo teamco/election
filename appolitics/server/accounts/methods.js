@@ -1,8 +1,9 @@
 Meteor.methods({
     updateUser: function (opts) {
 
+        console.info(TAPi18n.__('user_updated_at'));
         Meteor.users.update(
-            {_id: this.userId},
+            {_id: opts.userId},
             {$set: {"profile.updatedAt": new Date()}},
             {multi: true}
         );
@@ -14,6 +15,7 @@ Meteor.methods({
             method = 'update';
         }
 
+        console.info(TAPi18n.__('account_profile', method));
         Meteor.call(
             method + 'AccountProfile', {
                 userId: opts.userId,
@@ -21,14 +23,19 @@ Meteor.methods({
             }
         );
 
+        console.info(TAPi18n.__('user_roles', JSON.stringify(opts.access)));
         Meteor.call(
-            'updateRoles', {
+            'updateAccountRoles', {
                 userId: opts.userId,
                 access: opts.access
             }
         );
+
+        return Meteor.users.findOne(opts.userId);
     },
+
     destroyUser: function (user) {
+
         Meteor.users.remove(user._id);
         return user;
     }

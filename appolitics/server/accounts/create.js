@@ -11,7 +11,7 @@ var candidates = [
 function _defineRoles(user, roles) {
     if (user._id) {
         Meteor.defer(function () {
-            Roles.addUsersToRoles(user._id, roles, Roles.GLOBAL_GROUP);
+            Roles.addUsersToRoles(user._id, roles);
         });
     }
 }

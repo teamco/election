@@ -8,7 +8,6 @@ less
 iron:router
 twbs:bootstrap@3.3.5
 fortawesome:fontawesome
-zimme:iron-router-active
 jquery
 
 standard-minifiers
@@ -49,7 +48,6 @@ aldeed:collection2
 aldeed:autoform
 meteorhacks:meteorx
 mfactory:admin-lte
-mizzao:user-status
 reactive-var
 http
 themeteorchef:bert
@@ -61,3 +59,4 @@ tomi:upload-server
 #tomi:upload-jquery
 tkornblit:icheck
 tap:i18n
+mizzao:user-status

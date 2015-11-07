@@ -2,24 +2,27 @@ Router.configure({
     notFoundTemplate: 'notFound'
 });
 
-function inRole(role) {
-    return Meteor.user() && Roles.userIsInRole(Meteor.userId(), role);
-}
-
 var requireLogin = function () {
 
     function _isRestrictedArea(router) {
         return router.url.match(/admin/);
     }
 
-    if (_isRestrictedArea(this) && !inRole('admin')) {
+    if (_isRestrictedArea(this)) {
 
-        this.render('accessDenied');
-        Bert.alert(TAPi18n.__('restricted_area'), 'danger');
-        this.redirect('/');
-        this.stop();
+        if (isAdmin()) {
 
-    } else if (Meteor.user()) {
+            this.layout('endUserLayout');
+
+        } else {
+
+            this.render('accessDenied');
+            Bert.alert(TAPi18n.__('restricted_area'), 'danger');
+            this.redirect('/');
+            this.stop();
+        }
+
+    } else if (currentUser()) {
 
         if (inRole('candidate')) {
 

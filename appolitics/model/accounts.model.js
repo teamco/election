@@ -1,11 +1,9 @@
 Meteor.users.allow({
     insert: function (_id, user) {
-        return _id === user._id;
+        return user && _id === user._id;
     },
-    update: function (_id, user) {
-        return _id === user._id;
-    },
+    update: isOwnerDocument,
     remove: function (_id, user) {
-        return _id === user._id;
+        return user && _id === user._id;
     }
 });

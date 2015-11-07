@@ -8,38 +8,38 @@ Template.editUser.helpers({
     info: function () {
         return {
             _id: function () {
-                return getCurrentUser()._id;
+                return getUser()._id;
             },
             email: function () {
-                return getCurrentUser().profile.email;
+                return getUser().profile.email;
             },
             provider: function () {
-                return getCurrentUser().profile.provider;
+                return getUser().profile.provider;
             },
             profile: function () {
-                return getCurrentUser().profile.link;
+                return getUser().profile.link;
             },
             createdAt: function () {
-                return getCurrentUser().createdAt;
+                return getUser().createdAt;
             }
         };
     },
     status: function () {
         return {
             idle: function () {
-                return getCurrentUser().status.idle ? 'Idle' : 'Active';
+                return getUser().status.idle ? 'Idle' : 'Active';
             },
             online: function () {
-                return getCurrentUser().status.online ? 'Online' : 'Offline';
+                return getUser().status.online ? 'Online' : 'Offline';
             },
             ipAddress: function () {
-                return getCurrentUser().status.lastLogin.ipAddr;
+                return getUser().status.lastLogin.ipAddr;
             },
             userAgent: function () {
-                return getCurrentUser().status.lastLogin.userAgent;
+                return getUser().status.lastLogin.userAgent;
             },
             lastLogin: function () {
-                return getCurrentUser().status.lastLogin.date;
+                return getUser().status.lastLogin.date;
             }
         };
     },
@@ -84,23 +84,6 @@ Template.editUser.helpers({
         }
     }
 });
-
-function getUserName() {
-    return getCurrentUser().profile.name || ' ';
-}
-
-function getUserRoles() {
-    return Roles.getRolesForUser(getCurrentUser()) || [];
-}
-
-function getCurrentUser() {
-    return Accounts.users.findOne(Router.current().params.id) ||
-        {profile: {}, status: {lastLogin: {}}};
-}
-
-function getUserProfile() {
-    return (AccountProfile.findOne({userId: getCurrentUser()._id}) || {}).profile || {};
-}
 
 Meteor.subscribe("profile");
 Meteor.subscribe("roles");

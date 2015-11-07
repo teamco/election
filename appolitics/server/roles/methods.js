@@ -1,6 +1,6 @@
 Meteor.methods({
     updateAccountRoles: function (opts) {
-        
+
         var roles = Roles.getRolesForUser(opts.userId),
             update = _.compact(
                 _.map(opts.access, function (access, role) {
@@ -10,16 +10,13 @@ Meteor.methods({
                 })
             );
 
-        var isAdmin = Roles.getUsersInRole(opts.userId, 'admin'),
-            isCurrent = opts.userId === this.userId;
-
-        if (isAdmin) {
+        if (isAdmin()) {
 
             if (update.indexOf('admin') > -1) {
 
                 console.warn(TAPi18n.__('admin_added'));
 
-            } else if (isCurrent) {
+            } else if (opts.userId === this.userId) {
 
                 console.warn(TAPi18n.__('admin_skipped'));
 

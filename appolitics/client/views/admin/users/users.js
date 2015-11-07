@@ -1,7 +1,3 @@
-function isCurrentUser(_id) {
-    return _id === Meteor.userId();
-}
-
 Template.userData.events({
     'click a.delete-user': function (event, template) {
 
@@ -12,7 +8,7 @@ Template.userData.events({
 
         BootstrapModalPrompt.prompt({
             title: "Delete user",
-            content: 'Do you really want to remove user: ' + name + '?'
+            content: TAPi18n.__('confirm_user_delete', name)
         }, function (confirmed) {
 
             if (confirmed) {
@@ -25,7 +21,12 @@ Template.userData.events({
                     'destroyUser',
                     user,
                     function (error, result) {
-                        console.log(arguments)
+
+                        if (error) {
+                            return Bert.alert(error.message, 'danger');
+                        }
+
+                        Bert.alert(TAPi18n.__('user_deleted', name), 'info');
                     }
                 );
             }
@@ -36,9 +37,6 @@ Template.userData.events({
 
 // This code only runs on the client
 Template.userData.helpers({
-    isAdminUser: function () {
-        return Roles.userIsInRole(Meteor.user(), ['admin']);
-    },
     allUsers: function () {
         return Accounts.users.find().fetch();
     },

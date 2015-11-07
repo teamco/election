@@ -1,7 +1,3 @@
-isOwnerDocument = function (userId, doc) {
-    return doc && doc.userId === userId;
-};
-
 inRole = function (role, userId) {
 
     if (Meteor.isClient) {

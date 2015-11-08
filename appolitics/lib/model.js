@@ -1,5 +1,4 @@
 isOwnerDocument = function (userId, doc, fields, modifier) {
-    console.log(">>>>>>>>>", arguments)
     return doc && doc.userId === userId;
 };
 

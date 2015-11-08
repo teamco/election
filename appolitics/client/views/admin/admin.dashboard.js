@@ -9,6 +9,12 @@ Template.usersDashboard.helpers({
     }
 });
 
+Template.userLogs.helpers({
+    userLogsCount: function () {
+        return UserLog.find().count();
+    }
+});
+
 Template.stocksDashboard.helpers({
     stocks: function () {
         return _.map(availableStocks, function (symbol) {
@@ -43,3 +49,4 @@ Template.stocksDashboard.created = function () {
 
 Meteor.subscribe("users");
 Meteor.subscribe("userStatus");
+Meteor.subscribe("userLogs");

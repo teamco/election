@@ -49,7 +49,21 @@ var requireLogin = function () {
     this.next();
 };
 
+var updateUserLog = function() {
+
+    Meteor.call(
+        'updateUserLog',
+        this.url,
+        function (error, result) {
+
+            if (error) {
+            }
+        }
+    );
+};
+
 Router.onBeforeAction(requireLogin);
+Router.onAfterAction(updateUserLog);
 
 Router.route('/', function () {
 });

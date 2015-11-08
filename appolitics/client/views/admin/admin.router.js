@@ -1,11 +1,19 @@
-Router.route('/admin', function () {
-    this.render('adminDashboard');
+Router.route('/setting', function () {
+    this.render('settingDashboard');
 });
 
-Router.route('/admin/users', function () {
+Router.route('/setting/users', function () {
     this.render('userData');
-}, {name: 'admin.users'});
+}, {name: 'setting.users'});
 
-Router.route('/admin/users/:id', function () {
+Router.route('/setting/users/logs', function () {
+    this.render('userLogsData');
+}, {name: 'user.logs'});
+
+Router.route('/setting/users/:id/logs', function () {
+    this.render('userLogsData');
+});
+
+Router.route('/setting/users/:id', function () {
     this.render('editUser');
 });

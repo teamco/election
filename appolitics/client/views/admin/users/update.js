@@ -58,7 +58,7 @@ Template.editUser.events({
                         'info'
                     );
 
-                    Router.go('/admin/users');
+                    Router.go('/setting/users');
                 }
             }
         );

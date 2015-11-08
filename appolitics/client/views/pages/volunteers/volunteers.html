@@ -1,0 +1,60 @@
+<template name="volunteers">
+
+    <div class="ibox">
+        <div class="ibox-content">
+            <span class="text-muted small pull-right">Last modification: <i class="fa fa-clock-o"></i> 2:10 pm - 12.06.2014</span>
+            <h2>Volunteers</h2>
+            <p>
+                All volunteers that volunteer to your campaign.
+            </p>
+            <div class="input-group">
+                <input type="text" placeholder="Search volunteer " class="input form-control">
+                    <span class="input-group-btn">
+                            <button type="button" class="btn btn btn-primary"> <i class="fa fa-search"></i> Search</button>
+                    </span>
+            </div>
+            <div class="clients-list">
+                <ul class="nav nav-tabs">
+                    <span class="pull-right small text-muted">1406 volunteers</span>
+                    <li class="active"><a data-toggle="tab" href="#tab-1"><i class="fa fa-user"></i> Contacts</a></li>
+                    <li class=""><a data-toggle="tab" href="#tab-2"><i class="fa fa-group"></i> Groups</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div id="tab-1" class="tab-pane active">
+                        <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 100%;"><div class="full-height-scroll" style="overflow: hidden; width: auto; height: 100%;">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-hover">
+                                    <tbody>
+                                    {{#each volunteers}}
+                                        {{> volunteer}}
+                                    {{/each}}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div><div class="slimScrollBar" style="width: 7px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 365.112px; background: rgb(0, 0, 0);"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; opacity: 0.2; z-index: 90; right: 1px; background: rgb(51, 51, 51);"></div></div>
+                    </div>
+                    <div id="tab-2" class="tab-pane">
+                        <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 100%;"><div class="full-height-scroll" style="overflow: hidden; width: auto; height: 100%;">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-hover">
+                                    <thead class="">
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>region</th>
+                                            <th>Admin</th>
+                                            <th>Amount</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                         {{> volunteersGroup}}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div><div class="slimScrollBar" style="width: 7px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px; background: rgb(0, 0, 0);"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; opacity: 0.2; z-index: 90; right: 1px; background: rgb(51, 51, 51);"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

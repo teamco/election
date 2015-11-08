@@ -1,8 +1,25 @@
 <template name="endUserContent">
 
-    <div class="wrapper wrapper-content">
-        <!-- Main view  -->
-        {{> yield}}
+
+    <div class="wrapper wrapper-content animated fadeInUp">
+        <div class="col-xs-3 ">
+            {{> candidateProfileView}}
+            {{> advertisement}}
+        </div>
+        <div class="col-xs-7 animated ">
+            {{#if true}}
+                {{> candidateProfileHeader}}
+                <!-- Main view  -->
+                {{> candidateInnerPage}}
+            {{else}}
+
+                <!-- Main view  -->
+                {{> yield}}
+             {{/if}}
+        </div>
+        <div class="col-xs-2 ">
+            {{> chatPanel}}
+        </div>
     </div>
 
 </template>

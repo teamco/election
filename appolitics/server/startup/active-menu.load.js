@@ -91,8 +91,8 @@ Meteor.startup(function () {
         );
         ActiveMenu.insert(
             {
-                'name': 'Volunteer',
-                'path': 'volunteer',
+                'name': 'Volunteers',
+                'path': 'volunteers',
                 'gif': 'sa-users',
                 'roles': [
                     "admin",
@@ -116,22 +116,9 @@ Meteor.startup(function () {
             {
                 'name': 'My Groups',
                 'path': 'groups',
-                'gif': 'sa-users',
+                'gif': 'fa-users',
                 'roles': [
                     "admin",
-                    "candidate",
-                    "end-user"
-                ]
-            }
-        );
-        ActiveMenu.insert(
-            {
-                'name': 'Calendar',
-                'path': 'calendar',
-                'gif': '',
-                'roles': [
-                    "admin",
-                    "candidate",
                     "end-user"
                 ]
             }
@@ -140,7 +127,7 @@ Meteor.startup(function () {
             {
                 'name': 'Events',
                 'path': 'eventView',
-                'gif': '',
+                'gif': 'fa fa-calendar-o',
                 'roles': [
                     "admin",
                     "end-user"
@@ -167,28 +154,6 @@ Meteor.startup(function () {
                 'roles': [
                     "admin",
                     "candidate"
-                ]
-            }
-        );
-        ActiveMenu.insert(
-            {
-                'name': 'Donate',
-                'path': 'donate',
-                'gif': 'fa fa-usd',
-                'roles': [
-                    "admin",
-                    "end-user"
-                ]
-            }
-        );
-        ActiveMenu.insert(
-            {
-                'name': 'Shop',
-                'path': 'shop',
-                'gif': 'fa fa-shopping-cart',
-                'roles': [
-                    "admin",
-                    "end-user"
                 ]
             }
         );

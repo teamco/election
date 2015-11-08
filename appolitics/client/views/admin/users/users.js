@@ -7,7 +7,7 @@ Template.userData.events({
             name = user.profile.name || user.profile.email;
 
         BootstrapModalPrompt.prompt({
-            title: "Delete user",
+            title: TAPi18n.__('user_delete'),
             content: TAPi18n.__('confirm_user_delete', name)
         }, function (confirmed) {
 

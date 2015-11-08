@@ -6,6 +6,7 @@
   "user_updated_at": "Update user timestamp.",
   "account_profile": "Define account profile as: %s.",
   "user_roles": "Update user roles: %s.",
+  "user_delete": "Delete user",
   "confirm_user_delete": "Do you really want to remove \"%s\"?",
   "user_deleted": "User \"%s\" was deleted.",
   "restricted_area": "Restricted area"

@@ -61,3 +61,6 @@ tkornblit:icheck
 tap:i18n
 mizzao:user-status
 alethes:pages
+easy:search
+peerlibrary:base-component
+peerlibrary:blaze-components

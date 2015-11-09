@@ -49,3 +49,7 @@ div.show-user .footer {
 label[for="user-roles"] {
     width: 100%;
 }
+
+div[data-pages='user_log'].pagination-cont {
+    margin-bottom: 39px;
+}

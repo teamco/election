@@ -4,6 +4,10 @@ Meteor.methods({
         var connection = this.connection,
             headers = connection.httpHeaders;
 
+        if (url.match(/setting\/users\/logs/)) {
+            return false;
+        }
+
         UserLog.insert({
             userId: this.userId,
             createdAt: new Date(),

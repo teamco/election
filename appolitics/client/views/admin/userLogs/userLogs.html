@@ -7,6 +7,7 @@
             <th>User action</th>
             <th>IP</th>
             <th>Created at</th>
+            <th>Show</th>
         </tr>
         </thead>
         <tbody>
@@ -25,5 +26,6 @@
         </td>
         <td>{{clientAddress}}</td>
         <td>{{formatDate createdAt 'long'}}</td>
+        <td><a href="/setting/users/logs/{{_id}}" class="label label-info">More info</a></td>
     </tr>
 </template>

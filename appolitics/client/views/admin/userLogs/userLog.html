@@ -1,0 +1,42 @@
+<template name="userLogData">
+    <h2>User log</h2>
+
+    <table class="table user-logs">
+        <thead>
+        <tr>
+            <th>User action</th>
+            <th>IP</th>
+            <th>Created at</th>
+            <th>&nbsp;</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>
+                <p><a href="/setting/users/{{userLog.userId}}"><span class="label">{{logOwnerEmail userLog.userId}}</span></a></p>
+
+                <p><a href="{{userLog.url}}">{{userLog.url}}</a></p>
+            </td>
+            <td>{{userLog.clientAddress}}</td>
+            <td>{{formatDate userLog.createdAt 'long'}}</td>
+            <td><a href="/setting/users/logs" class="label label-info">Back</a></td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <p>
+                    <span class="label">Host</span>
+                    {{userLog.httpHeaders.host}}
+                </p>
+                <p>
+                    <span class="label">Accept language</span>
+                    {{acceptLanguage}}
+                </p>
+                <p>
+                    <span class="label">User agent</span>
+                    {{userAgent}}
+                </p>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</template>

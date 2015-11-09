@@ -10,8 +10,16 @@ Router.route('/setting/users/logs', function () {
     this.render('userLogsData');
 }, {name: 'user.logs'});
 
+Router.route('/setting/users/logs/:logId', function () {
+    this.render('userLogData');
+});
+
 Router.route('/setting/users/:id/logs', function () {
     this.render('userLogsData');
+});
+
+Router.route('/setting/users/:id/logs/:logId', function () {
+    this.render('userLogData');
 });
 
 Router.route('/setting/users/:id', function () {

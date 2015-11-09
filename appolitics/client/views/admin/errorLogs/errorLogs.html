@@ -1,0 +1,34 @@
+<template name="errorLogsData">
+    <h2>Error logs ({{errorLogsCount}})</h2>
+
+    <table class="table error-logs">
+        <thead>
+        <tr>
+            <th>Error</th>
+            <th>Type</th>
+            <th>Reason</th>
+            <th>Updated at</th>
+            <th>Show</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{> pages}}
+        </tbody>
+    </table>
+    {{> pagesNav}}
+</template>
+
+<template name="errorLogsDataItem">
+    <tr>
+        <td>{{error}}</td>
+        <td>{{errorType}}</td>
+        <td>{{reason}}</td>
+        <td>{{formatDate updatedAt 'long'}}</td>
+        <td>
+            <a href="/setting/users/errors/{{_id}}"
+               class="label label-{{#if fixed}}success{{else}}danger{{/if}}">
+                More info
+            </a>
+        </td>
+    </tr>
+</template>

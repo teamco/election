@@ -1,11 +1,11 @@
 var sharedMethods = {
-    logOwnerEmail: function(userId) {
+    logOwnerEmail: function (userId) {
         return getUser(userId).profile.email;
     },
-    logId: function() {
+    logId: function () {
         return Router.current().params.logId;
     },
-    userLog: function() {
+    userLog: function () {
         return UserLog.find(this.logId()).fetch()[0];
     }
 };
@@ -18,16 +18,19 @@ Template.userLogsData.helpers({
 
 Template.userLogData.helpers({
     logOwnerEmail: sharedMethods.logOwnerEmail,
-    userLog: function() {
+    userLog: function () {
         return sharedMethods.userLog();
     },
-    acceptLanguage: function() {
+    isError: function () {
+        return ErrorLog.findOne({userLogId: sharedMethods.logId()});
+    },
+    acceptLanguage: function () {
         return sharedMethods.userLog().httpHeaders['accept-language'];
     },
-    userAgent: function() {
+    userAgent: function () {
         return sharedMethods.userLog().httpHeaders['user-agent'];
     },
-    xForwardedFor: function() {
+    xForwardedFor: function () {
         return sharedMethods.userLog().httpHeaders['x-forwarded-for'];
     }
 });

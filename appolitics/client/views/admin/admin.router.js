@@ -1,5 +1,5 @@
 Router.route('/setting', function () {
-    this.render('settingDashboard');
+    this.render('adminDashboard');
 });
 
 Router.route('/setting/users', function () {
@@ -20,6 +20,22 @@ Router.route('/setting/users/:id/logs', function () {
 
 Router.route('/setting/users/:id/logs/:logId', function () {
     this.render('userLogData');
+});
+
+Router.route('/setting/users/errors', function () {
+    this.render('errorLogsData');
+}, {name: 'error.logs'});
+
+Router.route('/setting/users/errors/:errorId', function () {
+    this.render('errorLogData');
+});
+
+Router.route('/setting/users/:id/errors', function () {
+    this.render('errorLogsData');
+});
+
+Router.route('/setting/users/:id/errors/:errorId', function () {
+    this.render('errorLogData');
 });
 
 Router.route('/setting/users/:id', function () {

@@ -56,7 +56,8 @@ var updateUserLog = function() {
         this.url,
         function (error, result) {
 
-            if (error) {
+            if (throwError(error)) {
+                return false;
             }
         }
     );

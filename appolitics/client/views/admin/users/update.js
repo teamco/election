@@ -47,19 +47,16 @@ Template.editUser.events({
             },
             function (error, user) {
 
-                if (error) {
-
-                    Bert.alert(error.message, 'danger');
-
-                } else {
-
-                    Bert.alert(
-                        TAPi18n.__('user_updated', user.profile.email),
-                        'info'
-                    );
-
-                    Router.go('/setting/users');
+                if (throwError(error)) {
+                    return false;
                 }
+
+                Bert.alert(
+                    TAPi18n.__('user_updated', user.profile.email),
+                    'info'
+                );
+
+                Router.go('/setting/users');
             }
         );
     }

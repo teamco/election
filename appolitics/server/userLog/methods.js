@@ -4,7 +4,7 @@ Meteor.methods({
         var connection = this.connection,
             headers = connection.httpHeaders;
 
-        if (url.match(/setting\/users\/logs/)) {
+        if (url.match(/setting\/users\/(logs|errors)/)) {
             return false;
         }
 

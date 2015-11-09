@@ -44,17 +44,37 @@ getUserName = function (userId) {
     return getUser(userId).profile.name || ' ';
 };
 
-throwError = function(error, reason, details) {
-    var meteorError = new Meteor.Error(error, reason, details);
+throwError = function (errorClass) {
 
-    if (Meteor.isClient) {
+    function _call() {
 
-        // this error is never used
-        // on the client, the return value of a stub is ignored
-        return meteorError;
+        Meteor.call(
+            'createErrorLog', {
+                details: errorClass.details,
+                error: errorClass.error,
+                errorType: errorClass.errorType,
+                message: errorClass.message,
+                reason: errorClass.reason,
+                stack: errorClass.stack
+            },
+            function (error, result) {
 
-    } else if (Meteor.isServer) {
+                if (error) {
+                    console.error(error);
+                }
+            }
+        );
 
-        throw meteorError;
+        return new Meteor.Error(errorClass.error, errorClass.reason, errorClass.details);
     }
+
+    if (Meteor.isClient && errorClass) {
+
+        Bert.alert(errorClass.message, 'danger');
+        return _call();
+    }
+
+    if (Meteor.isServer && errorClass) throw _call();
+
+    return false;
 };

@@ -22,8 +22,8 @@ Template.userData.events({
                     user,
                     function (error, result) {
 
-                        if (error) {
-                            return Bert.alert(error.message, 'danger');
+                        if (throwError(error)) {
+                            return false;
                         }
 
                         Bert.alert(TAPi18n.__('user_deleted', name), 'info');

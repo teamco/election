@@ -20,12 +20,14 @@
 <template name="userLogsDataItem">
     <tr>
         <td>
-            <p><a href="/setting/users/{{userId}}"><span class="label">{{logOwnerEmail userId}}</span></a></p>
+            <p><a href="/setting/users/{{userId}}">
+                <span class="label">{{logOwnerEmail userId}}</span></a></p>
 
             <p><a href="{{url}}">{{url}}</a></p>
         </td>
         <td>{{clientAddress}}</td>
         <td>{{formatDate createdAt 'long'}}</td>
-        <td><a href="/setting/users/logs/{{_id}}" class="label label-info">More info</a></td>
+        <td><a href="/setting/users/logs/{{_id}}"
+               class="label label-{{#if isError _id}}danger{{else}}info{{/if}}">More info</a></td>
     </tr>
 </template>

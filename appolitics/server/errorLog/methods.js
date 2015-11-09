@@ -6,7 +6,7 @@ Meteor.methods({
 
         error.userLogId = UserLog.findOne(
             {userId: this.userId}, {
-                sort: {createdAt: 1},
+                sort: {createdAt: -1},
                 fields: {userId: 1}
             }
         )._id;

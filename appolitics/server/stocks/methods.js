@@ -10,20 +10,20 @@ Meteor.methods({
             "')&format=json&diagnostics=true&env=store://datatables.org/alltableswithkeys"
         ];
 
-        //try {
+        try {
 
-        return HTTP.call("GET", url.join('')).data;
+            return HTTP.call("GET", url.join('')).data;
 
-        //} catch(error) {
-        //
-        //    throwError({
-        //        details: error.arguments,
-        //        error: error.code,
-        //        errorType: error.errno,
-        //        message: error.message,
-        //        reason: error.syscall,
-        //        stack: error.stack
-        //    });
-        //}
+        } catch (error) {
+
+            throwError({
+                details: error.arguments,
+                error: error.code,
+                errorType: error.errno,
+                message: error.message,
+                reason: error.syscall,
+                stack: error.stack
+            });
+        }
     }
 });

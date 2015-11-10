@@ -5,21 +5,24 @@ Router.configure({
 var requireLogin = function () {
 
     function _isRestrictedArea(router) {
-        return router.url.match(/admin/);
+        return router.url.match(/setting/);
     }
 
     if (_isRestrictedArea(this)) {
 
+        this.layout('appoliticsLayout');
+
         if (isAdmin()) {
 
-            this.layout('endUserLayout');
+            this.stop();
 
         } else {
 
-            this.render('accessDenied');
-            Bert.alert(TAPi18n.__('restricted_area'), 'danger');
+            //this.render('accessDenied');
+            //Bert.alert(TAPi18n.__('restricted_area'), 'danger');
             this.redirect('/');
             this.stop();
+            return false;
         }
 
     } else if (currentUser()) {

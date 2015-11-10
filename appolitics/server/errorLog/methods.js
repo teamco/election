@@ -13,7 +13,18 @@ Meteor.methods({
 
         ErrorLog.insert(error);
     },
-    updateErrorLog: function (error) {
 
+    updateErrorLog: function (opts) {
+
+        ErrorLog.update(
+            {_id: opts.errorId}, {
+                $set: {
+                    updatedAt: new Date(),
+                    fixedBy: this.userId,
+                    fixed: 1
+                }
+            },
+            {multi: true}
+        );
     }
 });

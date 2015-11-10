@@ -6,11 +6,11 @@ Router.route('/setting/users', function () {
     this.render('userData');
 }, {name: 'setting.users'});
 
-Router.route('/setting/users/logs', function () {
+Router.route('/setting/logs', function () {
     this.render('userLogsData');
 }, {name: 'user.logs'});
 
-Router.route('/setting/users/logs/:logId', function () {
+Router.route('/setting/logs/:logId', function () {
     this.render('userLogData');
 });
 
@@ -22,11 +22,11 @@ Router.route('/setting/users/:id/logs/:logId', function () {
     this.render('userLogData');
 });
 
-Router.route('/setting/users/errors', function () {
+Router.route('/setting/errors', function () {
     this.render('errorLogsData');
 }, {name: 'error.logs'});
 
-Router.route('/setting/users/errors/:errorId', function () {
+Router.route('/setting/errors/:errorId', function () {
     this.render('errorLogData');
 });
 

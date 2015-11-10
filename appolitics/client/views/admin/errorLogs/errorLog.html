@@ -18,10 +18,9 @@
             <td>{{errorLog.reason}}</td>
             <td>{{formatDate errorLog.updatedAt 'long'}}</td>
             <td>
-                <a href="/setting/users/logs/{{errorLog.userLogId}}" class="label label-default">User log</a>
-                <a href="/setting/users/errors/{{errorLog._id}}/fix"
-                   class="label label-{{#if errorLog.fixed}}success{{else}}danger{{/if}}">Fix error</a>
-                <a href="/setting/users/errors" class="label label-info">Back</a>
+                <a href="/setting/logs/{{errorLog.userLogId}}" class="label label-default">User log</a>
+                <a data-type="error" class="label label-{{#if errorLog.fixed}}success{{else}}danger{{/if}}">Fix error</a>
+                <a href="/setting/errors" class="label label-info">Back</a>
             </td>
         </tr>
         <tr>

@@ -22,9 +22,9 @@
             <td>{{formatDate userLog.createdAt 'long'}}</td>
             <td>
                 {{#if isError}}
-                    <a href="/setting/users/errors/{{isError._id}}" class="label label-danger">Error log</a>
+                    <a href="/setting/errors/{{isError._id}}" class="label label-danger">Error log</a>
                 {{/if}}
-                <a href="/setting/users/logs" class="label label-info">Back</a>
+                <a href="/setting/logs" class="label label-info">Back</a>
             </td>
         </tr>
         <tr>

@@ -9,5 +9,7 @@
   "user_delete": "Delete user",
   "confirm_user_delete": "Do you really want to remove \"%s\"?",
   "user_deleted": "User \"%s\" was deleted.",
-  "restricted_area": "Restricted area"
+  "restricted_area": "Restricted area.",
+  "error_fixed": "Error was fixed successfully.",
+  "error_already_fixed": "Error already fixed."
 }

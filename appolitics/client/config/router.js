@@ -14,7 +14,7 @@ var requireLogin = function () {
 
         if (isAdmin()) {
 
-            this.stop();
+            //Bert.alert(TAPi18n.__('restricted_area'), 'info');
 
         } else {
 

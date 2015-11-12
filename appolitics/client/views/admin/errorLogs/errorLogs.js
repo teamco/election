@@ -94,5 +94,6 @@ Template.errorLogData.helpers({
 
 Template.errorLogsDataItem.helpers({});
 
+Meteor.subscribe("users");
 Meteor.subscribe("userLogs");
 Meteor.subscribe("errorLogs");

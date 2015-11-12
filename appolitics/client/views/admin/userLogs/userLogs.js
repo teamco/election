@@ -13,10 +13,24 @@ var sharedMethods = {
     }
 };
 
+Template.userLogsData.onCreated(function () {
+
+    var user = isUserLogs();
+
+    if (user && user._id) {
+
+        UserLogPages.set({
+            filters: {
+                userId: user._id
+            }
+        });
+    }
+});
+
 Template.userLogsData.helpers({
     isError: sharedMethods.isError,
     userLogsCount: function () {
-        return UserLog.find().count();
+        return runTemplateHelper(Template.userLogs, 'userLogsCount');
     }
 });
 

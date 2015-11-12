@@ -6,6 +6,9 @@ UserLogPages = new Meteor.Pagination(UserLog, {
     divWrapper: false,
     sort: {
         createdAt: -1
+    },
+    availableSettings: {
+        filters: true
     }
 });
 

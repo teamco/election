@@ -6,6 +6,9 @@ ErrorLogPages = new Meteor.Pagination(ErrorLog, {
     divWrapper: false,
     sort: {
         updatedAt: -1
+    },
+    availableSettings: {
+        filters: true
     }
 });
 

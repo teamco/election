@@ -43,13 +43,14 @@ div.show-user form {
 }
 
 div.show-user .footer {
-    bottom: 40px;
+    bottom: 39px;
 }
 
 label[for="user-roles"] {
     width: 100%;
 }
 
-div[data-pages='user_log'].pagination-cont {
+div[data-pages='user_log'].pagination-cont,
+div[data-pages='error_log'].pagination-cont {
     margin-bottom: 39px;
 }

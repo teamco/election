@@ -1,3 +1,7 @@
+runTemplateHelper = function (template, method) {
+    return template.__helpers.get(method).call();
+};
+
 inRole = function (role, userId) {
 
     if (Meteor.isClient) {
@@ -28,7 +32,7 @@ runAsAdmin = function (doc, filter) {
 };
 
 getUser = function (userId) {
-    return Accounts.users.findOne(userId || Router.current().params.id) ||
+    return Accounts.users.findOne(userId || Router.current().params.userId) ||
         {profile: {}, status: {lastLogin: {}}};
 };
 
@@ -42,6 +46,28 @@ getUserProfile = function (userId) {
 
 getUserName = function (userId) {
     return getUser(userId).profile.name || ' ';
+};
+
+isUserLogs = function () {
+    return Router.current().url.match(/setting\/users\/(.+)?/) ?
+        getUser() : false;
+};
+
+is403 = function(id, url) {
+
+    var name = Meteor.isClient ?
+        Template.instance().view.name:
+        'Meteor.server';
+
+    throwError({
+        error: 403,
+        errorType: TAPi18n.__('find_error', name),
+        reason: name,
+        message: TAPi18n.__('find_error', name),
+        stack: 'Invalid Id: ' + id
+    });
+
+    Router.go(url || '');
 };
 
 throwError = function (errorClass) {

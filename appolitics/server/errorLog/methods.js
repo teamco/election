@@ -4,12 +4,12 @@ Meteor.methods({
         error.createdAt = new Date();
         error.updatedAt = new Date();
 
-        error.userLogId = UserLog.findOne(
+        error.userLogId = (UserLog.findOne(
             {userId: this.userId}, {
                 sort: {createdAt: -1},
                 fields: {userId: 1}
             }
-        )._id;
+        ) || {})._id;
 
         ErrorLog.insert(error);
     },

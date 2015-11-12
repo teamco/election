@@ -37,7 +37,7 @@ Template.editUser.events({
             profile = _collectData($profile),
             access = _collectData($access);
 
-        var userId = Router.current().params.id;
+        var userId = getUser()._id;
 
         Meteor.call(
             'updateUser', {

@@ -7,15 +7,53 @@ Template.usersDashboard.helpers({
     }
 });
 
+function logUrl(type) {
+    var user = isUserLogs();
+    return user ?
+        ('/setting/users/' + user._id + type) :
+        ('/setting' + type);
+}
+
 Template.userLogs.helpers({
     userLogsCount: function () {
-        return UserLog.find().count();
+        var user = isUserLogs();
+        return user ?
+            UserLog.find({userId: user._id}).count() :
+            UserLog.find().count();
+    },
+
+    userLogsUrl: function () {
+        return logUrl('/logs');
     }
 });
 
 Template.errorLogs.helpers({
     errorLogsCount: function () {
+
+        var user = isUserLogs();
+
+        if (user) {
+
+            if (user._id) {
+
+                return ErrorLog.find({
+                    userLogId: {
+                        $in: _.map(
+                            UserLog.find({userId: user._id}).fetch(),
+                            function (log) {
+                                return log._id;
+                            }
+                        )
+                    }
+                }).count();
+            }
+        }
+
         return ErrorLog.find().count();
+    },
+
+    errorLogsUrl: function () {
+        return logUrl('/errors');
     }
 });
 

@@ -14,11 +14,11 @@ Router.route('/setting/logs/:logId', function () {
     this.render('userLogData');
 });
 
-Router.route('/setting/users/:id/logs', function () {
+Router.route('/setting/users/:userId/logs', function () {
     this.render('userLogsData');
 });
 
-Router.route('/setting/users/:id/logs/:logId', function () {
+Router.route('/setting/users/:userId/logs/:logId', function () {
     this.render('userLogData');
 });
 
@@ -30,14 +30,14 @@ Router.route('/setting/errors/:errorId', function () {
     this.render('errorLogData');
 });
 
-Router.route('/setting/users/:id/errors', function () {
+Router.route('/setting/users/:userId/errors', function () {
     this.render('errorLogsData');
 });
 
-Router.route('/setting/users/:id/errors/:errorId', function () {
+Router.route('/setting/users/:userId/errors/:errorId', function () {
     this.render('errorLogData');
 });
 
-Router.route('/setting/users/:id', function () {
+Router.route('/setting/users/:userId', function () {
     this.render('editUser');
 });

@@ -1,6 +1,10 @@
 Meteor.methods({
     updateUser: function (opts) {
 
+        if (!Accounts.users.find(opts.userId)) {
+            return is403(opts.userId);
+        }
+
         console.info(TAPi18n.__('user_updated_at'));
         Meteor.users.update(
             {_id: opts.userId},

@@ -5,7 +5,7 @@ ErrorLogPages = new Meteor.Pagination(ErrorLog, {
     perPage: 20,
     divWrapper: false,
     sort: {
-        createdAt: -1
+        updatedAt: -1
     }
 });
 

@@ -28,18 +28,71 @@ Template.errorLogData.events({
     }
 });
 
+Template.errorLogsData.onCreated(function () {
+
+    var user = isUserLogs();
+
+    if (user && user._id) {
+
+        ErrorLogPages.set({
+            filters: {
+                userLogId: {
+                    $in: _.map(
+                        UserLog.find({userId: user._id}).fetch(),
+                        function (log) {
+                            return log._id;
+                        }
+                    )
+                }
+            }
+        });
+    }
+});
+
 Template.errorLogsData.helpers({
     errorLogsCount: function () {
-        return ErrorLog.find().count();
+        return runTemplateHelper(Template.errorLogs, 'errorLogsCount');
     }
 });
 
 Template.errorLogData.helpers({
     errorLog: function () {
-        return ErrorLog.find(
-            Router.current().params.errorId
-        ).fetch()[0];
+
+        var user = isUserLogs(),
+            errorId = Router.current().params.errorId,
+            error,
+            failed = '/setting/errors';
+
+        if (user && user._id) {
+
+            error = ErrorLog.findOne({
+                _id: errorId,
+                userLogId: {
+                    $in: _.map(
+                        UserLog.find({userId: user._id}).fetch(),
+                        function (log) {
+                            return log._id;
+                        }
+                    )
+                }
+            });
+
+            if (!error) {
+                failed = '/setting/users/' + user._id + '/errors';
+            }
+        }
+
+        error = ErrorLog.findOne(errorId);
+
+        if (error) {
+            return error;
+        }
+
+        return is403(errorId, failed);
     }
 });
 
 Template.errorLogsDataItem.helpers({});
+
+Meteor.subscribe("userLogs");
+Meteor.subscribe("errorLogs");

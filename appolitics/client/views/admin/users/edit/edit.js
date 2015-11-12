@@ -81,7 +81,7 @@ Template.editUser.helpers({
             currentRoles: function () {
                 return roles.join(', ');
             }
-        }
+        };
     }
 });
 

@@ -1,3 +1,39 @@
+function _getErrorData(errorId) {
+
+    var user = isUserLogs(),
+        error,
+        failed = '/setting/errors';
+
+    errorId = errorId || Router.current().params.errorId;
+
+    if (user && user._id) {
+
+        error = ErrorLog.findOne({
+            _id: errorId,
+            userLogId: {
+                $in: _.map(
+                    UserLog.find({userId: user._id}).fetch(),
+                    function (log) {
+                        return log._id;
+                    }
+                )
+            }
+        });
+
+        if (!error) {
+            failed = '/setting/users/' + user._id + '/errors';
+        }
+    }
+
+    error = ErrorLog.findOne(errorId);
+
+    if (error) {
+        return error;
+    }
+
+    return is403(errorId, failed);
+}
+
 Template.errorLogData.events({
     'click a[data-type="error"]': function (event) {
 
@@ -56,40 +92,7 @@ Template.errorLogsData.helpers({
 });
 
 Template.errorLogData.helpers({
-    errorLog: function () {
-
-        var user = isUserLogs(),
-            errorId = Router.current().params.errorId,
-            error,
-            failed = '/setting/errors';
-
-        if (user && user._id) {
-
-            error = ErrorLog.findOne({
-                _id: errorId,
-                userLogId: {
-                    $in: _.map(
-                        UserLog.find({userId: user._id}).fetch(),
-                        function (log) {
-                            return log._id;
-                        }
-                    )
-                }
-            });
-
-            if (!error) {
-                failed = '/setting/users/' + user._id + '/errors';
-            }
-        }
-
-        error = ErrorLog.findOne(errorId);
-
-        if (error) {
-            return error;
-        }
-
-        return is403(errorId, failed);
-    }
+    errorLog: _getErrorData
 });
 
 Template.errorLogsDataItem.helpers({});

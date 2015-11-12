@@ -1,20 +1,26 @@
 <template name="userLogsData">
-    <h2>User logs ({{userLogsCount}})</h2>
 
-    <table class="table user-logs">
-        <thead>
-        <tr>
-            <th>User action</th>
-            <th>IP</th>
-            <th>Created at</th>
-            <th>Show</th>
-        </tr>
-        </thead>
-        <tbody>
-        {{> pages}}
-        </tbody>
-    </table>
-    {{> pagesNav}}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">User logs ({{userLogsCount}})</h3>
+        </div>
+        <div class="panel-body">
+            <table class="table user-logs">
+                <thead>
+                <tr>
+                    <th>User action</th>
+                    <th>IP</th>
+                    <th>Created at</th>
+                    <th>Show</th>
+                </tr>
+                </thead>
+                <tbody>
+                {{> pages}}
+                </tbody>
+            </table>
+        </div>
+        <div class="panel-footer">{{> pagesNav}}</div>
+    </div>
 </template>
 
 <template name="userLogsDataItem">
@@ -27,7 +33,6 @@
         </td>
         <td>{{clientAddress}}</td>
         <td>{{formatDate createdAt 'long'}}</td>
-        <td><a href="/setting/logs/{{_id}}"
-               class="label label-{{#if isError _id}}danger{{else}}info{{/if}}">More info</a></td>
+        <td><a href="logs/{{_id}}" class="label label-{{#if isError _id}}danger{{else}}info{{/if}}">More info</a></td>
     </tr>
 </template>

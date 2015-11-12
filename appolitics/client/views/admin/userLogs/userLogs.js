@@ -55,3 +55,7 @@ Template.userLogsDataItem.helpers({
     logOwnerEmail: sharedMethods.logOwnerEmail,
     isError: sharedMethods.isError
 });
+
+Meteor.subscribe("users");
+Meteor.subscribe("userLogs");
+Meteor.subscribe("errorLogs");

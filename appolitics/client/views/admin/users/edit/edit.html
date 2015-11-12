@@ -1,30 +1,36 @@
 <template name="editUser">
-    <h2>Show user</h2>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Show user</h3>
+        </div>
+        <div class="panel-body">
+            <div class="show-user">
 
-    <div class="show-user">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#info">Info</a></li>
+                    <li><a data-toggle="tab" href="#status">Status</a></li>
+                    <li><a data-toggle="tab" href="#profile">Profile</a></li>
+                    <li><a data-toggle="tab" href="#access">Access</a></li>
+                    <li><a data-toggle="tab" href="#logs">Logs</a></li>
+                </ul>
 
-        <ul class="nav nav-tabs">
-            <li class="active"><a data-toggle="tab" href="#info">Info</a></li>
-            <li><a data-toggle="tab" href="#status">Status</a></li>
-            <li><a data-toggle="tab" href="#profile">Profile</a></li>
-            <li><a data-toggle="tab" href="#access">Access</a></li>
-            <li><a data-toggle="tab" href="#logs">Logs</a></li>
-        </ul>
+                <form role="form">
 
-        <form role="form">
+                    <div class="tab-content">
+                        {{> editUserInfo info=info}}
+                        {{> editUserStatus status=status}}
+                        {{> editUserProfile profile=profile}}
+                        {{> editUserAccess access=access}}
+                        {{> editUserLogs logs=logs}}
+                    </div>
 
-            <div class="tab-content">
-                {{> editUserInfo info=info}}
-                {{> editUserStatus status=status}}
-                {{> editUserProfile profile=profile}}
-                {{> editUserAccess access=access}}
-                {{> editUserLogs logs=logs}}
+                </form>
             </div>
-
-            <div class="footer">
-                <a href="/setting/users" class="btn btn-default">Back</a>
-                <a href="/setting/users/{{info._id}}" data-type="update-user" class="btn btn-info">Submit</a>
-            </div>
-        </form>
+        </div>
+        <div class="panel-footer">
+            <a href="/setting/users" class="btn btn-default">Back</a>
+            <a href="/setting/users/{{info._id}}" data-type="update-user" class="btn btn-info">Submit</a>
+        </div>
     </div>
+
 </template>

@@ -1,50 +1,57 @@
 <template name="userLogData">
-    <h2>User log</h2>
 
-    <table class="table user-logs">
-        <thead>
-        <tr>
-            <th>User action</th>
-            <th>IP</th>
-            <th>Created at</th>
-            <th>Show</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>
-                <p><a href="/setting/users/{{userLog.userId}}"><span
-                        class="label">{{logOwnerEmail userLog.userId}}</span></a></p>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">User log</h3>
+        </div>
+        <div class="panel-body">
+            <table class="table user-logs">
+                <thead>
+                <tr>
+                    <th>User action</th>
+                    <th>IP</th>
+                    <th>Created at</th>
+                    <th>Show</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <p><a href="/setting/users/{{userLog.userId}}"><span
+                                class="label">{{logOwnerEmail userLog.userId}}</span></a></p>
 
-                <p><a href="{{userLog.url}}">{{userLog.url}}</a></p>
-            </td>
-            <td>{{userLog.clientAddress}}</td>
-            <td>{{formatDate userLog.createdAt 'long'}}</td>
-            <td>
-                {{#if isError}}
-                    <a href="/setting/errors/{{isError._id}}" class="label label-danger">Error log</a>
-                {{/if}}
-                <a href="/setting/logs" class="label label-info">Back</a>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="4">
-                <p>
-                    <span class="label">Host</span>
-                    {{userLog.httpHeaders.host}}
-                </p>
+                        <p><a href="{{userLog.url}}">{{userLog.url}}</a></p>
+                    </td>
+                    <td>{{userLog.clientAddress}}</td>
+                    <td>{{formatDate userLog.createdAt 'long'}}</td>
+                    <td>
+                        {{#if isError}}
+                            <a href="/setting/errors/{{isError._id}}" class="label label-danger">Error log</a>
+                        {{/if}}
+                        <a href="/setting/logs" class="label label-info">Back</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <p>
+                            <span class="label">Host</span>
+                            {{userLog.httpHeaders.host}}
+                        </p>
 
-                <p>
-                    <span class="label">Accept language</span>
-                    {{acceptLanguage}}
-                </p>
+                        <p>
+                            <span class="label">Accept language</span>
+                            {{acceptLanguage}}
+                        </p>
 
-                <p>
-                    <span class="label">User agent</span>
-                    {{userAgent}}
-                </p>
-            </td>
-        </tr>
-        </tbody>
-    </table>
+                        <p>
+                            <span class="label">User agent</span>
+                            {{userAgent}}
+                        </p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
 </template>

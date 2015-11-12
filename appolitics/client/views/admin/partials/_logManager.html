@@ -1,9 +1,15 @@
 <template name="logManager">
-    <h2>Logs management</h2>
 
-    <div class="row">
-        {{> userLogs}}
-        {{> errorLogs}}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Logs management</h3>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                {{> userLogs}}
+                {{> errorLogs}}
+            </div>
+        </div>
     </div>
 
 </template>

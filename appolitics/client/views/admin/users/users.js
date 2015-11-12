@@ -37,6 +37,9 @@ Template.userData.events({
 
 // This code only runs on the client
 Template.userData.helpers({
+    usersCount: function() {
+        return Accounts.users.find().count();
+    },
     allUsers: function () {
         return Accounts.users.find().fetch();
     },

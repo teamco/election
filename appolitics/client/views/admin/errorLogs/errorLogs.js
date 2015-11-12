@@ -1,3 +1,13 @@
+function _filterByUser(user) {
+
+    return _.map(
+        UserLog.find({userId: user._id}).fetch(),
+        function (log) {
+            return log._id;
+        }
+    );
+}
+
 function _getErrorData(errorId) {
 
     var user = isUserLogs(),
@@ -11,12 +21,7 @@ function _getErrorData(errorId) {
         error = ErrorLog.findOne({
             _id: errorId,
             userLogId: {
-                $in: _.map(
-                    UserLog.find({userId: user._id}).fetch(),
-                    function (log) {
-                        return log._id;
-                    }
-                )
+                $in: _filterByUser(user)
             }
         });
 
@@ -73,12 +78,7 @@ Template.errorLogsData.onCreated(function () {
         ErrorLogPages.set({
             filters: {
                 userLogId: {
-                    $in: _.map(
-                        UserLog.find({userId: user._id}).fetch(),
-                        function (log) {
-                            return log._id;
-                        }
-                    )
+                    $in: _filterByUser(user)
                 }
             }
         });

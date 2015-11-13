@@ -1,63 +1,67 @@
 <template name="editUserProfile">
     <div id="profile" class="tab-pane fade">
         <div class="form-group">
-            <label for="user-first-name">First name:</label>
-            <input type="text"
-                   class="form-control"
-                   name="userFirstName"
-                   id="user-first-name"
-                   value="{{profile.firstName}}"/>
+            <div class="input-group">
+                <span class="input-group-addon">First name</span>
+                <input type="text"
+                       class="form-control"
+                       name="userFirstName"
+                       value="{{profile.firstName}}"/>
+            </div>
         </div>
         <div class="form-group">
-            <label for="user-middle-name">Middle name:</label>
-            <input type="text"
-                   class="form-control"
-                   name="userMiddleName"
-                   id="user-middle-name"
-                   value="{{profile.middleName}}"/>
+            <div class="input-group">
+                <span class="input-group-addon">Middle name</span>
+                <input type="text"
+                       class="form-control"
+                       name="userMiddleName"
+                       value="{{profile.middleName}}"/>
+            </div>
         </div>
         <div class="form-group">
-            <label for="user-last-name">Last name:</label>
-            <input type="text"
-                   class="form-control"
-                   name="userLastName"
-                   id="user-last-name"
-                   value="{{profile.lastName}}"/>
+            <div class="input-group">
+                <span class="input-group-addon">Last name</span>
+                <input type="text"
+                       class="form-control"
+                       name="userLastName"
+                       value="{{profile.lastName}}"/>
+            </div>
         </div>
         <div class="form-group">
-            <label for="user-birthday">Birthday:</label>
-
             <div class="input-group datetimepicker">
                 <span class="input-group-addon">
                     <i class="glyphicon glyphicon-calendar"></i>
+                    Birthday
                 </span>
                 <input class="set-due-date form-control"
                        type="text"
                        data-type="date"
                        name="userBirthday"
-                       id="user-birthday"
                        value="{{formatDate profile.birthday 'MMMM DD, YYYY'}}"/>
             </div>
         </div>
         <div class="form-group">
-            <label for="user-country">Country:</label>
-            <select class="form-control" name="userCountry" id="user-country">
-                <option selected>Select country</option>
-                {{#each countries}}
-                    {{#if selectedCountry name}}
-                        <option selected value="{{name}}">{{name}}</option>
-                    {{else}}
-                        <option value="{{name}}">{{name}}</option>
-                    {{/if}}
-                {{/each}}
-            </select>
+            <div class="input-group">
+                <span class="input-group-addon">Country</span>
+                <select class="form-control" name="userCountry">
+                    <option selected>Select country</option>
+                    {{#each countries}}
+                        {{#if selectedCountry name}}
+                            <option selected value="{{name}}">{{name}}</option>
+                        {{else}}
+                            <option value="{{name}}">{{name}}</option>
+                        {{/if}}
+                    {{/each}}
+                </select>
+            </div>
         </div>
         <div class="form-group">
-            <label for="user-address">Address:</label>
-            <textarea type="text"
-                      class="form-control"
-                      name="userAddress"
-                      id="user-address">{{profile.address}}</textarea>
+            <div class="input-group">
+                <span class="input-group-addon">Address</span>
+                <textarea type="text"
+                          class="form-control"
+                          name="userAddress">{{profile.address}}</textarea>
+            </div>
         </div>
     </div>
 </template>

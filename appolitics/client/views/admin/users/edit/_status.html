@@ -1,30 +1,36 @@
 <template name="editUserStatus">
     <div id="status" class="tab-pane fade">
         <div class="form-group">
-            <label for="user-idle">Idle:</label>
-            <input type="text" disabled="disabled" class="form-control" id="user-idle"
-                   value="{{status.idle}}"/>
+            <div class="input-group">
+                <span class="input-group-addon">Idle</span>
+                <input type="text" disabled="disabled" class="form-control" value="{{status.idle}}"/>
+            </div>
         </div>
         <div class="form-group">
-            <label for="user-online">Status:</label>
-            <input type="text" disabled="disabled" class="form-control" id="user-online"
-                   value="{{status.online}}"/>
+            <div class="input-group">
+                <span class="input-group-addon">Status</span>
+                <input type="text" disabled="disabled" class="form-control" value="{{status.online}}"/>
+            </div>
         </div>
         <div class="form-group">
-            <label for="user-ip">IP Address:</label>
-            <input id="user-ip" type="text" class="form-control" disabled="disabled"
-                   value="{{status.ipAddress}}"/>
+            <div class="input-group">
+                <span class="input-group-addon">IP Address</span>
+                <input type="text" class="form-control" disabled="disabled" value="{{status.ipAddress}}"/>
+            </div>
         </div>
         <div class="form-group">
-            <label for="user-user-agent">User agent:</label>
-            <textarea id="user-user-agent" class="form-control" disabled="disabled">
-                {{status.userAgent}}
-            </textarea>
+            <div class="input-group">
+                <span class="input-group-addon">User agent</span>
+                <textarea class="form-control" disabled="disabled">
+                    {{status.userAgent}}
+                </textarea>
+            </div>
         </div>
         <div class="form-group">
-            <label for="user-last-login">Last login:</label>
-            <input id="user-last-login" type="text" class="form-control" disabled="disabled"
-                   value="{{status.lastLogin}}"/>
+            <div class="input-group">
+                <span class="input-group-addon">Last login</span>
+                <input type="text" class="form-control" disabled="disabled" value="{{status.lastLogin}}"/>
+            </div>
         </div>
     </div>
 </template>

@@ -47,5 +47,19 @@ label[for="user-roles"] {
 }
 
 .panel {
-    margin-top: 2rem;
+    margin-top: 2em;
+}
+
+div.show-user .input-group-addon {
+    min-width: 10em;
+    text-align: left;
+}
+
+div.show-user .mb {
+    margin-bottom: 0.5em;
+}
+
+div.show-user .action {
+    min-width: initial;
+    text-align: center;
 }

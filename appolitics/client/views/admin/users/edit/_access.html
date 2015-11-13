@@ -1,20 +1,22 @@
 <template name="editUserAccess">
     <div id="access" class="tab-pane fade">
         <div class="form-group">
-            <label for="user-roles">Current Roles:</label>
-            <input type="text"
-                   class="form-control"
-                   disabled="disabled"
-                   id="user-roles"
-                   value="{{access.currentRoles}}"/>
+            <div class="input-group">
+                <span class="input-group-addon">Current Roles</span>
+                <input type="text"
+                       class="form-control"
+                       disabled="disabled"
+                       value="{{access.currentRoles}}"/>
+            </div>
         </div>
         <div class="form-group">
-            <label for="user-roles">Available Roles:</label>
             {{#each access.availableRoles}}
-                <label class="checkbox-inline">
-                    <input name="{{name}}" checked="{{checked}}"
-                           type="checkbox"/>{{name}}
-                </label>
+                <div class="mb input-group col-lg-4">
+                    <span class="action input-group-addon">
+                        <input name="{{name}}" checked="{{checked}}" type="checkbox"/>
+                    </span>
+                    <input type="text" class="form-control" value="{{name}}" disabled="disabled /">
+                </div>
             {{/each}}
         </div>
     </div>

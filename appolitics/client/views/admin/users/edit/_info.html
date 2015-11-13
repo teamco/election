@@ -1,24 +1,28 @@
 <template name="editUserInfo">
     <div id="info" class="tab-pane fade in active">
         <div class="form-group">
-            <label for="user-email">Email address:</label>
-            <input type="email" disabled="disabled" class="form-control" id="user-email"
-                   value="{{info.email}}"/>
+            <div class="input-group">
+                <span class="input-group-addon">Email address</span>
+                <input type="email" disabled="disabled" class="form-control" value="{{info.email}}"/>
+            </div>
         </div>
         <div class="form-group">
-            <label for="user-provider">Provider:</label>
-            <input id="user-provider" type="text" class="form-control" disabled="disabled"
-                   value="{{info.provider}}"/>
+            <div class="input-group">
+                <span class="input-group-addon">Provider</span>
+                <input type="text" class="form-control" disabled="disabled" value="{{info.provider}}"/>
+            </div>
         </div>
         <div class="form-group">
-            <label for="user-profile">Profile:</label>
-            <input id="user-profile" type="text" class="form-control" disabled="disabled"
-                   value="{{info.profile}}"/>
+            <div class="input-group">
+                <span class="input-group-addon">Profile</span>
+                <input type="text" class="form-control" disabled="disabled" value="{{info.profile}}"/>
+            </div>
         </div>
         <div class="form-group">
-            <label for="user-created-at">Created at:</label>
-            <input id="user-created-at" type="text" class="form-control" disabled="disabled"
-                   value="{{info.createdAt}}"/>
+            <div class="input-group">
+                <span class="input-group-addon">Created at</span>
+                <input type="text" class="form-control" disabled="disabled" value="{{info.createdAt}}"/>
+            </div>
         </div>
     </div>
 </template>

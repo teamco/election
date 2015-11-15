@@ -1,0 +1,45 @@
+<template name="createNewBlog">
+
+    <div class="modal-dialog" style="width: 75%">
+        <div class="modal-content animated fadeIn">
+            <div class="modal-body">
+                <div class="ibox-content">
+                    <form id="form" action="#" class="wizard-big">
+                        <h1>Select Template</h1>
+                        <fieldset>
+                            template selection here
+
+                            <div id="froala-editor">
+                                <p>The classes should be defined in CSS, otherwise no changes will be visible on the paragraph's appearance.</p>
+                            </div>
+
+                        </fieldset>
+                        <h1>Editor</h1>
+                        <fieldset>
+
+                        </fieldset>
+
+                        <h1>Preview</h1>
+                        <fieldset>
+                            <div class="text-center" style="margin-top: 120px">
+                                <h2>Show preview before submit</h2>
+                            </div>
+                        </fieldset>
+
+                        <h1>Finish</h1>
+                        <fieldset>
+                            <h2>Terms and Conditions</h2>
+                            <input id="acceptTerms" name="acceptTerms" type="checkbox" class="required"> <label for="acceptTerms">I agree with the Terms and Conditions.</label>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary">Create</button>
+                <button type="button" class="btn btn-primary">Create & Publish</button>
+            </div>
+        </div>
+    </div>
+
+</template>

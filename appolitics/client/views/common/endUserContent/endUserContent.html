@@ -2,27 +2,34 @@
 
 
     <div class="wrapper wrapper-content animated fadeInUp">
-        <div class="col-xs-3 ">
-            {{> candidateProfileView}}
+        <div class="row">
+            <div class="col-lg-4">
 
-            <div class="row" style="height: 100px"></div>
-            
-            {{> moshe}}
-        </div>
-        <div class="col-xs-7 animated ">
-            {{#if true}}
-                {{> candidateProfileHeader}}
-                <!-- Main view  -->
-                {{> candidateInnerPage}}
-            {{else}}
+                {{> candidateProfileView}}
 
-                <!-- Main view  -->
-                {{> yield}}
-             {{/if}}
+                <div class="row" style="height: 100px">
+                    <br>
+                </div>
+
+                {{> outSourceContent}}
+
+            </div>
+            <div class="col-lg-6 ">
+                {{#if true}}
+                    {{> candidateProfileHeader}}
+                    <!-- Main view  -->
+                    {{> candidateInnerPage}}
+                {{else}}
+
+                    <!-- Main view  -->
+                    {{> yield}}
+                {{/if}}
+            </div>
+            <div class="col-lg-2 ">
+                {{> chatPanel}}
+            </div>
         </div>
-        <div class="col-xs-2 ">
-            {{> chatPanel}}
-        </div>
+
     </div>
 
 </template>

@@ -1,11 +1,18 @@
 <template name="candidateProfileHeader">
-    <div>
 
-        <img src="/candidatesContent/marcorubio/151013_MarcoRubio_LiveDebate_Post-1-892x400.jpg">
-        <div class="col">
-            <div class="col-sm-4">
-                <p>this is a test</p>
-            </div>
+    <div class="tabs-container">
+        <img src="/candidatesContent/marcorubio/151013_MarcoRubio_LiveDebate_Post-1-892x400.jpg" style="width: 100%" class="img-responsive" alt="profile">
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#timelineBlogs">Timeline</a></li>
+            <li class=""><a data-toggle="tab" href="#aboutProfile">About</a></li>
+            <li class=""><a data-toggle="tab" href="#volunteerForm">volunteer</a></li>
+        </ul>
+        <div class="tab-content">
+
+            {{> timelineBlogs}}
+            {{> aboutProfile}}
+            {{> volunteerForm}}
+
         </div>
     </div>
 </template>

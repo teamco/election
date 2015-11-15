@@ -18,3 +18,8 @@ Template.contentManagement.onDestroyed(function () {
     //add your statement here
 });
 
+Template.contentManagement.rendered = function(){
+
+    // Initialize fooTable
+/*    $('.footable').footable();*/
+};

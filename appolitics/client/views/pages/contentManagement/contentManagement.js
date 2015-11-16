@@ -1,5 +1,5 @@
 Template.contentManagement.helpers({
-    //add you helpers here
+
 });
 
 Template.contentManagement.events({
@@ -11,7 +11,7 @@ Template.contentManagement.onCreated(function () {
 });
 
 Template.contentManagement.onRendered(function () {
-    //add your statement here
+    $('.modal').appendTo("body");
 });
 
 Template.contentManagement.onDestroyed(function () {
@@ -20,6 +20,5 @@ Template.contentManagement.onDestroyed(function () {
 
 Template.contentManagement.rendered = function(){
 
-    // Initialize fooTable
-/*    $('.footable').footable();*/
+
 };

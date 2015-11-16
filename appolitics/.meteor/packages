@@ -68,3 +68,6 @@ meloncon:footable
 aashu28:jquery-steps
 
 babrahams:editable-text-wysiwyg-bootstrap-3
+twbs:bootstrap-noglyph
+froala:editor
+froala:editor-reactive

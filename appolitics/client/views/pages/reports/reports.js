@@ -1,5 +1,5 @@
 Template.reports.helpers({
-    //add you helpers here
+
 });
 
 Template.reports.events({
@@ -11,10 +11,5 @@ Template.reports.onCreated(function () {
 });
 
 Template.reports.onRendered(function () {
-    //add your statement here
-});
 
-Template.reports.onDestroyed(function () {
-    //add your statement here
 });
-

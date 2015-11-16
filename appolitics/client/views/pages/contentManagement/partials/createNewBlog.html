@@ -7,11 +7,10 @@
                     <form id="form" action="#" class="wizard-big">
                         <h1>Select Template</h1>
                         <fieldset>
-                            template selection here
-
-                            <div id="froala-editor">
-                                <p>The classes should be defined in CSS, otherwise no changes will be visible on the paragraph's appearance.</p>
+                            <div id="editorDiv">
+                                {{> editableText collection="blogs"  wysiwyg=true}}
                             </div>
+
 
                         </fieldset>
                         <h1>Editor</h1>

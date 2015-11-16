@@ -1,5 +1,6 @@
+
 Template.createNewBlog.helpers({
-    //add you helpers here
+
 });
 
 Template.createNewBlog.events({
@@ -11,16 +12,7 @@ Template.createNewBlog.onCreated(function () {
 });
 
 Template.createNewBlog.onRendered(function () {
-    $(function() {
-      $('div#froala-editor').froalaEditor({
-        // Define new paragraph styles.
-        paragraphStyles: {
-          'class1': 'Class 1',
-          'class2': 'Class 2'
-        },
-        toolbarButtons: ['bold', 'italic', 'underline', 'strikeThrough', 'fontFamily', 'fontSize', '|', 'paragraphStyle', 'paragraphFormat', 'align', 'undo', 'redo', 'html']
-      })
-    });
+
 });
 
 Template.createNewBlog.onDestroyed(function () {
@@ -28,10 +20,6 @@ Template.createNewBlog.onDestroyed(function () {
 });
 
 Template.createNewBlog.rendered = function(){
-
-
-
-
 
     // Initialize steps plugin
     $("#wizard").steps();
@@ -46,41 +34,10 @@ Template.createNewBlog.rendered = function(){
                 return true;
             }
 
-            // Forbid suppressing "Warning" step if the user is to young
-            if (newIndex === 3 && Number($("#age").val()) < 18)
-            {
-                return false;
-            }
-
-            var form = $(this);
-
-            // Clean up if user went backward before
-            if (currentIndex < newIndex)
-            {
-                // To remove error styles
-                $(".body:eq(" + newIndex + ") label.error", form).remove();
-                $(".body:eq(" + newIndex + ") .error", form).removeClass("error");
-            }
-
-            // Disable validation on fields that are disabled or hidden.
-         //   form.validate().settings.ignore = ":disabled,:hidden";
-
-            // Start validation; Prevent going forward if false
-            return form.valid();
         },
         onStepChanged: function (event, currentIndex, priorIndex)
         {
-            // Suppress (skip) "Warning" step if the user is old enough.
-            if (currentIndex === 2 && Number($("#age").val()) >= 18)
-            {
-                $(this).steps("next");
-            }
 
-            // Suppress (skip) "Warning" step if the user is old enough and wants to the previous step.
-            if (currentIndex === 2 && priorIndex === 3)
-            {
-                $(this).steps("previous");
-            }
         },
         onFinishing: function (event, currentIndex)
         {
@@ -100,16 +57,15 @@ Template.createNewBlog.rendered = function(){
             // Submit form input
             form.submit();
         }
-    }).validate({
-        errorPlacement: function (error, element)
-        {
-            element.before(error);
-        },
-        rules: {
-            confirm: {
-                equalTo: "#password"
-            }
-        }
-    });
-
+    });/*.validate({
+     errorPlacement: function (error, element)
+     {
+     element.before(error);
+     },
+     rules: {
+     confirm: {
+     equalTo: "#password"
+     }
+     }
+     });*/
 };

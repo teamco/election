@@ -66,3 +66,5 @@ peerlibrary:base-component
 peerlibrary:blaze-components
 meloncon:footable
 aashu28:jquery-steps
+
+babrahams:editable-text-wysiwyg-bootstrap-3

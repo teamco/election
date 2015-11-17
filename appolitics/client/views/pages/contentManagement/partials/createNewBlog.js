@@ -12,7 +12,7 @@ Template.createNewBlog.onCreated(function () {
 });
 
 Template.createNewBlog.onRendered(function () {
-
+    $('.selector').froalaEditor('toolbar.showInline', null, true);
 });
 
 Template.createNewBlog.onDestroyed(function () {

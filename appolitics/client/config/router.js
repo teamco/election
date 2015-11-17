@@ -40,13 +40,13 @@ var requireLogin = function () {
         } else {
 
             this.layout("siteTemplate");
-            this.render('landing');
+            this.render('login');
         }
 
     } else {
 
         this.layout("siteTemplate");
-        this.render('landing');
+        this.render('login');
     }
 
     this.next();

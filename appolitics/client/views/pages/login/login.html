@@ -37,6 +37,16 @@
                 </div>
                 <div class="col-md-6">
                     <div class="ibox-content">
+                        {{#if currentUser}}
+                                {{currentUser.services.facebook.name}} -
+                                {{currentUser.services.facebook.gender}}
+                                <button id="logout">Logout</button>
+                            {{else}}
+                                <button id="facebook-login" class="btn btn-default"> Login with Facebook</button>
+                            {{/if}}
+                        <button type="submit" class="btn btn-primary block full-width m-b">Sign in with Google</button>
+
+                        <span class="center-block"> or </span>
                         <form class="m-t" role="form" action="{{pathFor route='timeline'}}">
                             <div class="form-group">
                                 <input type="email" class="form-control" placeholder="Username" required="">

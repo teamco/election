@@ -71,3 +71,7 @@ babrahams:editable-text-wysiwyg-bootstrap-3
 twbs:bootstrap-noglyph
 froala:editor
 froala:editor-reactive
+cfs:standard-packages
+cfs:filesystem
+cfs:gridfs
+cfs:s3

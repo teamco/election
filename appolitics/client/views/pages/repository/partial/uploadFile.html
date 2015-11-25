@@ -2,13 +2,16 @@
     <div class="wrapper wrapper-content animated fadeIn">
         <div class="row">
             <div class="col-lg-12">
-                <div class="ibox float-e-margins">
-                    <div class="ibox-title">
-                        <h5>Dropzone Area</h5>
-                        {{>iboxTools}}
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <h3>Dropzone Area</h3>
                     </div>
-                    <div class="ibox-content">
-                        {{> dropzone url='http://localhost:3030/upload' id='dropzoneDiv'}}
+                    <div class="panel-body">
+                        <input type=”file” name=”…” class=”myFileInput”>
+                        <div class="myFileInput">
+
+                            {{> dropzone url='http://localhost:3000/upload' id='myFileInput'}}
+                        </div>
                     </div>
                 </div>
             </div>

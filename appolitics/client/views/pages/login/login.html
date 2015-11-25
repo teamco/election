@@ -2,76 +2,73 @@
     <div class="full">
 
 
-        <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+        <header class="loginHeader navbar navbar-static-top bs-docs-nav" id="top" role="banner">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">APPolitics</button>
                     <a class="navbar-brand" href="#">APPolitics</a>
                     <a class="navbar-brand" href="#/about">About</a>
+                    <li>{{> loginButtons}}</li>
                 </div>
             </div>
         </header>
 
         <div class="loginColumns animated fadeInDown">
+            <div class="row-height" style="height: 50px">
+                <h2 class="font-bold">Welcome to APPolitics</h2>
+
+            </div>
             <div class="row-height">
+                <div class="col-md-5">
+                    <form class="m-t" role="form" action="{{pathFor route='timeline'}}">
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Username" required="">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Password" required="">
+                        </div>
+                        <button type="submit" class="btn btn-primary block full-width m-b">Login</button>
 
-                <div class="col-md-6">
-                    <h2 class="font-bold">Welcome to APPolitics</h2>
+                        <a href="#">
+                            <small>Forgot password?</small>
+                        </a>
 
-                    <p>
-                        Perfectly designed and precisely prepared admin theme with over 50 pages with extra new web app views.
-                    </p>
-
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                    </p>
-
-                    <p>
-                        When an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    </p>
-
-                    <p>
-                        <small>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</small>
-                    </p>
+                        <p class="text-muted text-center">
+                            <small>Do not have an account?</small>
+                        </p>
+                        <a class="btn btn-sm btn-white btn-block" href="{{pathFor route='register'}}">Create an account</a>
+                    </form>
 
                 </div>
-                <div class="col-md-6">
-                    <div class="ibox-content">
-                        {{#if currentUser}}
-                                {{currentUser.services.facebook.name}} -
-                                {{currentUser.services.facebook.gender}}
-                                <button id="logout">Logout</button>
-                            {{else}}
-                                <button id="facebook-login" class="btn btn-default"> Login with Facebook</button>
-                            {{/if}}
-                        <button type="submit" class="btn btn-primary block full-width m-b">Sign in with Google</button>
-
-                        <span class="center-block"> or </span>
-                        <form class="m-t" role="form" action="{{pathFor route='timeline'}}">
-                            <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Username" required="">
-                            </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control" placeholder="Password" required="">
-                            </div>
-                            <button type="submit" class="btn btn-primary block full-width m-b">Login</button>
-
-                            <a href="#">
-                                <small>Forgot password?</small>
-                            </a>
-
-                            <p class="text-muted text-center">
-                                <small>Do not have an account?</small>
-                            </p>
-                            <a class="btn btn-sm btn-white btn-block" href="{{pathFor route='register'}}">Create an account</a>
-                        </form>
-
+                <div class="col-md-1">
+                    <div id="dlgDivider">
                     </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="panel">
+                        {{#if currentUser}}
+                            {{currentUser.services.facebook.name}} -
+                            {{currentUser.services.facebook.gender}}
+                            <button id="logout">Logout</button>
+                        {{else}}
+                            <button id="facebook-login" class="btn btn-success block full-width m-b"> Login with Facebook</button>
+                        {{/if}}
+                        <div class="row-height" style="height: 10px">
+
+                        </div>
+                        <button type="submit" class="btn btn-danger block full-width m-b">Sign in with Google</button>
+
+                        <span>
+                            By clicking Sign In with Facebook, I acknowledge and agree to the Terms of Use and <a>Privacy Policy</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-1">
+
                 </div>
             </div>
             <hr/>
         </div>
-
     </div>
     {{> footer }}
 </template>

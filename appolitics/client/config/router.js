@@ -10,14 +10,11 @@ var requireLogin = function () {
 
     if (_isRestrictedArea(this)) {
 
-        this.layout('appoliticsLayout');
 
         if (isAdmin()) {
-
-            //Bert.alert(TAPi18n.__('restricted_area'), 'info');
-
+            this.layout('adminLayout');
+            Bert.alert(TAPi18n.__('restricted_area'), 'info');
         } else {
-
             //this.render('accessDenied');
             //Bert.alert(TAPi18n.__('restricted_area'), 'danger');
             this.redirect('/');

@@ -1,8 +1,27 @@
 .full {
-    background: url('img/loginBG.png') no-repeat center center fixed;
+    background-color: white;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
     height: 100%;
+
+}
+
+#dlgDivider {
+    float: left;
+    width: 1px;
+    height: 264px;
+    margin-top: 16px;
+    margin-left: 20px;
+    background-color: #C0C0BE;
+}
+
+.loginHeader {
+
+    background: #fff!important;
+    height: 60px;
+    border-bottom: 1px solid #e6e6e6 !important;
+    position: relative;
+    z-index: 2;
 }
